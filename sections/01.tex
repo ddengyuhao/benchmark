@@ -8,7 +8,26 @@ To exploit the enormous value in the data lake, researchers from both industry a
 
 %given a query table, they search relevant tables from the data lake, so as to benefit the downstream applications, such as augmenting more data instances~\cite{} or  improving the machine learning model performance~\cite{}. 
 
+\begin{table*}[t]
+	\centering
+	\caption{Benchmark Comparison.}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		\centering
+		Benchmarks & Type & $\#$-Query tables & $\#$-Lake tables & $\#$-Total columns & Size (GB) & Source  \\
+		\hline
+		TUS Small~\cite{TUS}& Union  & 200 & 1,530 & 14,810 & 1 & Open Data  \\
+		\hline
+		TUS Large~\cite{TUS}& Union  & 1,000 & 5,043 & 54,923 & 1.5 & Open Data  \\
+		\hline
+		Santos Small~\cite{Santos}& Union  & 50 & 550 & 6,322 & 0.45 & Open Data  \\
+		\hline
+		Santos Large~\cite{Santos}& Union  & 80 & 11,090 & 123,477 & 11 & Open Data  \\
+		\hline
+	\end{tabular}
+	\label{Table:benchmarks}
 
+\end{table*}
 
 In general, discovering related tables from data lakes can be generally categorized into several sub-tasks, namely keyword-based search, joinable table search and unionable table search.
 The first category~\cite{} issues keywords as queries, based on which relevant tables are retrieved. 
@@ -66,6 +85,8 @@ TPC benchmarks~\cc{\cite{}} for the database community, ImageNet~\cc{\cite{}} fo
 	\item API design can be pushed before ``Analyzing benchmark results''
 \ei
 }
+
+
 
 
 \noindent \textbf{Existing Benchmarks.}  

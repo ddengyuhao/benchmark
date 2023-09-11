@@ -14,15 +14,33 @@ To exploit the enormous value in the data lake, researchers from both industry a
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		\centering
-		Benchmarks & Type & $\#$-Query tables & $\#$-Lake tables & $\#$-Total columns & Size (GB) & Source  \\
+		Benchmarks & Type & $\#$-Query tables & $\#$-Lake tables & $\#$-Total columns & Size (GB) &  API \\
+		\hline  
+		TUS Small~\cite{TUS}& Union  & 200 & 1,530 & 14,810 & 1 & \XSolidBrush \\
 		\hline
-		TUS Small~\cite{TUS}& Union  & 200 & 1,530 & 14,810 & 1 & Open Data  \\
+		TUS Large~\cite{TUS}& Union  & 1,000 & 5,043 & 54,923 & 1.5 & \XSolidBrush \\
 		\hline
-		TUS Large~\cite{TUS}& Union  & 1,000 & 5,043 & 54,923 & 1.5 & Open Data  \\
+		Santos Small~\cite{Santos}& Union  & 50 & 550 & 6,322 & 0.45 & \XSolidBrush \\
 		\hline
-		Santos Small~\cite{Santos}& Union  & 50 & 550 & 6,322 & 0.45 & Open Data  \\
+		Santos Large~\cite{Santos}& Union  & 80 & 11,090 & 123,477 & 11 & \XSolidBrush  \\
 		\hline
-		Santos Large~\cite{Santos}& Union  & 80 & 11,090 & 123,477 & 11 & Open Data  \\
+		Josie~\cite{Josie}& Join  & XX & XX  & XX  & XX &  \XSolidBrush \\
+		\hline
+		Valentine~\cite{valentine}& XX  & XX & XX  & XX  & XX &  \XSolidBrush \\
+		\hline
+		LakeBench~\cite{arxiv}& Union & XX & XX  & XX  & XX &  \XSolidBrush \\
+		\hline
+		\rowcolor{gray!40}
+		OpenData Small& Join \& Union  & XX & XX  & XX  & XX & \Checkmark  \\
+		\hline
+		\rowcolor{gray!40}
+		OpenData Large& Join \& Union  & XX & XX  & XX  & XX & \Checkmark  \\
+		\hline
+		\rowcolor{gray!40}
+		WebTable Small& Join \& Union  & XX & XX  & XX  & XX & \Checkmark\\
+		\hline
+		\rowcolor{gray!40}
+		WebTable Large& Join \& Union  & XX & XX  & XX  & XX &\Checkmark \\
 		\hline
 	\end{tabular}
 	\label{Table:benchmarks}
@@ -124,6 +142,8 @@ Third, we evaluate various approaches~\cc{\cite{}}, including techniques like sc
 Fourth, we implement an easy-to-use API, based on which a user can conveniently (1) profile the benchmark datasets from different perspectives;
 (2) issue join/union table search through few lines of python code;
 (3) compare with multiple state-of-the-art discovery algorithms in one line. 
+
+Overall, 
 
 To summarize, we make the following contributions.
 

@@ -31,7 +31,7 @@ The reason is that in this way, we have to set a cut-off threshold for the relev
 
 \subsection{Overall Framework of Table Discovery}
 
-In this subsection, we will introduce the high-level framework of table discovery, which generally consists of the following modules, namely column modeling, index construction, online table query processing and relevance score computation.
+In this subsection, we will introduce the high-level framework of table discovery, which generally consists of the following modules, namely column modeling, index construction, online table query processing.
 At a high level, the former two modules are offline, \ie respectively representing each column in the data lake to a vector and indexing theses columns. Then, when a query table comes, the column(s) of the table is (are) first encoded. Afterwards, with the help of the offline built index, top-$K$ tables with high relevance score are retrieved from the data lake. Next, we respectively illustrate each module as shown in Figure~\ref{fig:framework}.
 
 

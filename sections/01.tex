@@ -129,7 +129,7 @@ run different algorithms over these benchmarks.
 
 To address the above challenges, in this paper, we create a comprehensive benchmark \sys for table search in data lake.
 
- First, we collect 3 TB tables from multiple sources, including OpenData, WebTable, and a domain-specific dataset as the data lakes, based on which we evaluate different the table union/join search approaches. These datasets have diverse characteristics. For example, Web table has a large number of tables (XXX) but each has a small size. In contrast, each table in OpenData is quite large (XXX), but the number is smaller than that of WebTable. 
+ First, we collect 3 TB tables from different sources, including OpenData~\cite{} and  WebTable~\cite{}, based on which we evaluate different the table union/join search approaches. These datasets have diverse characteristics. WebTable has a large number of tables (XXX) but each has a small size. In contrast, each table in OpenData is quite large (XXX), but the number is smaller than that of WebTable. 
  
  
 Second, we create sufficient and diverse queries using two approaches. 
@@ -143,7 +143,7 @@ Fourth, we implement an easy-to-use API, based on which a user can conveniently 
 (2) issue join/union table search through few lines of python code;
 (3) compare with multiple state-of-the-art discovery algorithms in one line. 
 
-Overall, 
+Overall, Table~\ref{Table:benchmarks} shows the comparison of \sys over existing benchmarks. Based on OpenData~\cite{} and  WebTable~\cite{}, we build 4 data lakes (corresponding to the gray rows), over which  both join and union search are performed. We can observe that \sys achieves a more comprehensive benchmark due to the much larger number of queries with various characteristics and  much larger data lake size such that both the effectiveness and efficiency of different table discovery algorithms are sufficiently evaluated. 
 
 To summarize, we make the following contributions.
 

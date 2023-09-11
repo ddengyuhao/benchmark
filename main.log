@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  11 SEP 2023 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  11 SEP 2023 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,8 +1956,11 @@ Underfull \hbox (badness 3536) in paragraph at lines 156--157
 state-of-the-art join-
  []
 
-) (./sections/02.tex [3.3]
-<fig/framework.pdf, id=157, 613.29124pt x 710.655pt>
+) (./sections/02.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3.3]
+<fig/framework.pdf, id=158, 613.29124pt x 710.655pt>
 File: fig/framework.pdf Graphic file (type pdf)
  <use fig/framework.pdf>
 Package pdftex.def Info: fig/framework.pdf used on input line 66.
@@ -1973,9 +1976,12 @@ ol-lect three datasets from Open-Data [[]],
  []
 
 ) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4.4 <./fig/framework.pdf>]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
- [4.4 <./fig/framework.pdf>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2055,10 +2061,10 @@ txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
 mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (6 pages, 802732 bytes).
+Output written on main.pdf (6 pages, 803322 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
  57503 words of extra memory for PDF output out of 61914 (max. 10000000)
 

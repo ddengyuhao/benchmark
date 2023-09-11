@@ -1,0 +1,136 @@
+%!TEX root = ../main.tex
+\section{Benchmark Design} 
+In this section, we first introduce the design goals of \sys benchmark for table discovery tasks, and then present how to generate the \sys benchmark consisting of datasets, queries and ground truth.
+
+\subsection{Design Goals}
+We design the table discovery benchmark by following the 4
+benchmark design criteria proposed by Jim Gray.
+
+\noindent\textbf{Relevance}
+
++ Collect many tabular datasets in data lakes covering different data characteristics.
+
++ Join/union queries covering different query characteristics.
+
+
+\noindent\textbf{Scalability}
+
++ Various data size in data lake.
+
+\noindent\textbf{Portability}
+
++ Python code.
+
++ Easily test different algorithms.
+
++ Upload your own data lakes.
+
+\noindent\textbf{Simplicity}\cc{Not sure what does this mean}
+
++ The benchmark is designed to eliminate redundant
+
+tests and be easily understandable -- -- queries are well classified.
+
++ With human-labeled ground truth?
+
+
+
+
+
+
+
+
+\subsection{Benchmark Overview}
+
+
+\noindent\textbf{Datasets}
+We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable} and DrugBank~\cite{DrugCentral} respectively. 
+
+\cc{Introduce what here? Should avoid repetition with next Section.}
+
++ Statistics of collected datasets.
+
++ Clean the datasets.
+
++ Remove sth.
+
+%Table~\ref{table} summarizes the statistics of collected datasets.
+
+
+\noindent\textbf{Query Generation}
+
++ Fake tables: split-based. Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
+
++ Real tables: retrieved-based. Use real tables as query tables, and directly query the data lake.
+
+
++ Classify: 
+
+\quad\quad -- Column type (string, number, category)
+ 
+\quad\quad -- Fake or real
+  
+\quad\quad -- Selectivity
+
+\quad\quad -- Size
+
+\noindent\textbf{Ground Truth Creation}
+
++ Semi-automatic label: corresponding to fake tables. Some positive results are automatically generated, while others should be manually labeled.
+
++ Manually label: corresponding to real tables.
+
+\noindent\textbf{Method Evaluation} \cc{How to category}
+
+
+{\scriptsize
+    \begin{table*}[t]
+        \centering
+        \caption{Table Discovery Methods.}
+        \vspace{-3.5ex}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \centering
+            Methods & Task & Index Type & Embedding & KB  \\
+            \hline
+            Josie~\cite{Josie} & Join & Inverted index & \XSolidBrush & \XSolidBrush  \\
+            \hline
+            LSH Ensemble~\cite{LshEn} & Join & LSH & \XSolidBrush & \XSolidBrush  \\
+            \hline
+            Pexeso~\cite{Pexeso} & Join &  Inverted index, Hierarchical gird & \Checkmark & \XSolidBrush  \\
+            \hline
+            DeepJoin~\cite{DeepJoin} & Join & HNSW & \Checkmark & \XSolidBrush  \\
+            \hline
+             TUS~\cite{TUS} & Union & LSH & \Checkmark & \Checkmark  \\
+            \hline
+            D3L~\cite{D3L} & Union & LSH & \Checkmark & \XSolidBrush  \\
+            \hline
+            Starmie~\cite{Starmie} & Union & HNSW & \Checkmark & \XSolidBrush  \\
+            \hline
+            Santos~\cite{Santos} & Union & Inverted index & \XSolidBrush & \Checkmark  \\
+            \hline
+            Frt12~\cite{Frt12} & Join \& Union & \XSolidBrush & \XSolidBrush & \Checkmark  \\
+            \hline
+            InfoGather~\cite{InfoGather} & Join \& Union & Inverted index & \XSolidBrush & \XSolidBrush  \\
+            \hline
+            Aurum~\cite{Aurum} & Join \& Union & LSH & \Checkmark & \XSolidBrush  \\
+            \hline
+        \end{tabular}
+        \label{table:methods}
+        \vspace{-4ex}
+    \end{table*}
+}
+
++ \cc{Join/Union}
+
++ \cc{Schema matching}
+
++ Hash-based
+
++ Inverted index 
+
++ Pre-trained language model (HNSW)
+
+
+\noindent\textbf{API Design}
+

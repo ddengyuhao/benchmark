@@ -1,0 +1,26 @@
+Table join search aims at finding joinable tables for a query table. 
+Early works propose schema matching-based approaches to find related tables with the query table. 
+InfoGather augments the query table by adding more data entries or by discovering new potential attributes. It first builds a semantic graph using schema matching and then develops holistic matching framework based on topic sensitive pagerank.
+Frt12 defines joinable tables as schema-complements where schema matching is conducted by attribute names and values. 
+These works trend to use Jaccard similarity to measure the similarity between attributes. This is impractical for data lake tables where there is large and skewed domain sizes.
+
+
+LSH Ensemble addresses the table join search into the problem of domain search and uses set containment to find attributes that highly overlap with the query domain. It presents a cost model to conduct an optimal data partitioning for the LSH index, such that LSH Ensemble is enable to obtain high accuracy over a large and skewed domain distributions. 
+Following the similar idea, JOSIE uses set containment to find the top-k joinable tables by considering columns as sets and matching values as intersection between sets. It performs data-driven cost model to scale inverted index to massive data lakes.
+
+
+Meanwhile, some works develop graph-based approaches to represent relationships between datasets. 
+Aurum first builds a knowledge graph by computing the syntactic relationships between data sketches, and then finds the joinable tables along join paths. 
+Its successor SemProp identifies semantic links between datasets by leveraging ontologies and word embeddings. SemProp is implemented as a part of Aurum.
+
+Subsequently, some approaches are designed to find the semantically joinable tables. 
+PEXESO first encodes column values into high-dimensional vectors, and then performs a block-and-verify method to compute the cosine similarity between vectors. 
+DeepJoin proposes an embedding-based retrieval framework to find the top-k joinable tables, which employs a pre-trained language model for column embedding and an ANNS algorithm for fast retrieval.
+
+
+Most recently, some approaches are proposed to find joinable datasets to improve the performance of downstream machine learning task. 
+ARDA augments the input table by first integrating related tables using joining and aggregation, and then performing feature selection to prune noisy for machine learning applications.
+Leva proposes a graph representation learning framework to capture inter-table information to boost the performance of the ML model. It first builds a relational embedding by representing relational data as a graph and then filters out unuseful graph information based on the supervision signal from the downstream task. 
+Metam performs a goal-oriented augmentation method to identify a minimum augmentation dataset that have high utility score for the downstream ML task.
+AutoFeature utilizes a reinforcement learning based framework to select table attributes following an exploration-exploitation strategy. It explores the features in tables that have led to performance improvement and also exploits the tables that are rarely selected. 
+

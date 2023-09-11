@@ -1,0 +1,10 @@
+Table Union search aims at finding unionable tables for a query table. 
+Frt12 first defines unionable tables as entity-complements that share a subject attribute and have similar schemas. 
+TUS defines table union search by considering the attributes that originate from the same domain. The attribute unionability is measured by set overlap, semantic similarity using an ontology, and a natural language metric using word embeddings. It then aggregates the column-level scores to a table-level unionability score using bipartite graph matching. 
+D3L extends this approach by adding the formatting similarity and attribute names into measures.
+
+
+Subsequently, Santos defines table unionability not only based on columns, but also column-to-column relationships. It first models the semantics of columns and their relationships using both an existing knowledge graph and a self-curated knowledge graph populated with values of the data lake. And then the table union search problem is treated as semantic graph matching of query table and lake tables.
+
+More recently, AutoData augments training data by selecting a set of data points that are useful for improving the performance of downstream machine learning task. It first clusters all data points from candidate datasets, and then iteratively picks which cluster to use processed by a multi-armed bandit based solution and a Deep Q Networks-based reinforcement learning solution.
+Starmie considers contextual information within a table to capture binary relationships between tables. It first performs a contrastive learning method to train column encoders in a fully unsupervised manner. And then it utilizes the cosine similarity between column embedding vectors as the column unionability score and proposes a filter-and-verification framework to compute the unionability score of tables.

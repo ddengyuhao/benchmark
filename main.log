@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  11 SEP 2023 19:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  11 SEP 2023 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1976,12 +1976,12 @@ ol-lect three datasets from Open-Data [[]],
  []
 
 ) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4.4 <./fig/framework.pdf>]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4.4 <./fig/framework.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2027,11 +2027,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 43218 strings out of 492995
- 788262 string characters out of 6132704
+ 43221 strings out of 492995
+ 788334 string characters out of 6132704
  953028 words of memory out of 5000000
  45338 multiletter control sequences out of 15000+600000
- 200315 words of font info for 370 fonts, out of 8000000 for 9000
+ 200588 words of font info for 372 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,12n,94p,10381b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -2061,7 +2061,7 @@ txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
 mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (6 pages, 803322 bytes).
+Output written on main.pdf (6 pages, 803218 bytes).
 PDF statistics:
  348 PDF objects out of 1000 (max. 8388607)
  272 compressed objects within 3 object streams

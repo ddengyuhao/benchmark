@@ -15,14 +15,9 @@ Warning--to sort, need author or key in OpenData
 Warning--no key, author in WebTable
 Warning--no author, editor, organization, or key in WebTable
 Warning--to sort, need author or key in WebTable
-Warning--no key, author in DrugCentral
-Warning--no author, editor, organization, or key in DrugCentral
-Warning--to sort, need author or key in DrugCentral
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Warning--no key, author in DrugCentral
-Warning--no key, author in DrugCentral
 Warning--no key, author in OpenData
 Warning--no key, author in OpenData
 Warning--no key, author in WebTable
@@ -34,8 +29,6 @@ Warning--empty year in OpenData
 Warning--no key, author in WebTable
 Warning--empty author in WebTable
 Warning--empty year in WebTable
-Warning--no key, author in DrugCentral
-Warning--empty author in DrugCentral
 Warning--empty address in D3L
 Warning--empty address in Pexeso
 Warning--page numbers missing in both pages and numpages fields in DeepJoin
@@ -45,45 +38,45 @@ Warning--empty address in valentine
 Warning--empty address in Frt12
 Warning--empty address in InfoGather
 Warning--empty address in Josie
-You've used 15 entries,
+You've used 14 entries,
             5981 wiz_defined-function locations,
-            1724 strings with 23155 characters,
-and the built_in function-call counts, 17971 in all, are:
-= -- 2147
+            1719 strings with 23079 characters,
+and the built_in function-call counts, 17304 in all, are:
+= -- 2079
 > -- 647
 < -- 0
-+ -- 222
++ -- 221
 - -- 207
-* -- 1383
-:= -- 1702
-add.period$ -- 72
-call.type$ -- 15
-change.case$ -- 124
-chr.to.int$ -- 15
-cite$ -- 59
-duplicate$ -- 1583
-empty$ -- 1119
+* -- 1342
+:= -- 1662
+add.period$ -- 68
+call.type$ -- 14
+change.case$ -- 120
+chr.to.int$ -- 14
+cite$ -- 47
+duplicate$ -- 1504
+empty$ -- 1061
 format.name$ -- 255
-if$ -- 4381
+if$ -- 4218
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 55
-newline$ -- 156
+newline$ -- 148
 num.names$ -- 90
-pop$ -- 722
+pop$ -- 682
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 222
 quote$ -- 0
-skip$ -- 560
+skip$ -- 532
 stack$ -- 0
-substring$ -- 1255
-swap$ -- 158
+substring$ -- 1207
+swap$ -- 154
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 380
-warning$ -- 32
+type$ -- 350
+warning$ -- 25
 while$ -- 69
 width$ -- 0
-write$ -- 325
-(There were 34 warnings)
+write$ -- 307
+(There were 27 warnings)

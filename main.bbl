@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{15}
+\begin{thebibliography}{14}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -50,14 +50,6 @@
  \bibinfo{year}{[n.\,d.]}\natexlab{}.
 \newblock \bibinfo{title}{{W}ebTable}.
 \newblock \bibinfo{howpublished}{\url{https://webdatacommons.org/webtables/}}.
-\newblock
-
-
-\bibitem[Dru(2017)]%
-        {DrugCentral}
- \bibinfo{year}{2017}\natexlab{}.
-\newblock \bibinfo{title}{{D}rugCentral}.
-\newblock \bibinfo{howpublished}{\url{http://drugcentral.org/download}}.
 \newblock
 
 

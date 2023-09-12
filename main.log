@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  12 SEP 2023 10:44
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  12 SEP 2023 14:33
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  12 SEP 2023 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1686,11 +1682,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
 (Font)              scaled to size 9.0pt on input line 63.
-<fig/example.pdf, id=80, 1195.46625pt x 701.62125pt>
+<fig/example.pdf, id=80, 1206.5075pt x 701.62125pt>
 File: fig/example.pdf Graphic file (type pdf)
 <use fig/example.pdf>
 Package pdftex.def Info: fig/example.pdf  used on input line 79.
-(pdftex.def)             Requested size: 405.03754pt x 237.713pt.
+(pdftex.def)             Requested size: 405.03754pt x 235.53972pt.
 
 Class acmart Warning: A possible image without description on input line 82.
 
@@ -1723,7 +1719,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 140.
  [2.2 <./fig/example.pdf>]
 
-LaTeX Warning: Reference `XXX' on page 3 undefined on input line 144.
+LaTeX Warning: Reference `XXX' on page 3 undefined on input line 145.
 
 
 Underfull \hbox (badness 3536) in paragraph at lines 156--157
@@ -1731,42 +1727,31 @@ Underfull \hbox (badness 3536) in paragraph at lines 156--157
 state-of-the-art join-
  []
 
-<<<<<<< Updated upstream
 ) (./sections/02.tex
-Underfull \vbox (badness 1033) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
  [3.3]
-<fig/framework.pdf, id=158, 613.29124pt x 710.655pt>
-File: fig/framework.pdf Graphic file (type pdf)
- <use fig/framework.pdf>
-Package pdftex.def Info: fig/framework.pdf used on input line 64.
-=======
-) (./sections/02.tex [3.3]
-<fig/framework.pdf, id=156, 613.29124pt x 710.655pt>
+<fig/framework.pdf, id=155, 613.29124pt x 710.655pt>
 File: fig/framework.pdf Graphic file (type pdf)
 <use fig/framework.pdf>
 Package pdftex.def Info: fig/framework.pdf  used on input line 64.
->>>>>>> Stashed changes
 (pdftex.def)             Requested size: 229.08937pt x 265.45396pt.
 
 
 Class acmart Warning: A possible image without description on input line 67.
 
 ) (./sections/03.tex
-<<<<<<< Updated upstream
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
-\T1/LinuxLibertineT-TLF/b/n/9 Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20) We c
-ol-lect three datasets from Open-Data [[]],
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
 \T1/LinuxLibertineT-TLF/b/n/9 (+20) Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20
 ) We col-lect three datasets from Open-Data [[]],
  []
 
 
-Overfull \hbox (6.04347pt too wide) in paragraph at lines 129--129
+Overfull \hbox (6.04347pt too wide) in paragraph at lines 115--115
 []|\T1/LinuxLibertineT-TLF/b/n/9 (-20) Methods|  
->>>>>>> Stashed changes
  []
 
 ) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex [4.4 <./fig/framew
@@ -1774,28 +1759,15 @@ ork.pdf>]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
-<<<<<<< Updated upstream
-Underfull \vbox (badness 3417) has occurred while \output is active []
-=======
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
- [4.4 <./fig/framework.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
->>>>>>> Stashed changes
+Underfull \vbox (badness 2903) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5.5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
+ [5.5])
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 71.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
 
 Package natbib Warning: There were undefined citations.
@@ -1827,62 +1799,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-<<<<<<< Updated upstream
 
 LaTeX Warning: There were undefined references.
 
- ) 
-Here is how much of TeX's memory you used:
- 43225 strings out of 492995
- 788414 string characters out of 6132704
- 953028 words of memory out of 5000000
- 45339 multiletter control sequences out of 15000+600000
- 200861 words of font info for 374 fonts, out of 8000000 for 9000
- 1302 hyphenation exceptions out of 8191
- 60i,12n,94p,10381b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-} </Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bb
-ding10.540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4
--t1-4.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oe
-xx6f.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncs
-llp.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.
-enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local
-/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/local/t
-exlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-I.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLiber
-tineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinL
-ibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine
-/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/fxl
-ri-5letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/fx
-lri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/n
-txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
-mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (6 pages, 803672 bytes).
-PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 57503 words of extra memory for PDF output out of 61914 (max. 10000000)
-=======
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A1438CB80E59121E49AAC0E8B827F65E;2028.
  ) 
 Here is how much of TeX's memory you used:
- 39076 strings out of 478268
- 719709 string characters out of 5846347
- 1133070 words of memory out of 5000000
- 55726 multiletter control sequences out of 15000+600000
- 673889 words of font info for 433 fonts, out of 8000000 for 9000
+ 39086 strings out of 478268
+ 719939 string characters out of 5846347
+ 1133516 words of memory out of 5000000
+ 55727 multiletter control sequences out of 15000+600000
+ 674728 words of font info for 439 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  89i,13n,131p,3241b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -1910,11 +1838,10 @@ e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ne
 wtx/txsys.pfb>
-Output written on main.pdf (6 pages, 736716 bytes).
+Output written on main.pdf (6 pages, 737394 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
  103071 words of extra memory for PDF output out of 106986 (max. 10000000)
->>>>>>> Stashed changes
 

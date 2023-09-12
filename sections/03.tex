@@ -78,32 +78,64 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
             \centering
             Methods & Task & Index Type & Embedding & KB  \\
             \hline
-            Josie~\cite{Josie} & Join & Inverted index & \XSolidBrush & \XSolidBrush  \\
+            \josie~\cite{Josie} & Join & Inverted index & \XSolidBrush & \XSolidBrush  \\
             \hline
-            LSH Ensemble~\cite{LshEn} & Join & LSH & \XSolidBrush & \XSolidBrush  \\
+            \lsh~\cite{LshEn} & Join & LSH & \XSolidBrush & \XSolidBrush  \\
             \hline
-            Pexeso~\cite{Pexeso} & Join &  Inverted index, Hierarchical gird & \Checkmark & \XSolidBrush  \\
+            \pex~\cite{Pexeso} & Join &  Inverted index, Hierarchical gird & \Checkmark & \XSolidBrush  \\
             \hline
-            DeepJoin~\cite{DeepJoin} & Join & HNSW & \Checkmark & \XSolidBrush  \\
+            \deepjoin~\cite{DeepJoin} & Join & HNSW & \Checkmark & \XSolidBrush  \\
             \hline
-             TUS~\cite{TUS} & Union & LSH & \Checkmark & \Checkmark  \\
+             \tus~\cite{TUS} & Union & LSH & \Checkmark & \Checkmark  \\
             \hline
-            D3L~\cite{D3L} & Union & LSH & \Checkmark & \XSolidBrush  \\
+            \dlll~\cite{D3L} & Union & LSH & \Checkmark & \XSolidBrush  \\
             \hline
-            Starmie~\cite{Starmie} & Union & HNSW & \Checkmark & \XSolidBrush  \\
+            \starmie~\cite{Starmie} & Union & HNSW & \Checkmark & \XSolidBrush  \\
             \hline
-            Santos~\cite{Santos} & Union & Inverted index & \XSolidBrush & \Checkmark  \\
+            \santos~\cite{Santos} & Union & Inverted index & \XSolidBrush & \Checkmark  \\
             \hline
-            Frt12~\cite{Frt12} & Join \& Union & \XSolidBrush & \XSolidBrush & \Checkmark  \\
+            \frt~\cite{Frt12} & Join \& Union & \XSolidBrush & \XSolidBrush & \Checkmark  \\
             \hline
-            InfoGather~\cite{InfoGather} & Join \& Union & Inverted index & \XSolidBrush & \XSolidBrush  \\
+            \infogather~\cite{InfoGather} & Join \& Union & Inverted index & \XSolidBrush & \XSolidBrush  \\
             \hline
-            Aurum~\cite{Aurum} & Join \& Union & LSH & \Checkmark & \XSolidBrush  \\
+            \aurum~\cite{Aurum} & Join \& Union & LSH & \Checkmark & \XSolidBrush  \\
             \hline
         \end{tabular}
         \label{table:methods}
         
     \end{table*}
+
+    \begin{table*}[t]
+	\centering
+	\caption{Complex of Different Table Discovery Methods.}  \vspace{-1em}
+	{
+		\begin{tabular}{c||cc|cc}
+			\toprule
+			% 合并单元格
+			\multirow{2}{1cm}{\textbf{Methods}} & \multicolumn{2}{c}{\textbf{Offline Process}} & \multicolumn{2}{c}{\textbf{Online Process}} \\ 
+			&Time Complexity    & Space Complexity & Time Complexity & Space Complexity \\ 
+			\midrule[1pt]     % 中线（或表示为\hline）
+			
+			\starmie         & $\tablenum$         & $\columnnum$                   & $\cellnum$               & $\tuplenum$      \\
+			\josie             & 6,497          & 12                   & 7                & 20        \\         
+			\lsh          & 150,000        & 10                   & 2                & 16.55     \\
+			\dlll          & 2,000          & 20                   & 4                & 30       \\
+			\pex          & 103,905        & 24                   & 2                & 40      \\
+			\deepjoin             & 630,420        & $3\times32\times32$    & 10               & 10      \\
+			\tus          & 70,000         & $1\times28\times28$    & 10               & 10          \\
+			\santos              & 14,980         & 14                   & 2                & 5     \\
+			\frt         & 60,000         & $3\times32\times32$    & 10               & 20       \\
+			\infogather        & 60,000         & $3\times32\times32$    & 100              & 20      \\
+			\aurum            & 919            & 11                   & 2                & 30       \\
+			SATO            & 36,276         & 18                   & 2                & 30    \\
+			TABERT         & 70,000         & $1\times28\times28$    & 10               & 40       \\
+		
+			\bottomrule
+		\end{tabular}
+	}
+	\vspace{-1em}
+	\label{table:complex_analyse}
+	\end{table*}
 
 + \cc{Join/Union}
 

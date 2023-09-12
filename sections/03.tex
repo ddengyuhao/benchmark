@@ -3,35 +3,21 @@
 In this section, we first introduce the design goals of \sys benchmark for table discovery tasks, and then present how to generate the \sys benchmark consisting of datasets, queries and ground truth.
 
 \subsection{Design Goals}
-We design the table discovery benchmark by following the 4
+We design the table discovery benchmark by the 
 benchmark design criteria proposed by Jim Gray.
 
-\noindent\textbf{Relevance}
-
-+ Collect many tabular datasets in data lakes covering different data characteristics.
-
-+ Join/union queries covering different query characteristics.
+\noindent\textbf{Relevance.}
+The benchmark covers a wide range of table discovery characteristics. First, in terms of the data lake, we incorporate 4 lakes with size ranging from 10GB to 1TB, and with column number ranging from \cc{1 million} to 10 million. Second, in terms of the queries, with the help of much human efforts, we create and label more than 10 thousand table queries that cover various query characteristics, including column semantic, column overlapping, column size, etc.
 
 
-\noindent\textbf{Scalability}
 
-+ Various data size in data lake.
+\noindent\textbf{Scalability.} The benchmark involves much larger data lakes than existing data lakes for table discovery. The data lake size should be considered from two aspects. One is the normal total storage size that is highly related  to the average table size  and the number of tables. The other is the number of total columns because almost all table discovery algorithms build index and search over a large number of columns.  \sys involves up to 1 TB data lake and 10 million columns, which is sufficient enough to evaluate the scalability.
 
-\noindent\textbf{Portability}
 
-+ Python code.
 
-+ Easily test different algorithms.
 
-+ Upload your own data lakes.
+\noindent\textbf{Simplicity} The benchmark 
 
-\noindent\textbf{Simplicity}\cc{Not sure what does this mean}
-
-+ The benchmark is designed to eliminate redundant
-
-tests and be easily understandable -- -- queries are well classified.
-
-+ With human-labeled ground truth?
 
 
 
@@ -44,7 +30,7 @@ tests and be easily understandable -- -- queries are well classified.
 
 
 \noindent\textbf{Datasets}
-We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable} and DrugBank~\cite{DrugCentral} respectively. 
+We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable}. 
 
 \cc{Introduce what here? Should avoid repetition with next Section.}
 

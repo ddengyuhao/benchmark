@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  12 SEP 2023 21:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  12 SEP 2023 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,6 +1744,9 @@ Package pdftex.def Info: fig/framework.pdf  used on input line 64.
 Class acmart Warning: A possible image without description on input line 67.
 
 ) (./sections/03.tex
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 32--34
 \T1/LinuxLibertineT-TLF/b/n/9 (+20) Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20
 ) We col-lect three datasets from Open-Data [[]],
@@ -1754,21 +1757,27 @@ Overfull \hbox (6.04347pt too wide) in paragraph at lines 115--115
 []|\T1/LinuxLibertineT-TLF/b/n/9 (-20) Methods|  
  []
 
-) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex [4.4 <./fig/framew
-ork.pdf>]
+[4.4 <./fig/framework.pdf>]) (./sections/04.tex) (./sections/05.tex)
+(./sections/06.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
-Underfull \vbox (badness 2903) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5.5])
+ [5.5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 71.
-)
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+ [6.6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1788,10 +1797,10 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
+Overfull \vbox (1.16599pt too high) has occurred while \output is active []
 
-[6.6] (./main.aux)
+
+[7.7] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -1806,13 +1815,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A1438CB80E59121E49AAC0E8B827F65E;2028.
  ) 
 Here is how much of TeX's memory you used:
- 39086 strings out of 478268
- 719939 string characters out of 5846347
- 1133516 words of memory out of 5000000
+ 39093 strings out of 478268
+ 720092 string characters out of 5846347
+ 1126531 words of memory out of 5000000
  55727 multiletter control sequences out of 15000+600000
- 674728 words of font info for 439 fonts, out of 8000000 for 9000
+ 675266 words of font info for 443 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 89i,13n,131p,3241b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,131p,3241b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
 usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/u
@@ -1838,10 +1847,10 @@ e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ne
 wtx/txsys.pfb>
-Output written on main.pdf (6 pages, 737394 bytes).
+Output written on main.pdf (7 pages, 738777 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  103071 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -117,15 +117,17 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 			\midrule[1pt]     % 中线（或表示为\hline）
 			
 			\starmie         & $\tablenum$         & $\columnnum$                   & $\cellnum$               & $\tuplenum$      \\
-			\josie             & 6,497          & 12                   & 7                & 20        \\         
+			\josie             & O$(\cellvaluenum + \rawtokennum \log \rawtokennum)$         & O$(\rawtokennum)$                   & O$(\positinglistlen log \positinglistlen)$         & O$(\positinglistlen)$        \\         
 			\lsh          & 150,000        & 10                   & 2                & 16.55     \\
 			\dlll          & 2,000          & 20                   & 4                & 30       \\
 			\pex          & 103,905        & 24                   & 2                & 40      \\
 			\deepjoin             & 630,420        & $3\times32\times32$    & 10               & 10      \\
 			\tus          & 70,000         & $1\times28\times28$    & 10               & 10          \\
 			\santos              & 14,980         & 14                   & 2                & 5     \\
-			\frt         & 60,000         & $3\times32\times32$    & 10               & 20       \\
-			\infogather        & 60,000         & $3\times32\times32$    & 100              & 20      \\
+			\frt-join         &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querytuplenum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
+			\frt-union         & O$(\tuplenum)$         & O$(\tuplenum)$    & O$(\tablenum \times {(\querytuplenum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
+			\infogather-join        & 60,000         & $3\times32\times32$    & 100              & 20      \\
+			\infogather-union        & 60,000         & $3\times32\times32$    & 100              & 20      \\
 			\aurum            & 919            & 11                   & 2                & 30       \\
 			SATO            & 36,276         & 18                   & 2                & 30    \\
 			TABERT         & 70,000         & $1\times28\times28$    & 10               & 40       \\

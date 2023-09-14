@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  13 SEP 2023 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  14 SEP 2023 09:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1961,13 +1961,10 @@ state-of-the-art join-
  []
 
 ) (./sections/02.tex
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1430) has occurred while \output is active []
+Underfull \vbox (badness 6741) has occurred while \output is active []
 
  [3.3]
-<fig/framework.pdf, id=157, 613.29124pt x 710.655pt>
+<fig/framework.pdf, id=158, 613.29124pt x 710.655pt>
 File: fig/framework.pdf Graphic file (type pdf)
  <use fig/framework.pdf>
 Package pdftex.def Info: fig/framework.pdf used on input line 65.
@@ -2045,19 +2042,19 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43233 strings out of 492995
- 788489 string characters out of 6132704
- 954140 words of memory out of 5000000
- 45346 multiletter control sequences out of 15000+600000
+ 43237 strings out of 492995
+ 788519 string characters out of 6132704
+ 954168 words of memory out of 5000000
+ 45350 multiletter control sequences out of 15000+600000
  200861 words of font info for 374 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,13n,94p,10381b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-} </Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bb
-ding10.540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4
--t1-4.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oe
-xx6f.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncs
-llp.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.
+}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc} </
+Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bbding
+10.540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-
+4.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f
+.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.
 enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local
 /texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/local/t
@@ -2079,10 +2076,10 @@ txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
 mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 809182 bytes).
+Output written on main.pdf (7 pages, 810122 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
+ 354 PDF objects out of 1000 (max. 8388607)
+ 277 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
  57503 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -129,7 +129,7 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 			\frt-union         & O$(\tuplenum)$         & O$(\tuplenum)$    & O$(\tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
 			\infogather-join        & O$(\columnnum^2)$         & O$(\columnnum^2)$     & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum)$      \\
 			\infogather-union        & O$(\columnnum^2)$          & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum + {(\querycolumnnum + \averagetargettuplenum)}^3))$              & O$(\inforneighbornnum + {\averagetargettuplenum}^2)$      \\
-			\aurum            & 919            & 11                   & 2                & 30       \\
+			\aurum            & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
 			SATO            & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
 			TABBIE         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
 			TURL         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
@@ -148,16 +148,25 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 		\hline
 		Symbol & Meaning \\ \hline
 		O & inda \\ 
-		$\mathcal{P}$ & Number of columns in the query table$\qtable$  \\
+		$\mathcal{B}$ & Number of columns in the query table$\qtable$  \\
 		$\mathcal{N}$ &The total number of columns in all tables in the data lake$\lake$ \\
 		$\mathcal{K}$ & The number of non-distinct cell values in all tables in the data lake$\lake$   \\
 		$\mathcal{R}$ &The number of distinct cell values in all tables in the data lak$\lake$e \\
 		$\mid \mathcal{T} \mid$ & Number of tables in the data lake$\lake$  \\
 		$\mathcal{X}$ &The total number of tuples in all tables in the data lake$\lake$ \\
 		$\mathcal{A}$ & The number of non-distinct cell values in query table$\qtable$  \\
-	
 		
+		$\mathcal{L}$ & The length of positing list in \josie  \\
+		$\mathcal{H}$ & The dimension of minhash vector \\
+		$\mathcal{P}$ & The number of partition in \lsh\\
+		$\mathcal{D}$ & The number of neighbors in \dlll\\
+		$\mathcal{I}$ & The number of neighbors in \infogather\\
+		$\overline{\mathcal{O}}$ & The average number of tuples in target column\\
 		%
+
+
+
+
 
 	
 	\end{tabular}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  14 SEP 2023 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  14 SEP 2023 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1973,32 +1973,38 @@ Package pdftex.def Info: fig/framework.pdf used on input line 68.
 
 Class acmart Warning: A possible image without description on input line 71.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./sections/03.tex
+Underfull \vbox (badness 3525) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 \T1/LinuxLibertineT-TLF/b/n/9 Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20) We c
 ol-lect three datasets from Open-Data [[]],
  []
 
 
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [4.4 <./fig/framework.pdf>]
 Overfull \hbox (6.74619pt too wide) in paragraph at lines 116--116
 []|\T1/LinuxLibertineT-TLF/b/n/9 Methods|  
  []
 
-[4.4 <./fig/framework.pdf>]) (./sections/04.tex) (./sections/05.tex)
-(./sections/06.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
-Underfull \vbox (badness 2903) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5.5])
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 
-Underfull \vbox (badness 4279) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6])
 
@@ -2013,11 +2019,7 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
-
-Overfull \vbox (1.16599pt too high) has occurred while \output is active []
-
 Package atenddvi Info: Last page = 7.
-
 [7.7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
@@ -2041,11 +2043,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  43256 strings out of 492995
  788706 string characters out of 6132704
- 955168 words of memory out of 5000000
+ 957168 words of memory out of 5000000
  45350 multiletter control sequences out of 15000+600000
  206476 words of font info for 392 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,94p,10381b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,94p,10381b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc} </
 Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bbding
@@ -2073,7 +2075,7 @@ txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
 mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 811659 bytes).
+Output written on main.pdf (7 pages, 811901 bytes).
 PDF statistics:
  354 PDF objects out of 1000 (max. 8388607)
  277 compressed objects within 3 object streams

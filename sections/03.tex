@@ -122,9 +122,11 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 			\lsh          & O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$     \\
 			\dlll          & O$(\cellvaluenum + \columnnum)$          & O$(\columnnum)$                   & O$(\querycolumnnum \times \dlllneighbornnum)$                & O($\querycolumnnum$)       \\
 			\pex          & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\querycellvalue + \log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$      \\
-			\deepjoin             & 630,420        & $3\times32\times32$    & 10               & 10      \\
-			\tus          & 70,000         & $1\times28\times28$    & 10               & 10          \\
-			\santos              & 14,980         & 14                   & 2                & 5     \\
+			\deepjoin         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$     \\
+			
+			\tus          & O$()$         & O$()$    & O$()$               & O$()$          \\
+			\santos              & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum {\averagetargetcolumnnum}^2)$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$     \\
+			
 			\frt-join         &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
 			\frt-union         & O$(\tuplenum)$         & O$(\tuplenum)$    & O$(\tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
 			\infogather-join        & O$(\columnnum^2)$         & O$(\columnnum^2)$     & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum)$      \\

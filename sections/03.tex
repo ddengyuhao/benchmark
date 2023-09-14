@@ -117,28 +117,52 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 			&Time Complexity    & Space Complexity & Time Complexity & Space Complexity \\ 
 			\midrule[1pt]     % 中线（或表示为\hline）
 			
-			\starmie         & $\tablenum$         & $\columnnum$                   & $\cellnum$               & $\tuplenum$      \\
+			\starmie         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
 			\josie             & O$(\cellvaluenum + \rawtokennum \log \rawtokennum)$         & O$(\rawtokennum)$                   & O$(\positinglistlen log \positinglistlen)$         & O$(\positinglistlen)$        \\         
-			\lsh          & 150,000        & 10                   & 2                & 16.55     \\
-			\dlll          & 2,000          & 20                   & 4                & 30       \\
-			\pex          & 103,905        & 24                   & 2                & 40      \\
+			\lsh          & O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$     \\
+			\dlll          & O$(\cellvaluenum + \columnnum)$          & O$(\columnnum)$                   & O$(\querycolumnnum \times \dlllneighbornnum)$                & O($\querycolumnnum$)       \\
+			\pex          & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\querycellvalue + \log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$      \\
 			\deepjoin             & 630,420        & $3\times32\times32$    & 10               & 10      \\
 			\tus          & 70,000         & $1\times28\times28$    & 10               & 10          \\
 			\santos              & 14,980         & 14                   & 2                & 5     \\
-			\frt-join         &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querytuplenum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
-			\frt-union         & O$(\tuplenum)$         & O$(\tuplenum)$    & O$(\tablenum \times {(\querytuplenum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
-			\infogather-join        & 60,000         & $3\times32\times32$    & 100              & 20      \\
-			\infogather-union        & 60,000         & $3\times32\times32$    & 100              & 20      \\
+			\frt-join         &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
+			\frt-union         & O$(\tuplenum)$         & O$(\tuplenum)$    & O$(\tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$       \\
+			\infogather-join        & O$(\columnnum^2)$         & O$(\columnnum^2)$     & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum)$      \\
+			\infogather-union        & O$(\columnnum^2)$          & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum + {(\querycolumnnum + \averagetargettuplenum)}^3))$              & O$(\inforneighbornnum + {\averagetargettuplenum}^2)$      \\
 			\aurum            & 919            & 11                   & 2                & 30       \\
-			SATO            & 36,276         & 18                   & 2                & 30    \\
-			TABERT         & 70,000         & $1\times28\times28$    & 10               & 40       \\
-		
+			SATO            & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
+			TABBIE         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
+			TURL         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
+			TURL         & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$    \\
 			\bottomrule
 		\end{tabular}
 	}
 	\vspace{-1em}
 	\label{table:complex_analyse}
 	\end{table*}
+
+\begin{table*}[!ht]
+	\centering
+	\caption{The Meaning of Different Symbols.}
+	\begin{tabular}{cc}
+		\hline
+		Symbol & Meaning \\ \hline
+		O & inda \\ 
+		$\mathcal{P}$ & Number of columns in the query table$\qtable$  \\
+		$\mathcal{N}$ &The total number of columns in all tables in the data lake$\lake$ \\
+		$\mathcal{K}$ & The number of non-distinct cell values in all tables in the data lake$\lake$   \\
+		$\mathcal{R}$ &The number of distinct cell values in all tables in the data lak$\lake$e \\
+		$\mid \mathcal{T} \mid$ & Number of tables in the data lake$\lake$  \\
+		$\mathcal{X}$ &The total number of tuples in all tables in the data lake$\lake$ \\
+		$\mathcal{A}$ & The number of non-distinct cell values in query table$\qtable$  \\
+	
+		
+		%
+
+	
+	\end{tabular}
+	\label{symbol_table}
+\end{table*}
 
 + \cc{Join/Union}
 

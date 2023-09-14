@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  14 SEP 2023 14:52
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  14 SEP 2023 14:14
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  14 SEP 2023 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1385,14 +1381,80 @@ Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen354
 )
 Excluding comment 'screenonly' Include comment 'printonly'
-Excluding comment 'anonsuppress' Excluding comment 'acks' (./main.aux)
+Excluding comment 'anonsuppress' Excluding comment 'acks' (./main.aux
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 <
+      <<<<<< Updated upstream
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Label `subsec:def' multiply defined.
+
+
+LaTeX Warning: Label `fig:framework' multiply defined.
+
+
+LaTeX Warning: Label `table:methods' multiply defined.
+
+
+LaTeX Warning: Label `table:complex_analyse' multiply defined.
+
+
+Package natbib Warning: Citation `OpenData' multiply defined.
+
+
+Package natbib Warning: Citation `WebTable' multiply defined.
+
+
+Package natbib Warning: Citation `D3L' multiply defined.
+
+
+Package natbib Warning: Citation `Pexeso' multiply defined.
+
+
+Package natbib Warning: Citation `DeepJoin' multiply defined.
+
+
+Package natbib Warning: Citation `Starmie' multiply defined.
+
+
+Package natbib Warning: Citation `Aurum' multiply defined.
+
+
+Package natbib Warning: Citation `Santos' multiply defined.
+
+
+Package natbib Warning: Citation `valentine' multiply defined.
+
+
+Package natbib Warning: Citation `TUS' multiply defined.
+
+
+Package natbib Warning: Citation `Frt12' multiply defined.
+
+
+Package natbib Warning: Citation `InfoGather' multiply defined.
+
+
+Package natbib Warning: Citation `Josie' multiply defined.
+
+
+Package natbib Warning: Citation `LshEn' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 19.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
  19.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 19.
@@ -1634,6 +1696,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 29.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 29.
+ [1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 9.0pt on input line 29.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -1652,7 +1715,8 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 8.0pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 6.2pt on input line 29.
- (./sections/01.tex
+
+(./sections/01.tex
 LaTeX Font Info:    Trying to load font information for U+ding on input line 19
 .
 
@@ -1663,7 +1727,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/ding/m/n/9'
 (microtype)             (new value: 9.0pt) on input line 19.
 
 
-Package natbib Warning: Citation `arxiv' on page 1 undefined on input line 31.
+Package natbib Warning: Citation `arxiv' on page 2 undefined on input line 31.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 58.
@@ -1686,7 +1750,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
 (Font)              scaled to size 9.0pt on input line 63.
-<fig/example.pdf, id=80, 1206.5075pt x 701.62125pt>
+<fig/example.pdf, id=86, 1206.5075pt x 701.62125pt>
 File: fig/example.pdf Graphic file (type pdf)
 <use fig/example.pdf>
 Package pdftex.def Info: fig/example.pdf  used on input line 79.
@@ -1708,10 +1772,12 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 88.
 
-Package natbib Warning: Citation `arxiv' on page 1 undefined on input line 114.
+Package natbib Warning: Citation `arxiv' on page 2 undefined on input line 114.
 
 
-[1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 122.
+[2.2
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1719,11 +1785,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 140.
- [2.2 <./fig/example.pdf>]
+ [3.3 <./fig/example.pdf>]
 
-LaTeX Warning: Reference `XXX' on page 3 undefined on input line 145.
+LaTeX Warning: Reference `XXX' on page 4 undefined on input line 145.
 
 
 Underfull \hbox (badness 3536) in paragraph at lines 156--157
@@ -1732,98 +1796,55 @@ state-of-the-art join-
  []
 
 ) (./sections/02.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-<<<<<<< Updated upstream
+Underfull \vbox (badness 1412) has occurred while \output is active []
 
- [3.3]
-<fig/framework.pdf, id=158, 613.29124pt x 710.655pt>
-File: fig/framework.pdf Graphic file (type pdf)
- <use fig/framework.pdf>
-Package pdftex.def Info: fig/framework.pdf used on input line 68.
-=======
-
-
-Underfull \vbox (badness 1430) has occurred while \output is active []
-
- [3.3]
-<fig/framework.pdf, id=155, 613.29124pt x 710.655pt>
+ [4.4]
+<fig/framework.pdf, id=159, 613.29124pt x 710.655pt>
 File: fig/framework.pdf Graphic file (type pdf)
 <use fig/framework.pdf>
-Package pdftex.def Info: fig/framework.pdf  used on input line 65.
->>>>>>> Stashed changes
+Package pdftex.def Info: fig/framework.pdf  used on input line 68.
 (pdftex.def)             Requested size: 229.08937pt x 265.45396pt.
 
 
 Class acmart Warning: A possible image without description on input line 71.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (./sections/03.tex
-Underfull \vbox (badness 3525) has occurred while \output is active []
-
-
-<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
-\T1/LinuxLibertineT-TLF/b/n/9 Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20) We c
-ol-lect three datasets from Open-Data [[]],
- []
-
-
-Underfull \vbox (badness 1436) has occurred while \output is active []
-
- [4.4 <./fig/framework.pdf>]
-Overfull \hbox (6.74619pt too wide) in paragraph at lines 116--116
-[]|\T1/LinuxLibertineT-TLF/b/n/9 Methods|  
- []
-
-) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
 \T1/LinuxLibertineT-TLF/b/n/9 (+20) Datasets \T1/LinuxLibertineT-TLF/m/n/9 (+20
 ) We col-lect three datasets from Open-Data [[]],
  []
 
 
-Overfull \hbox (6.04347pt too wide) in paragraph at lines 115--115
+Overfull \hbox (6.04347pt too wide) in paragraph at lines 116--116
 []|\T1/LinuxLibertineT-TLF/b/n/9 (-20) Methods|  
  []
 
-[4.4 <./fig/framework.pdf>]) (./sections/04.tex) (./sections/05.tex)
-(./sections/06.tex
+[5.5 <./fig/framework.pdf>]) (./sections/04.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
+(./sections/05.tex) (./sections/06.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5.5]
->>>>>>> Stashed changes
+ [6.6]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<<<<<<< Updated upstream
- [5.5])
-(./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 63.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6.6])
-=======
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6.6])
+ [7.7])
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 )
->>>>>>> Stashed changes
 
 Package natbib Warning: There were undefined citations.
+
+
+Package natbib Warning: There were multiply defined citations.
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
@@ -1840,7 +1861,7 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
-[7.7] (./main.aux)
+[8.8] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -1851,57 +1872,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 336C320892443009797E13430E3D73F7;2029.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< Updated upstream
- 43256 strings out of 492995
- 788706 string characters out of 6132704
- 957168 words of memory out of 5000000
- 45350 multiletter control sequences out of 15000+600000
- 206476 words of font info for 392 fonts, out of 8000000 for 9000
- 1302 hyphenation exceptions out of 8191
- 60i,13n,94p,10381b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc} </
-Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bbding
-10.540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-
-4.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f
-.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.
-enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local
-/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/local/t
-exlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-I.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLiber
-tineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinL
-ibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine
-/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/fxl
-ri-5letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/fx
-lri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/n
-txsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
-mi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 811901 bytes).
-PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 57503 words of extra memory for PDF output out of 61914 (max. 10000000)
-=======
- 39099 strings out of 478268
- 720193 string characters out of 5846347
- 1129953 words of memory out of 5000000
- 55730 multiletter control sequences out of 15000+600000
- 675531 words of font info for 445 fonts, out of 8000000 for 9000
+ 39109 strings out of 478268
+ 720310 string characters out of 5846347
+ 1123102 words of memory out of 5000000
+ 55734 multiletter control sequences out of 15000+600000
+ 676475 words of font info for 449 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  89i,13n,131p,3241b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -1929,11 +1911,10 @@ e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ne
 wtx/txsys.pfb>
-Output written on main.pdf (7 pages, 739809 bytes).
+Output written on main.pdf (8 pages, 741770 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  103071 words of extra memory for PDF output out of 106986 (max. 10000000)
->>>>>>> Stashed changes
 

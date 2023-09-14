@@ -8,21 +8,21 @@ In this section, we first formally define the two table discovery tasks in a dat
 \noindent\textbf{\underline{Table Join Search.}}
 Suppose that a data lake $\lake$ contains a large set of tables $\lake=\{T_1, T_2, ..., T_N\}$, where each table $T_i, i \in [1,N]$ has $n_i$ rows (tuples), $m_i$ columns (attributes) and each cell value is denoted by $c_{ij}$.  Given a query table $\jqtable$, as well as a specific column $\jqcolumn$ of $\jqtable$, table join search is to find the target tables that can be joined with  $\jqtable$ on $\jqcolumn$.
 %
-Overall, it can be taken as measuring the relevance score between two columns, denoted by $R(\jqcolumn, \tcolumn)$, where   $\tcolumn$ is a column  of a target table $\ttable$. The higher the score, the more likely the two columns can be joined (we can say that the two columns or two tables can be joined interchangebly, \ie $R(\jqcolumn, \tcolumn)$  can also be represented as $R(\jqcolumn, \ttable)$.
-Note that different methods have different criteria to compute the score, like the number of overlaps or semantic similarity.
+Overall, it can be taken as measuring the relevance score between two columns, denoted by $R(\jqcolumn, \tcolumn)$, where   $\tcolumn$ is a column  of a target table $\ttable \in \lake$. The higher the score, the more likely the two columns can be joined (we can say that the two columns or two tables can be joined interchangebly, \ie $R(\jqcolumn, \tcolumn)$  can also be represented as $R(\jqcolumn, \ttable)$.
+Note that different methods have different criteria to compute the score, like the number of overlaps and/or semantic similarity.
  The formal definition is as follows. 
 
 \begin{definition}[Top-$K$ Table Join Search]
-	Given $\lake$, a query table $\qtable$ and the specific column $\qcolumn$, Top-$K$ table join search aims to retrieve a subset $\lake_q \subset \lake$, $|\lake_q|=K$ such that $\forall T \in \lake_q$ and $\forall T' \in T \setminus \lake_q$, $R(\qcolumn, T)>R(\qcolumn, T')$.
+	Given $\lake$, a query table $\jqtable$, the specific column $\jqcolumn$ and a parameter $K$, Top-$K$ table join search aims to retrieve a subset $\lake_q \subset \lake$, $|\lake_q|=K$ such that $\forall T \in \lake_q$ and $\forall T' \in T \setminus \lake_q$, $R(\jqcolumn, T)>R(\jqcolumn, T')$.
 \end{definition}
 
-\noindent \underline{\textit{Remark.}} Given a target table $T_t$, there may exist multiple columns that can be joined with $\qtable$. In this way,  we  take the one with the highest score as the target column, \ie $\tcolumn=\arg\max\limits_{C\in T_t} R(\qcolumn, C)$. Also, we just focus on the single join rather than multiple joins like~\cite{}.
+\noindent \underline{\textit{Remark.}} Given a target table $T_t$, there may exist multiple columns that can be joined with $\qtable$. In this way,  we  take the one with the highest score as the target column, \ie $\jtcolumn=\arg\max\limits_{C\in T_t} R(\jqcolumn, C)$. Also, we just focus on the single join rather than multiple joins like~\cite{}.
 
-\noindent\textbf{\underline{Table Union Search.}} Given a query table $\qtable$,  table union search aims at finding the most top-$K$ unionable tables from the data lake $\lake$. At a high level, the foundation of table union search is still the unionbility of  columns, \ie a pair of unionable tables should have multiple pairs of columns to be unioned. Similar to the table join search, the column unionbility also considers the overlaps and/or semantics between columns. To be specific, given a target table $\ttable$, we can compute the relevance of each pair of columns, \ie   $R(C, C), C \in \qtable, C' \in \ttable$, and then a table-level relevance score can be computed as $R(\qtable, \ttable)$.
+\noindent\textbf{\underline{Table Union Search.}} Given a query table $\qtable$,  table union search aims at finding the most top-$K$ unionable tables from the data lake $\lake$. At a high level,  table union search still highly relies on   the unionbility of  columns, \ie a pair of unionable tables should have multiple pairs of columns that can be unioned. Similar to the table join search, the column unionbility also considers the overlaps and/or semantics between columns. To be specific, given a target table $\ttable$, we can compute the relevance of each pair of columns, \ie   $R(C, C'), C \in \qtable, C' \in \ttable$, and then a table-level relevance score can be computed as $R(\qtable, \ttable)$.
 
 
 \begin{definition}[Top-$K$ Table Union Search]
-	Given $\lake$ and a query table $\qtable$, Top-$K$ table union search aims to retrieve a subset $\lake_q \subset \lake$, $|\lake_q|=K$ such that $\forall T \in \lake_q$ and $\forall T' \in T \setminus \lake_q$, $R(\qtable, T)>R(\qtable, T')$.
+	Given $\lake$ and a query table $\uqtable$, Top-$K$ table union search aims to retrieve a subset $\lake_q \subset \lake$, $|\lake_q|=K$ such that $\forall T \in \lake_q$ and $\forall T' \in T \setminus \lake_q$, $R(\uqtable, T)>R(\uqtable, T')$.
 \end{definition}
 
 
@@ -54,7 +54,10 @@ Mostly,  these vectors can be hash codes~\cite{} (\eg generated by the minhash f
 
 %For instance, both \starmie and \deepjoin leverage the Hierarchical Navigable Small World (HNSW) approach, recognized as one of the most prominent methods in ANN. In contrast, \dlll and \tus employ Locality-Sensitive Hashing (LSH) indexes to enhance search performance. Additionally, inverted indexing is employed in \josie and \santos to effectively handle millions of search scenarios.
 
-\noindent\textbf{Online Table Query Processing.} For the online process, when a user issues a table for the join search, $\qcolumn$ is always first represented as a vector. Then based on the index, a large proportion of columns in the data lake that have low relevance scores with the query are pruned and top-$K$ columns (tables) with high relevance scores are returned. When a table for the union search is issued, different from the join search, every column should be represented as a vector and searched over the index. For each column, top-$K$ columns with high relevance scores are retrieved from the data lake, associated with their tables. Then, we compute the union of all retrieved tables corresponding to all columns of the query table. Next, for each table in the union, the relevance score between it and the query table is computed using techniques like bipartite graph matching. Finally, top-$K$ tables with the highest relevance scores are returned.
+\noindent\textbf{Online Table Query Processing.} For the online process, when a user issues a table $\jqtable$ for the join search, $\jqcolumn$ is always first represented as a vector. Then based on the index, a large proportion of columns in the data lake that have low relevance scores with the query are pruned and top-$K$ columns (tables) with high relevance scores, \ie $R(\jqcolumn, \ttable)$, are returned. When a table $\uqtable$ for the union search is issued, different from the join search, every column should be represented as a vector and searched over the index.
+Suppose that $\uqtable$ has $m$ columns. 
+ For each column $C_i \in \uqtable, i \in [1,m]$, similar to the join search, we retrieve a set of columns with relatively high relevance scores with $C_i$ from the data lake. We use $S_i$ to denote the set of tables that contain the above columns.
+Then, we compute the union of all retrieved tables, \ie $\cup_{i=1}^m C_i$. Next, for each table in the union, the relevance score between it and the query table is computed using techniques like bipartite graph matching. Finally, top-$K$ tables with the highest relevance scores are returned.
 
 
 

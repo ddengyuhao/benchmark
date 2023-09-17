@@ -26,19 +26,22 @@ The benchmark covers a wide range of table discovery characteristics. First, in 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{fig/benchmark.pdf}
-	\caption{Table Discovery in Data Lake.}
-	\label{fig:xx}
+	\caption{Overview of \sys Construction.}
+	\label{fig:benchmark}
 \end{figure}
 
 
 
 \subsection{Benchmark Overview}
+In this subsection, we overview the pipeline of our benchmark design. Overall, as shown in Figure~\ref{fig:benchmark}, we first collect the datasets, then construct queries and generate ground truth for these queries. Finally, we implement various table discovery algorithms, analyze their performance from multiple perspectives, and design easy-to-use APIs.
 
+\noindent\textbf{Datasets.}
+We build 4 data lakes from OpenData~\cite{OpenData} and WebTable~\cite{WebTable}. For each data source, we create a small and large data lake respectively.
 
-\noindent\textbf{Datasets}
-We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable}. 
+For OpenData~\cite{OpenData}, the original dataset contains XX tables, 
 
-\cc{Introduce what here? Should avoid repetition with next Section.}
+For WebTable~\cite{WebTable}, the original dataset contains XX tables, 
+
 
 + Statistics of collected datasets.
 
@@ -49,9 +52,9 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 %Table~\ref{table} summarizes the statistics of collected datasets.
 
 
-\noindent\textbf{Query Generation}
+\noindent\textbf{Query Generation.}
 
-+ Fake tables: split-based. Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
++ Synthetic tables: split-based. Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
 
 + Real tables: retrieved-based. Use real tables as query tables, and directly query the data lake.
 
@@ -66,15 +69,26 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 
 \quad\quad -- Size
 
-\noindent\textbf{Ground Truth Creation}
+\noindent\textbf{Ground Truth Creation.}
 
 + Semi-automatic label: corresponding to fake tables. Some positive results are automatically generated, while others should be manually labeled.
 
 + Manually label: corresponding to real tables.
 
-\noindent\textbf{Method Evaluation} \cc{How to category}
+\noindent\textbf{Method Evaluation.} \cc{How to category}
+
++ \cc{Join/Union}
+
++ \cc{Schema matching}
+
++ Hash-based
+
++ Inverted index 
+
++ Pre-trained language model (HNSW)
 
 
+\noindent\textbf{API Design}
 
     \begin{table*}[t]
         \centering
@@ -147,16 +161,5 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 	\label{symbol_table}
 \end{table*}
 
-+ \cc{Join/Union}
 
-+ \cc{Schema matching}
-
-+ Hash-based
-
-+ Inverted index 
-
-+ Pre-trained language model (HNSW)
-
-
-\noindent\textbf{API Design}
 

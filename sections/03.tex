@@ -76,32 +76,32 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
         \caption{Table Discovery Methods.}
         \begin{tabular}{|c|c|c|c|c|cccc|}
             \hline
-            \multirow{2}{1cm}{\textbf{Methods}} & \multirow{2}{0.6cm}{\textbf{Task}} & \multirow{2}{0.8cm}{\textbf{Index}} & \multirow{2}{1.6cm}{\textbf{Embedding}} &  \multirow{2}{0.4cm}{\textbf{KB}} & \multicolumn{2}{c}{\textbf{Offline Process}} & \multicolumn{2}{c|}{\textbf{Online Process}} \\
-            &&&&&Time Comp.    & Space Comp. & Time Comp. & Space Comp. \\ 
+            \multirow{2}{1cm}{\textbf{Methods}} & \multirow{2}{0.6cm}{\textbf{Task}} & \multirow{2}{0.8cm}{\textbf{Index}} & \multirow{2}{1.6cm}{\textbf{Embedding}} & \multicolumn{2}{c}{\textbf{Offline Process}} & \multicolumn{2}{c|}{\textbf{Online Process}} \\
+            &&&&Time Comp.    & Space Comp. & Time Comp. & Space Comp. \\ 
             \hline
-            \josie~\cite{Josie} & J & Inv. index & \XSolidBrush & \XSolidBrush   & O$(\cellvaluenum + \rawtokennum \log \rawtokennum)$         & O$(\rawtokennum)$                   & O$(\positinglistlen log \positinglistlen)$         & O$(\positinglistlen)$    \\
+            \josie~\cite{Josie} & J & Inv. index & \XSolidBrush  & O$(\cellvaluenum + \rawtokennum \log \rawtokennum)$         & O$(\rawtokennum)$                   & O$(\positinglistlen log \positinglistlen)$         & O$(\positinglistlen)$    \\
             \hline
-            \lsh~\cite{LshEn} & J & LSH & \XSolidBrush & \XSolidBrush & O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$  \\
+            \lsh~\cite{LshEn} & J & LSH & \XSolidBrush& O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$  \\
             \hline
-            \pex~\cite{Pexeso} & J &  Inv. index& \Checkmark & \XSolidBrush  & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\querycellvalue + \log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$     \\
+            \pex~\cite{Pexeso} & J &  Inv. index& \Checkmark  & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\querycellvalue + \log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$     \\
             \hline
-            \deepjoin~\cite{DeepJoin} & J & HNSW & \Checkmark & \XSolidBrush & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$  \\
+            \deepjoin~\cite{DeepJoin} & J & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$  \\
             \hline
-             \tus~\cite{TUS} & U & LSH & \Checkmark  & \Checkmark & O$(\cellvaluenum + \columnnum)$         & O$(\columnnum \times \minhashlen)$    & O$(\querycolumnnum)$               &  O$(\querycolumnnum \times \minhashlen)$     \\
+             \tus~\cite{TUS} & U & LSH & \Checkmark  & O$(\cellvaluenum + \columnnum)$         & O$(\columnnum \times \minhashlen)$    & O$(\querycolumnnum)$               &  O$(\querycolumnnum \times \minhashlen)$     \\
             \hline
-            \dlll~\cite{D3L} & U & LSH & \Checkmark& \XSolidBrush & O$(\cellvaluenum + \columnnum)$          & O$(\columnnum)$                   & O$(\querycolumnnum \times \dlllneighbornnum)$                & O($\querycolumnnum$)      \\
+            \dlll~\cite{D3L} & U & LSH & \Checkmark& O$(\cellvaluenum + \columnnum)$          & O$(\columnnum)$                   & O$(\querycolumnnum \times \dlllneighbornnum)$                & O($\querycolumnnum$)      \\
             \hline
-            \starmie~\cite{Starmie} & U & HNSW & \Checkmark & \XSolidBrush& O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
+            \starmie~\cite{Starmie} & U & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
             \hline
-            \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & \Checkmark & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum {\averagetargetcolumnnum}^2)$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
+            \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum {\averagetargetcolumnnum}^2)$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
             \hline
-            \frt~\cite{Frt12} & J \& U & \XSolidBrush & \XSolidBrush & \Checkmark&  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
+            \frt~\cite{Frt12} & J \& U & \XSolidBrush & \XSolidBrush &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
             \hline
-            \infogather~\cite{InfoGather} & J \& U & Inv. index & \XSolidBrush & \XSolidBrush& O$(\columnnum^2)$          & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum )$   \\
+            \infogather~\cite{InfoGather} & J \& U & Inv. index & \XSolidBrush & O$(\columnnum^2)$   & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum )$   \\
             \hline
-            \aurum~\cite{Aurum} & J \& U & LSH & \Checkmark & \XSolidBrush  \\
+            \aurum~\cite{Aurum} & J \& U & LSH & \Checkmark  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
             \hline
-            Pretrain-based Method~\cite{} & U & HNSW & \Checkmark & \XSolidBrush  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
+            Pretrain-based Method~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
             \hline
         \end{tabular}
         \label{table:methods}
@@ -114,13 +114,13 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 	\begin{tabular}{cc}
 		\hline
 		Symbol & Meaning \\ \hline
-		$\mathcal{B}$ & Number of columns in the query table$\qtable$  \\
-		$\mathcal{N}$ &The total number of columns in all tables in the data lake$\lake$ \\
-		$\mathcal{K}$ & The number of non-distinct cell values in all tables in the data lake$\lake$   \\
-		$\mathcal{R}$ &The number of distinct cell values in all tables in the data lak$\lake$e \\
-		$\mid \mathcal{T} \mid$ & Number of tables in the data lake$\lake$  \\
-		$\mathcal{X}$ &The total number of tuples in all tables in the data lake$\lake$ \\
-		$\mathcal{A}$ & The number of non-distinct cell values in query table$\qtable$  \\
+		$\mathcal{B}$ & Number of columns in the query table $\qtable$  \\
+		$\mathcal{N}$ &The total number of columns in all tables in the data lake $\lake$ \\
+		$\mathcal{K}$ & The number of non-distinct cell values in all tables in the data lake $\lake$   \\
+		$\mathcal{R}$ &The number of distinct cell values in all tables in the data lake $\lake$ \\
+		$\mid \mathcal{T} \mid$ & Number of tables in the data lake $\lake$  \\
+		$\mathcal{X}$ &The total number of tuples in all tables in the data lake $\lake$ \\
+		$\mathcal{A}$ & The number of non-distinct cell values in query table $\qtable$  \\
 		
 		$\mathcal{L}$ & The length of positing list in \josie  \\
 		$\mathcal{H}$ & The dimension of minhash vector \\
@@ -133,9 +133,11 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 
 %fake方法造query：就是先选一个行和列都比较多的大表，然后随机选择num列（num为随机数），并且打乱这些列的顺序，再添加了一列随机数；竖着切成几个小表之后，再随机选择num行（num为随机数），并且打乱这些行的顺序，同时，选择横着切表之前的1/4行作为切完之后各个小表之间的overlap。
 
-%不fake方法造query：
+%不fake方法造query：随机抽选一些候选表出来，然后再人工抽取一些人能识别出来表格主题的表（方便后续ground truth的标注）
 
+%fake方法定ground truth: 首先，竖着切之后，判断各个小表有没有属性重复，有的话，两个表之间视为可以join。除此之外，横着切生成的不同小表，由于它们之间一定会有overlap和属性重复，所以两两之间视为可union
 
+%不fake方法定ground truth：根据不fake的方法造出来的query，利用一些简单的相似性判断捞出一些候选表，再进行人工标注
 
 	
 	\end{tabular}

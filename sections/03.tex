@@ -62,7 +62,11 @@ These small tables are then put into the data lake and they can also serve as qu
 %Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.  
 
 
-\noindent\textbf{Ground Truth Generation.} Due to different query construction methods, the ways of ground truth generation are different.  In Figure~\ref{fig:benchmark}, for real queries, 
+\noindent\textbf{Ground Truth Generation.} For different query construction methods, the ways of ground truth (GT) generation are different, as shown in Figure~\ref{fig:benchmark}
+
+ \noindent \underline{\textit{GT generation for real queries.}} An ideal ground truth generation method is that for each of queries, we ask the humans to label whether all tables in $\lake$ can be join/union with the query, which is prohibitively expensive. A natural solution is to leverage a rough search  method to retrieve a number of candidate tables that have a relatively high relevance with the query table, \ie a high recall, and then ask the humans to manually check these candidates.
+ 
+  \noindent \underline{\textit{GT generation for synthetic queries.}} 
 
 
 
@@ -81,9 +85,6 @@ These small tables are then put into the data lake and they can also serve as qu
 \noindent\textbf{Ground Truth Creation.}
 \fi
 
-+ Semi-automatic label: corresponding to fake tables. Some positive results are automatically generated, while others should be manually labeled.
-
-+ Manually label: corresponding to real tables.
 
 \noindent\textbf{Method Evaluation.} 
 

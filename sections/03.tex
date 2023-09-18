@@ -52,13 +52,17 @@ For WebTable~\cite{WebTable}, the original dataset contains XX tables,
 %Table~\ref{table} summarizes the statistics of collected datasets.
 
 
-\noindent\textbf{Query Generation.}
+\noindent\textbf{Query Construction.} We use two methods to construct join \& union search queries.
 
-+ Synthetic tables: split-based. Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
+\noindent \underline{\textit{Real queries.}}  A direct way is to use real tables  as queries, so we  extract  $Q\subset \lake$ as a set of queries. However, in real scenarios, the table search results are likely to be sparse, so in previous benchmarks, they construct  synthetic queries based on big tables, and we conduct this in a similar way as follows.
 
-+ Real tables: retrieved-based. Use real tables as query tables, and directly query the data lake.
+\noindent \underline{\textit{Synthetic queries.}} 
+Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
 
 
+
+
+\iffalse
 + Classify: 
 
 \quad\quad -- Column type (string, number, category)
@@ -70,12 +74,15 @@ For WebTable~\cite{WebTable}, the original dataset contains XX tables,
 \quad\quad -- Size
 
 \noindent\textbf{Ground Truth Creation.}
+\fi
 
 + Semi-automatic label: corresponding to fake tables. Some positive results are automatically generated, while others should be manually labeled.
 
 + Manually label: corresponding to real tables.
 
-\noindent\textbf{Method Evaluation.} \cc{How to category}
+\noindent\textbf{Method Evaluation.} 
+
+\cc{How to category}
 
 + \cc{Join/Union}
 

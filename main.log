@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  17 SEP 2023 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  18 SEP 2023 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2006,22 +2006,17 @@ build 4 data lakes from Open-Data [[]] and
  []
 
 [4.4 <./fig/framework.pdf> <./fig/benchmark.pdf>]
-Overfull \hbox (6.74619pt too wide) in paragraph at lines 98--98
+Overfull \hbox (6.74619pt too wide) in paragraph at lines 105--105
 []|\T1/LinuxLibertineT-TLF/b/n/9 Methods|  
  []
 
 
-Overfull \hbox (2.26913pt too wide) in paragraph at lines 98--98
+Overfull \hbox (2.26913pt too wide) in paragraph at lines 105--105
 []|\T1/LinuxLibertineT-TLF/b/n/9 Task|  
  []
 
 
-Overfull \hbox (1.12907pt too wide) in paragraph at lines 98--98
-[]|\T1/LinuxLibertineT-TLF/b/n/9 KB|  
- []
-
-
-Overfull \hbox (27.66626pt too wide) in paragraph at lines 96--127
+Overfull \hbox (5.88535pt too wide) in paragraph at lines 103--134
  [][] 
  []
 
@@ -2033,7 +2028,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
-[6.6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6.6]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 )
@@ -2111,7 +2108,7 @@ newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 903713 bytes).
+Output written on main.pdf (7 pages, 904117 bytes).
 PDF statistics:
  389 PDF objects out of 1000 (max. 8388607)
  299 compressed objects within 3 object streams

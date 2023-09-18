@@ -62,11 +62,13 @@ These small tables are then put into the data lake and they can also serve as qu
 %Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.  
 
 
-\noindent\textbf{Ground Truth Generation.} For different query construction methods, the ways of ground truth (GT) generation are different, as shown in Figure~\ref{fig:benchmark}
+\noindent\textbf{Ground Truth Generation.} For different query construction methods, the ways of ground truth (GT) generation are different, as shown in Figure~\ref{fig:benchmark}.
 
  \noindent \underline{\textit{GT generation for real queries.}} An ideal ground truth generation method is that for each of queries, we ask the humans to label whether all tables in $\lake$ can be join/union with the query, which is prohibitively expensive. A natural solution is to leverage a rough search  method to retrieve a number of candidate tables that have a relatively high relevance with the query table, \ie a high recall, and then ask the humans to manually check these candidates.
  
-  \noindent \underline{\textit{GT generation for synthetic queries.}} 
+ \noindent \underline{\textit{GT generation for synthetic queries.}} We can see from  Figure~\ref{fig:benchmark} that the ground truth of synthetic queries consists of two parts. 
+ On the one hand, since each synthetic query is obtained by splitting from a big table, there exist multiple tables splitted from the same table that are joinable/unionable with the query. 
+  On the other hand, very likely, there  still exist joinable/unionable tables in $\lake$ besides the above  splitted ones.  Therefore, we leverage the above method for  real queries to label more ground truth via humans.
 
 
 
@@ -101,7 +103,7 @@ These small tables are then put into the data lake and they can also serve as qu
 + Pre-trained language model (HNSW)
 
 
-\noindent\textbf{API Design}
+\noindent\textbf{API Design.}
 
     \begin{table*}[t]
         \centering

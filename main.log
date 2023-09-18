@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  18 SEP 2023 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  18 SEP 2023 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2006,31 +2006,37 @@ build 4 data lakes from Open-Data [[]] and
  []
 
 [4.4 <./fig/framework.pdf> <./fig/benchmark.pdf>]
-Overfull \hbox (6.74619pt too wide) in paragraph at lines 105--105
+Overfull \hbox (6.74619pt too wide) in paragraph at lines 110--110
 []|\T1/LinuxLibertineT-TLF/b/n/9 Methods|  
  []
 
 
-Overfull \hbox (2.26913pt too wide) in paragraph at lines 105--105
+Overfull \hbox (2.26913pt too wide) in paragraph at lines 110--110
 []|\T1/LinuxLibertineT-TLF/b/n/9 Task|  
  []
 
 
-Overfull \hbox (5.88535pt too wide) in paragraph at lines 103--134
+Overfull \hbox (5.88535pt too wide) in paragraph at lines 108--139
  [][] 
  []
 
 ) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [5.5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6.6]
+ [6.6])
+(./sections/07.tex) (./sections/08.tex) (./sections/09.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 )
@@ -2046,11 +2052,7 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
-
-Overfull \vbox (1.03899pt too high) has occurred while \output is active []
-
 Package atenddvi Info: Last page = 7.
-
 [7.7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
@@ -2074,11 +2076,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  43274 strings out of 492995
  789000 string characters out of 6132704
- 959252 words of memory out of 5000000
+ 959105 words of memory out of 5000000
  45364 multiletter control sequences out of 15000+600000
  206780 words of font info for 393 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,94p,10381b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,94p,10381b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
 usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc} </Use
@@ -2108,10 +2110,10 @@ newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 904117 bytes).
+Output written on main.pdf (7 pages, 904844 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
+ 392 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
  54 named destinations out of 1000 (max. 500000)
  58020 words of extra memory for PDF output out of 61914 (max. 10000000)
 

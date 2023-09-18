@@ -54,10 +54,15 @@ For WebTable~\cite{WebTable}, the original dataset contains XX tables,
 
 \noindent\textbf{Query Construction.} We use two methods to construct join \& union search queries.
 
-\noindent \underline{\textit{Real queries.}}  A direct way is to use real tables  as queries, so we  extract  $Q\subset \lake$ as a set of queries. However, in real scenarios, the table search results are likely to be sparse, so in previous benchmarks, they construct  synthetic queries based on big tables, and we conduct this in a similar way as follows.
+\noindent \underline{\textit{Real queries.}}  A direct way  is to use real tables  as queries, so we  extract  $Q\subset \lake$ as a set of queries. However, in real scenarios, the table search results are likely to be sparse, so in all previous benchmarks, they construct synthetic queries based on big tables, and we conduct this in a similar way as follows.
 
-\noindent \underline{\textit{Synthetic queries.}} 
-Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
+\noindent \underline{\textit{Synthetic queries.}} The basic idea is to split large tables into multiple small ones. As shown in Figure~\ref{fig:benchmark}, generally, we split from two perspectives, namely row-level and column-level splitting. 
+Basically, row-level splitting mainly generates unionable tables, while column-level splitting mostly generates joinable tables.
+These small tables are then put into the data lake and they can also serve as queries.
+%Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.  
+
+
+\noindent\textbf{Ground Truth Generation.} Due to different query construction methods, the ways of ground truth generation are different.  In Figure~\ref{fig:benchmark}, for real queries, 
 
 
 

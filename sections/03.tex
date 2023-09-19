@@ -44,13 +44,13 @@ In this subsection, we overview the pipeline of our benchmark design. Overall, a
 		\centering
 		Data Lake  & \#-Tables & $\#$-Columns & Max/Min/Avg Col. No. & Max/Min/Avg Row No. & Size (GB)  \\
 		\hline  
-		OpenData Small& XX  & XX & XX  & XX  & XX   \\
+		OpenData Small& 6374  & 104,992 & 514/3/16.5  &  10,250,220/5/54,454.3  & 100.03GB  \\
 		\hline
-		OpenData Large& XX  & XX & XX  & XX  & XX  \\
+		OpenData Large& 64,793  & 1,385,149  & 6304/3/21.4   & 66,407,950/5/130,018.3  & 1.08TB   \\
 		\hline
-		WebTable Small& XX  & XX & XX  & XX  & XX \\
+		WebTable Small& 2,772,825   & 17,929,497 & 25/3/6.5  & 16,908/5/23.0  &13.01GB \\
 		\hline
-		WebTable Large& XX  & XX & XX  & XX  & XX  \\
+		WebTable Large& 16,684,293  & 107,891,225 & 25/3/9.5  & 16,908/5/25.5   & 77.05G  \\
 		\hline
 	\end{tabular}
 	\label{Table:datasets}
@@ -58,18 +58,11 @@ In this subsection, we overview the pipeline of our benchmark design. Overall, a
 \end{table*}
 
 \noindent\textbf{Datasets.}
-We build 4 data lakes from OpenData~\cite{OpenData} and WebTable~\cite{WebTable}. For each data source, we create a small and large data lake respectively.
+We build 4 data lakes from OpenData~\cite{OpenData} and WebTable~\cite{WebTable}. For each data source, we create a small and large data lake respectively. The statistics of them are shown in Table~\ref{Table:datasets}.
+For OpenData~\cite{OpenData}, we extract 70,546 tables from \cc{XXX}, including the union of \cc{XX}, \cc{XX} and \cc{XX}. The characteristic of OpenData is that it contains large tables with numerous rows. 
+For WebTable~\cite{WebTable}, the original dataset contains 27,783,441 tables, from which we extract 50\% into the data lake. The characteristic of WebTable is that it contains a large number of small tables, and thus the total number of columns is very large. As a pre-processing, we remove some very small tables (row number $<5$ or column number $<3$) and remove the columns with larger then 50\% NULL values. Finally, we obtain the OpenData Large and WebTable Large, from which we randomly sample 10\% as OpenData Small and WebTable Small, as shown in Table~\ref{Table:datasets}.
 
-For OpenData~\cite{OpenData}, the original dataset contains XX tables, 
-
-For WebTable~\cite{WebTable}, the original dataset contains XX tables, 
-
-
-+ Statistics of collected datasets.
-
-+ Clean the datasets.
-
-+ Remove sth.
+%after adding the small tables or before ??
 
 %Table~\ref{table} summarizes the statistics of collected datasets.
 

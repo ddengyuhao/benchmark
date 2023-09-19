@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  19 SEP 2023 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  19 SEP 2023 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2000,29 +2000,30 @@ Package microtype Info: Character `textemdash ' is missing
 Class acmart Warning: A possible image without description on input line 31.
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 60--62
+Underfull \hbox (badness 3601) in paragraph at lines 60--64
 \T1/LinuxLibertineT-TLF/b/n/9 Datasets. \T1/LinuxLibertineT-TLF/m/n/9 (+20) We 
 build 4 data lakes from Open-Data [[]] and
  []
 
 [4.4 <./fig/framework.pdf> <./fig/benchmark.pdf>]
-Overfull \hbox (6.74619pt too wide) in paragraph at lines 135--135
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (6.74619pt too wide) in paragraph at lines 128--128
 []|\T1/LinuxLibertineT-TLF/b/n/9 Methods|  
  []
 
 
-Overfull \hbox (2.26913pt too wide) in paragraph at lines 135--135
+Overfull \hbox (2.26913pt too wide) in paragraph at lines 128--128
 []|\T1/LinuxLibertineT-TLF/b/n/9 Task|  
  []
 
 
-Overfull \hbox (5.88535pt too wide) in paragraph at lines 133--164
+Overfull \hbox (5.88535pt too wide) in paragraph at lines 126--157
  [][] 
  []
 
 ) (./sections/04.tex) (./sections/05.tex) (./sections/06.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
  [5.5]
@@ -2074,11 +2075,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43276 strings out of 492995
- 789032 string characters out of 6132704
+ 43277 strings out of 492995
+ 789062 string characters out of 6132704
  959307 words of memory out of 5000000
  45365 multiletter control sequences out of 15000+600000
- 206780 words of font info for 393 fonts, out of 8000000 for 9000
+ 206894 words of font info for 394 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,13n,94p,10381b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -2110,10 +2111,10 @@ newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (7 pages, 906383 bytes).
+Output written on main.pdf (7 pages, 907914 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
+ 397 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  55 named destinations out of 1000 (max. 500000)
  58020 words of extra memory for PDF output out of 61914 (max. 10000000)
 

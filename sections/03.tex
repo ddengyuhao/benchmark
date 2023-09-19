@@ -35,6 +35,28 @@ The benchmark covers a wide range of table discovery characteristics. First, in 
 \subsection{Benchmark Overview}
 In this subsection, we overview the pipeline of our benchmark design. Overall, as shown in Figure~\ref{fig:benchmark}, we first collect the datasets, then construct queries and generate ground truth for these queries. Finally, we implement various table discovery algorithms, analyze their performance from multiple perspectives, and design easy-to-use APIs.
 
+
+\begin{table*}[t]
+	\centering
+	\caption{Statistics of Data Lakes.}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\centering
+		Data Lake  & \#-Tables & $\#$-Columns & Max/Min/Avg Col. No. & Max/Min/Avg Row No. & Size (GB)  \\
+		\hline  
+		OpenData Small& XX  & XX & XX  & XX  & XX   \\
+		\hline
+		OpenData Large& XX  & XX & XX  & XX  & XX  \\
+		\hline
+		WebTable Small& XX  & XX & XX  & XX  & XX \\
+		\hline
+		WebTable Large& XX  & XX & XX  & XX  & XX  \\
+		\hline
+	\end{tabular}
+	\label{Table:datasets}
+	
+\end{table*}
+
 \noindent\textbf{Datasets.}
 We build 4 data lakes from OpenData~\cite{OpenData} and WebTable~\cite{WebTable}. For each data source, we create a small and large data lake respectively.
 

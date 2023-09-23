@@ -1,9 +1,31 @@
 %!TEX root = ../main.tex
 \section{Related Work}
-XX
+In this Section, we first introduce existing  benchmarks in details. Then we discuss other table discovery tasks  (including keyword-based search and table QA) besides join\& union search. Finally, we introduce how to leverage table discovery to improve the ML model performance, which the most widely-used downstream task of table discovery. 
 
-+ Benchmark.
+\noindent \textbf{Existing benchmarks.} 
+TUS~\cite{TUS} first builds a benchmark for table union search, which contains around 5,000 tables (from OpenData) in the data lake, among which 1,000 queries are selected as query tables with ground truth. 
+%
+Santos~\cite{Santos} improves the TUS benchmark by additionally labeling column-to-column relations to consider more semantics, but it is just for table union search with around 10,100 data lake tables and 80 query tables.
+%
+Josie~\cite{Josie} is a join search benchmark that uses two data lakes. One is the same with TUS, and the other is sampled from the Web Table, with 1,000 query columns respectively. 
+%
+Valentine~\cite{valentine} evaluates multiple schema matching techniques to solve table discovery tasks, using several hundreds of tables to match pairs of tables. 
+%
+A recent Arxiv work~\cite{arxiv} focuses on evaluating table pretraining methods for table
+ discovery tasks, with the goal of improve downstream machine learning tasks. 
+%
+\cc{LLM}
 
-+ Other discovery tasks. Keyword, Open Domain Table QA
+\noindent \textbf{Table discovery tasks.}
 
-+ Data discovery for ML.
++ Keyword
+
++ Table QA
+
+
+\noindent \textbf{Table discovery for ML.}
+To address the data scarcity problem, recently, researchers have studied to acquire data from external resources (\eg data lake, web) to enrich the training set, so as to improve the model performance. At a high level, for tabular data, existing methods can be categorized into enriching features and tuples.
+For enriching features, existing studies~\cite{DBLP:conf/icde/LiuCLLFT22,
+	DBLP:journals/pvldb/ChepurkoMZFKK20,
+	DBLP:conf/sigmod/KumarNPZ16} takes as input the training table, and searches other tables that can join with the table and improve the model performance from a data lake, which is a different problem from us.
+For enriching tuples, Li et al.~\cite{DBLP:conf/icml/YoonAP20} focuses on searching tuples through querying data markets, but it assumes that the acquired data has the same distribution with current training set, which is hard to guarantee in practice. Yoon et al.~\cite{DBLP:journals/pvldb/LiYK21} propose a data evaluation framework to assign a score for each training sample. The higher the score, the more likely this sample will be added into the training set.  However, the added training samples are also available in advance and homogeneous with the training set. Different from the above works, Autodata~\ref{DBLP:journals/pvldb/ChaiLTLL22} focuses on selecting data that can benefit the downstream ML tasks from heterogeneous resources \cc{using reinforcement learning}. However, all  above works have to rely on external resources to enrich new training data, but our method can automatically generate new data without the help of other resources.

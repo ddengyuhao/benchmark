@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  23 SEP 2023 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  23 SEP 2023 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2042,11 +2042,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [6.6])
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex
 
-Package natbib Warning: Citation `arxiv' on page 7 undefined on input line 14.
+Package natbib Warning: Citation `arxiv' on page 7 undefined on input line 16.
+
+
+Package natbib Warning: Citation `arxiv' on page 7 undefined on input line 19.
 
 
 LaTeX Warning: Reference `DBLP:journals/pvldb/ChaiLTLL22' on page 7 undefined o
-n input line 31.
+n input line 33.
 
 ) [7.7] (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
@@ -2057,7 +2060,7 @@ LaTeX Info: Redefining \tempurl on input line 192.
 LaTeX Info: Redefining \tempurl on input line 208.
 LaTeX Info: Redefining \tempurl on input line 269.
 
-Underfull \vbox (badness 1365) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 
@@ -2134,7 +2137,7 @@ newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (8 pages, 913409 bytes).
+Output written on main.pdf (8 pages, 913228 bytes).
 PDF statistics:
  434 PDF objects out of 1000 (max. 8388607)
  342 compressed objects within 4 object streams

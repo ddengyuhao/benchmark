@@ -2,10 +2,12 @@
 \section{Related Work}
 In this Section, we first introduce existing  benchmarks in details. Then we discuss other table discovery tasks  (including keyword-based search and table QA) besides join\& union search. Finally, we introduce how to leverage table discovery to improve the ML model performance, which the most widely-used downstream task of table discovery. 
 
+
+
 \noindent \textbf{Existing benchmarks.} 
-TUS~\cite{TUS} first builds a benchmark for table union search, which contains around 5,000 tables (from OpenData) in the data lake, among which 1,000 queries are selected as query tables with ground truth. 
+TUS~\cite{TUS} is the  first benchmark for table union search, which contains around 5,000 tables from OpenData. They construct 1,000 queries  as query tables with ground truth, all of which are synthetic queries obtained through splitting large tables. 
 %
-Santos~\cite{Santos} improves the TUS benchmark by additionally labeling column-to-column relations to consider more semantics, but it is just for table union search with around 10,100 data lake tables and 80 query tables.
+Santos~\cite{Santos} improves the TUS benchmark by additionally labeling column-to-column relations to consider more semantics, but it is just for table union search with around 10,100 data lake tables and 80 query tables. 
 %
 Josie~\cite{Josie} is a join search benchmark that uses two data lakes. One is the same with TUS, and the other is sampled from the Web Table, with 1,000 query columns respectively. 
 %
@@ -14,7 +16,7 @@ Valentine~\cite{valentine} evaluates multiple schema matching techniques to solv
 A recent Arxiv work~\cite{arxiv} focuses on evaluating table pretraining methods for table
  discovery tasks, with the goal of improve downstream machine learning tasks. 
 %
-\cc{LLM}
+Another Arxiv work~\cite{arxiv} leverages the large language model to build a benchmark for table union search.
 
 \noindent \textbf{Table discovery tasks.}
 

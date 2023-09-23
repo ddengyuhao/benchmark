@@ -155,7 +155,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
             \hline
             \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum {\averagetargetcolumnnum}^2)$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
             \hline
-            \frt~\cite{Frt12} & J \& U & \XSolidBrush & \XSolidBrush &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
+            \frt~\cite{Frt12} & J \& U & N/A & \XSolidBrush &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
             \hline
             \infogather~\cite{InfoGather} & J \& U & Inv. index & \XSolidBrush & O$(\columnnum^2)$   & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum )$   \\
             \hline

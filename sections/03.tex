@@ -26,36 +26,69 @@ The benchmark covers a wide range of table discovery characteristics. First, in 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{fig/benchmark.pdf}
-	\caption{Table Discovery in Data Lake.}
-	\label{fig:xx}
+	\caption{Overview of \sys Construction.}
+	\label{fig:benchmark}
 \end{figure}
 
 
 
 \subsection{Benchmark Overview}
+In this subsection, we overview the pipeline of our benchmark design. Overall, as shown in Figure~\ref{fig:benchmark}, we first collect the datasets, then construct queries and generate ground truth for these queries. Finally, we implement various table discovery algorithms, analyze their performance from multiple perspectives, and design easy-to-use APIs.
 
 
-\noindent\textbf{Datasets}
-We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable}. 
+\begin{table*}[t]
+	\centering
+	\caption{Statistics of Data Lakes.}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\centering
+		Data Lake  & \#-Tables & $\#$-Columns & Max/Min/Avg Col. No. & Max/Min/Avg Row No. & Size (GB)  \\
+		\hline  
+		OpenData Small& 6374  & 104,992 & 514/3/16.5  &  10,250,220/5/54,454.3  & 100.03GB  \\
+		\hline
+		OpenData Large& 64,793  & 1,385,149  & 6304/3/21.4   & 66,407,950/5/130,018.3  & 1.08TB   \\
+		\hline
+		WebTable Small& 2,772,825   & 17,929,497 & 25/3/6.5  & 16,908/5/23.0  &13.01GB \\
+		\hline
+		WebTable Large& 16,684,293  & 107,891,225 & 25/3/6.8  & 16,908/5/23.5   & 77.05G  \\
+		\hline
+	\end{tabular}
+	\label{Table:datasets}
+	
+\end{table*}
 
-\cc{Introduce what here? Should avoid repetition with next Section.}
+\noindent\textbf{Datasets.}
+We build 4 data lakes from OpenData~\cite{OpenData} and WebTable~\cite{WebTable}. For each data source, we create a small and large data lake respectively. The statistics of them are shown in Table~\ref{Table:datasets}.
+For OpenData~\cite{OpenData}, we extract 70,546 tables from \cc{XXX}, including the union of \cc{XX}, \cc{XX} and \cc{XX}. The characteristic of OpenData is that it contains large tables with numerous rows. 
+For WebTable~\cite{WebTable}, the original dataset contains 27,783,441 tables, from which we extract 50\% into the data lake. The characteristic of WebTable is that it contains a large number of small tables, and thus the total number of columns is very large. As a pre-processing, we remove some very small tables (row number $<5$ or column number $<3$) and remove the columns with larger then 50\% NULL values. Finally, we obtain the OpenData Large and WebTable Large, from which we randomly sample 10\% as OpenData Small and WebTable Small, as shown in Table~\ref{Table:datasets}.
 
-+ Statistics of collected datasets.
-
-+ Clean the datasets.
-
-+ Remove sth.
+%after adding the small tables or before ??
 
 %Table~\ref{table} summarizes the statistics of collected datasets.
 
 
-\noindent\textbf{Query Generation}
+\noindent\textbf{Query Construction.} We use two methods to construct join \& union search queries.
 
-+ Fake tables: split-based. Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.
+\noindent \underline{\textit{Real queries.}}  A direct way  is to use real tables  as queries, so we  extract  $Q\subset \lake$ as a set of queries. However, in real scenarios, the table search results are likely to be sparse, so in all previous benchmarks, they construct synthetic queries based on big tables, and we conduct this in a similar way as follows.
 
-+ Real tables: retrieved-based. Use real tables as query tables, and directly query the data lake.
+\noindent \underline{\textit{Synthetic queries.}} The basic idea is to split large tables into multiple small ones. As shown in Figure~\ref{fig:benchmark}, generally, we split from two perspectives, namely row-level and column-level splitting. 
+Basically, row-level splitting mainly generates unionable tables, while column-level splitting mostly generates joinable tables.
+These small tables are then put into the data lake and they can also serve as queries.
+%Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.  
 
 
+\noindent\textbf{Ground Truth Generation.} For different query construction methods, the ways of ground truth (GT) generation are different, as shown in Figure~\ref{fig:benchmark}.
+
+ \noindent \underline{\textit{GT generation for real queries.}} An ideal ground truth generation method is that for each of queries, we ask the humans to label whether all tables in $\lake$ can be join/union with the query, which is prohibitively expensive. A natural solution is to leverage a rough search  method to retrieve a number of candidate tables that have a relatively high relevance with the query table, \ie a high recall, and then ask the humans to manually check these candidates.
+ 
+ \noindent \underline{\textit{GT generation for synthetic queries.}} We can see from  Figure~\ref{fig:benchmark} that the ground truth of synthetic queries consists of two parts. 
+ On the one hand, since each synthetic query is obtained by splitting from a big table, there exist multiple tables splitted from the same table that are joinable/unionable with the query. 
+  On the other hand, very likely, there  still exist joinable/unionable tables in $\lake$ besides the above  splitted ones.  Therefore, we leverage the above method for  real queries to label more ground truth via humans.
+
+
+
+
+\iffalse
 + Classify: 
 
 \quad\quad -- Column type (string, number, category)
@@ -66,15 +99,37 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 
 \quad\quad -- Size
 
-\noindent\textbf{Ground Truth Creation}
-
-+ Semi-automatic label: corresponding to fake tables. Some positive results are automatically generated, while others should be manually labeled.
-
-+ Manually label: corresponding to real tables.
-
-\noindent\textbf{Method Evaluation} \cc{How to category}
+\noindent\textbf{Ground Truth Creation.}
+\fi
 
 
+\noindent\textbf{Method Evaluation \& Analysis.} 
+Given the data lakes, queries and ground truth, we next compare the performance of different table discovery approaches about the effectiveness and efficiency. Overall, in terms of the downstream task, we categorize existing methods based on supporting join, union or join\&union search. In each category, different methods adopt different column representation and index construction methods, which also lead to different online query methods, with different performance on effectiveness and efficiency. Furthermore, \cc{how to summarize the query categories???}
+%but they can support each other by slightly modifying. To support our query-candidate category, we have to apply Starmie (for union) to the join scenario.
+
++ Query Category: real/synthetic, long/short, String/Category/Numerical
+
++ Query-Candidate Category: Join(overlap, semantic), Union(overlap, semantic)
+
+
+\iffalse
+\cc{How to category}
+
++ \cc{Join/Union}
+
++ \cc{Schema matching}
+
++ Hash-based
+
++ Inverted index 
+
++ Pre-trained language model (HNSW)
+
+
+\fi
+
+
+\noindent\textbf{API Design.}
 
     \begin{table*}[t]
         \centering
@@ -106,7 +161,7 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
             \hline
             \aurum~\cite{Aurum} & J \& U & LSH & \Checkmark  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
             \hline
-            Pretrain-based Method~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
+            Pretrain-based~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
             \hline
         \end{tabular}
         \label{table:methods}
@@ -149,16 +204,5 @@ We collect three datasets from OpenData~\cite{OpenData}, WebTable~\cite{WebTable
 	\label{symbol_table}
 \end{table*}
 
-+ \cc{Join/Union}
 
-+ \cc{Schema matching}
-
-+ Hash-based
-
-+ Inverted index 
-
-+ Pre-trained language model (HNSW)
-
-
-\noindent\textbf{API Design}
 

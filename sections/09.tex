@@ -1,2 +1,38 @@
 %!TEX root = ../main.tex
 \section{Related Work}
+In this Section, we first introduce existing  benchmarks in details. Then we discuss other table discovery tasks  (including keyword-based search and table QA) besides join\& union search. Finally, we introduce how to leverage table discovery to improve the ML model performance, which the most widely-used downstream task of table discovery. 
+
+
+
+\noindent \textbf{Existing benchmarks.} 
+TUS~\cite{TUS} is the first benchmark for table union search, which contains around 5,000 tables from OpenData. They construct 1,000 queries  as query tables with ground truth, all of which are synthetic queries obtained through splitting large tables. Besides the benchmark, this work mainly focuses on defining the table union search problem and proposes an LSH-based  solution to solve the problem.
+%
+Santos~\cite{Santos} improves the table union search strategy by considering the relations between columns, so it improves the  TUS benchmark by additionally labeling column-to-column relations. However, the data lake scale (10,100  lake tables) and number of queries (80 queries) are still relatively small. 
+%
+Josie~\cite{Josie} includes a join search benchmark that uses two data lakes. One is the same with TUS, and the other is sampled from the Web Table, with 1,000 query columns respectively. However, it only considers the table join search and just evaluates the efficiency, because Josie  considers the exact overlap as the join condition without taking any semantics into account. 
+%
+Comparing with the above works, \sys is a benchmark that supports both join and union search with large scale data lake, various queries and sufficient analysis in term of the efficacy.
+%
+Valentine~\cite{valentine} focuses on evaluating multiple schema matching techniques to solve table discovery tasks. The evaluation is to match pairs of tables within  existing datasets. Comparing to us, \cc{it}   
+%
+A recent Arxiv work~\cite{arxiv} focuses on evaluating table pretraining methods for table
+ discovery tasks, with the specific goal of improving downstream machine learning tasks. 
+ 
+%
+Another Arxiv work~\cite{arxiv} leverages the large language model to build a benchmark for table union search.
+%
+Overall, \sys
+
+\noindent \textbf{Table discovery tasks.}
+
++ Keyword
+
++ Table QA
+
+
+\noindent \textbf{Table discovery for ML.}
+To address the data scarcity problem, recently, researchers have studied to acquire data from external resources (\eg data lake, web) to enrich the training set, so as to improve the model performance. At a high level, for tabular data, existing methods can be categorized into enriching features and tuples.
+For enriching features, existing studies~\cite{DBLP:conf/icde/LiuCLLFT22,
+	DBLP:journals/pvldb/ChepurkoMZFKK20,
+	DBLP:conf/sigmod/KumarNPZ16} takes as input the training table, and searches other tables that can join with the table and improve the model performance from a data lake, which is a different problem from us.
+For enriching tuples, Li et al.~\cite{DBLP:conf/icml/YoonAP20} focuses on searching tuples through querying data markets, but it assumes that the acquired data has the same distribution with current training set, which is hard to guarantee in practice. Yoon et al.~\cite{DBLP:journals/pvldb/LiYK21} propose a data evaluation framework to assign a score for each training sample. The higher the score, the more likely this sample will be added into the training set.  However, the added training samples are also available in advance and homogeneous with the training set. Different from the above works, Autodata~\ref{DBLP:journals/pvldb/ChaiLTLL22} focuses on selecting data that can benefit the downstream ML tasks from heterogeneous resources \cc{using reinforcement learning}. However, all  above works have to rely on external resources to enrich new training data, but our method can automatically generate new data without the help of other resources.

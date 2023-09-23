@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  23 SEP 2023 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  23 SEP 2023 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,32 +2045,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package natbib Warning: Citation `arxiv' on page 7 undefined on input line 14.
 
 
-Package natbib Warning: Citation `DBLP:conf/icde/LiuCLLFT22' on page 7 undefine
-d on input line 30.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ChepurkoMZFKK20' on page 
-7 undefined on input line 30.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/KumarNPZ16' on page 7 undefi
-ned on input line 30.
-
-
-Package natbib Warning: Citation `DBLP:conf/icml/YoonAP20' on page 7 undefined 
-on input line 31.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiYK21' on page 7 undefin
-ed on input line 31.
-
-
 LaTeX Warning: Reference `DBLP:journals/pvldb/ChaiLTLL22' on page 7 undefined o
 n input line 31.
 
 ) [7.7] (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
+LaTeX Info: Redefining \tempurl on input line 162.
+LaTeX Info: Redefining \tempurl on input line 178.
+LaTeX Info: Redefining \tempurl on input line 192.
+LaTeX Info: Redefining \tempurl on input line 208.
+LaTeX Info: Redefining \tempurl on input line 269.
+
+Underfull \vbox (badness 1365) has occurred while \output is active []
+
 )
 
 Package natbib Warning: There were undefined citations.
@@ -2085,10 +2073,10 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
 
-Overfull \vbox (1.51982pt too high) has occurred while \output is active []
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 Package atenddvi Info: Last page = 8.
-
 [8.8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
@@ -2110,11 +2098,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43289 strings out of 492995
- 789327 string characters out of 6132704
- 959066 words of memory out of 5000000
- 45374 multiletter control sequences out of 15000+600000
- 206894 words of font info for 394 fonts, out of 8000000 for 9000
+ 43329 strings out of 492995
+ 790492 string characters out of 6132704
+ 958491 words of memory out of 5000000
+ 45385 multiletter control sequences out of 15000+600000
+ 209470 words of font info for 410 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,13n,94p,10381b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -2146,10 +2134,10 @@ newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (8 pages, 910777 bytes).
+Output written on main.pdf (8 pages, 913409 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
  58044 words of extra memory for PDF output out of 61914 (max. 10000000)
 

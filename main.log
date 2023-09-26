@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  25 SEP 2023 22:04
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  25 SEP 2023 21:39
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2091,6 +2095,7 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
  43329 strings out of 492995
  790492 string characters out of 6132704
  958646 words of memory out of 5000000
@@ -2128,6 +2133,43 @@ onts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/r
 txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
 Output written on main.pdf (8 pages, 913961 bytes).
+=======
+ 39193 strings out of 478268
+ 722495 string characters out of 5846347
+ 1133075 words of memory out of 5000000
+ 55764 multiletter control sequences out of 15000+600000
+ 681123 words of font info for 479 fonts, out of 8000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 89i,13n,131p,3241b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
+}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
+usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/u
+sr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/us
+r/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr
+/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/
+local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
+a-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Liberti
+neMathMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Liber
+tineMathMI5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Li
+bertineMathMI7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/liber
+tine/LinBiolinumT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/li
+bertine/LinBiolinumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/libertine/LinBiolinumTI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/libertine/LinLibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2022/texmf-dist/font
+s/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/niceframe-type1/bbding10.pfb></usr/local/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
+type1/public/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/newtx/txsys.pfb>
+Output written on main.pdf (8 pages, 841817 bytes).
+>>>>>>> Stashed changes
 PDF statistics:
  433 PDF objects out of 1000 (max. 8388607)
  341 compressed objects within 4 object streams

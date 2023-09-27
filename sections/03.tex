@@ -44,9 +44,9 @@ In this subsection, we overview the pipeline of our benchmark design. Overall, a
 		\centering
 		Data Lake  & \#-Tables & $\#$-Columns & Max/Min/Avg Col. No. & Max/Min/Avg Row No. & Size (GB)  \\
 		\hline  
-		OpenData Small& 6374  & 104,992 & 514/3/16.5  &  10,250,220/5/54,454.3  & 100.03GB  \\
+		OpenData Small& 10,374  & 166,770 & 502/3/16.1  &  10,250,220/5/79,310.7  & 100.03GB  \\
 		\hline
-		OpenData Large& 64,793  & 1,385,149  & 6304/3/21.4   & 66,407,950/5/130,018.3  & 1.08TB   \\
+		OpenData Large& 64,793  & 1,385,149  & 502/3/21.0   & 39,014,091/5/112,359.9  & 1.08TB   \\
 		\hline
 		WebTable Small& 2,772,825   & 17,929,497 & 25/3/6.5  & 16,908/5/23.0  &13.01GB \\
 		\hline
@@ -75,7 +75,6 @@ For WebTable~\cite{WebTable}, the original dataset contains 27,783,441 tables, f
 Basically, row-level splitting mainly generates unionable tables, while column-level splitting mostly generates joinable tables.
 These small tables are then put into the data lake and they can also serve as queries.
 %Split large tables into small ones, which are put into the data lake, and then use some of the small ones as queries.  
-
 
 \noindent\textbf{Ground Truth Generation.} For different query construction methods, the ways of ground truth (GT) generation are different, as shown in Figure~\ref{fig:benchmark}.
 

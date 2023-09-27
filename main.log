@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  26 SEP 2023 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  26 SEP 2023 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1649,60 +1649,60 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 6.2pt on input line 29.
  (./sections/01.tex
-LaTeX Font Info:    Trying to load font information for U+ding on input line 19
+LaTeX Font Info:    Trying to load font information for U+ding on input line 20
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/ding/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 19.
+(microtype)             (new value: 9.0pt) on input line 20.
 
 
-Package natbib Warning: Citation `arxiv' on page 1 undefined on input line 31.
+Package natbib Warning: Citation `arxiv' on page 1 undefined on input line 32.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 58.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 9.0pt on input line 59.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 59
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 9.0pt on input line 60.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 60
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 59.
+(Font)              using `T1/zi4/m/n' instead on input line 60.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 59.
+(Font)              scaled to size 9.0pt on input line 60.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 9.0pt on input line 63.
+(Font)              scaled to size 9.0pt on input line 64.
 <fig/example.pdf, id=92, 1206.5075pt x 701.62125pt>
 File: fig/example.pdf Graphic file (type pdf)
 <use fig/example.pdf>
-Package pdftex.def Info: fig/example.pdf  used on input line 79.
+Package pdftex.def Info: fig/example.pdf  used on input line 80.
 (pdftex.def)             Requested size: 405.03754pt x 235.53972pt.
 
-Class acmart Warning: A possible image without description on input line 82.
+Class acmart Warning: A possible image without description on input line 83.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 88.
+(Font)              scaled to size 7.3pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 88.
+(Font)              scaled to size 7.3pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 88.
+(Font)              scaled to size 9.0pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 88.
+(Font)              scaled to size 9.0pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 88.
+(Font)              scaled to size 8.0pt on input line 89.
 [1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -1712,13 +1712,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 142.
+(Font)              scaled to size 7.0pt on input line 143.
  [2.2 <./fig/example.pdf>]
 
-LaTeX Warning: Reference `XXX' on page 3 undefined on input line 145.
+LaTeX Warning: Reference `XXX' on page 3 undefined on input line 146.
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 156--157
+Underfull \hbox (badness 3536) in paragraph at lines 157--158
 \T1/LinuxLibertineT-TLF/m/n/9 (+20) (4) We eval-u-ate and an-a-lyze mul-ti-ple 
 state-of-the-art join-
  []
@@ -1758,24 +1758,24 @@ Underfull \hbox (badness 3375) in paragraph at lines 60--64
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 []\T1/LinuxLibertineT-TLF/m/n/9 (+20) + Query Cat-e-gory: Real/Synthetic (Spars
 e/Dense),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 []\T1/LinuxLibertineT-TLF/m/n/9 (+20) + Query-Candidate Cat-e-gory: Join(overla
 p, se-man-tic),
  []
 
 
-Overfull \hbox (6.04347pt too wide) in paragraph at lines 139--139
+Overfull \hbox (6.04347pt too wide) in paragraph at lines 138--138
 []|\T1/LinuxLibertineT-TLF/b/n/9 (-20) Methods|  
  []
 
 
-Overfull \hbox (1.8735pt too wide) in paragraph at lines 139--139
+Overfull \hbox (1.8735pt too wide) in paragraph at lines 138--138
 []|\T1/LinuxLibertineT-TLF/b/n/9 (-20) Task|  
  []
 
@@ -1854,7 +1854,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  39193 strings out of 478268
  722495 string characters out of 5846347
- 1133074 words of memory out of 5000000
+ 1133075 words of memory out of 5000000
  55764 multiletter control sequences out of 15000+600000
  681123 words of font info for 479 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1886,7 +1886,7 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/public/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
 ublic/newtx/txsys.pfb>
-Output written on main.pdf (8 pages, 841817 bytes).
+Output written on main.pdf (8 pages, 841823 bytes).
 PDF statistics:
  417 PDF objects out of 1000 (max. 8388607)
  331 compressed objects within 4 object streams

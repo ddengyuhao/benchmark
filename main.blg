@@ -41,45 +41,45 @@ Warning--empty address in Frt12
 Warning--empty address in InfoGather
 Warning--empty address in DBLP:conf/icml/YoonAP20
 Warning--empty address in Josie
-You've used 19 entries,
+You've used 20 entries,
             5981 wiz_defined-function locations,
-            1762 strings with 24796 characters,
-and the built_in function-call counts, 24018 in all, are:
-= -- 2950
-> -- 858
+            1771 strings with 25071 characters,
+and the built_in function-call counts, 25273 in all, are:
+= -- 3152
+> -- 897
 < -- 0
-+ -- 292
-- -- 273
-* -- 1832
-:= -- 2272
-add.period$ -- 93
-call.type$ -- 19
-change.case$ -- 162
-chr.to.int$ -- 19
-cite$ -- 55
-duplicate$ -- 2104
-empty$ -- 1477
-format.name$ -- 341
-if$ -- 5879
++ -- 305
+- -- 285
+* -- 1924
+:= -- 2384
+add.period$ -- 98
+call.type$ -- 20
+change.case$ -- 170
+chr.to.int$ -- 20
+cite$ -- 56
+duplicate$ -- 2202
+empty$ -- 1547
+format.name$ -- 357
+if$ -- 6209
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 78
-newline$ -- 201
-num.names$ -- 125
-pop$ -- 904
+missing$ -- 82
+newline$ -- 212
+num.names$ -- 132
+pop$ -- 937
 preamble$ -- 1
-purify$ -- 304
+purify$ -- 320
 quote$ -- 0
-skip$ -- 758
+skip$ -- 790
 stack$ -- 0
-substring$ -- 1772
-swap$ -- 228
+substring$ -- 1870
+swap$ -- 238
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 472
+type$ -- 488
 warning$ -- 28
-while$ -- 99
+while$ -- 105
 width$ -- 0
-write$ -- 419
+write$ -- 441
 (There were 30 warnings)

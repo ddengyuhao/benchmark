@@ -4,15 +4,27 @@
 \subsection{Synthetic query generation}
 In this part, we will discuss how to split large tables and generate the corresponding ground truth.
 
+\noindent \textbf{Choosing Large Tables.} 
+To split a base table into multiple small synthetic queries, it is usually necessary to use a large base table with more rows and columns. To achieve this, we sorted all the lake tables by multiplying the number of rows and columns of each table. Tables with rows and columns greater than a certain threshold were selected, and in order to ensure the diversity of synthetic queries, we manually selected tables with differenet semantics as the base tables.
+
+\noindent \textbf{Generate Synthetic Queries.} 
+To generate syhthetic queries that are relatively realistic, including randomness and a certain level of difficulty. We mainly use two methods to generate synthetic queries for join and union cases, which involve horizontal and vertical table splitting.
+
+\noindent \underline{\textit{Union.}}  To generate synthetic queries for the unionable case, it is essential for two small tables to share identical columns. Consequently, we generate unionable scenarios by partitioning the original base table both horizontally and vertically, ensuring there is no overlap in rows and varying the extent of column overlap. First, we horizontally split the table into several parts, then randomly select several columns from each part as column overlap. After that, we select the remaining columns that are not duplicate as supplementary columns for each small table, and thus forming the synthetic queries for the union case.
+
+\noindent \underline{\textit{Join.}}  Joinable tables must share at least one common joining column, and unlike unionable tables, they should exhibit a substantial row overlap. To construct this case, similar to the method used in the union case we first vertically split the base table into several tables while retaining varying proportions of overlapping columns (e.g., 1 column, 30\% of columns, 50\%, etc.). Furthermore, we horizontally divide the split tables with varyingt row overlap percentages (in our case,20\%, 35\%, 50\%, etc.). 
+
+\noindent \textbf{Generate Ground Truth.} 
+
 + How to choose large tables.
 
 + How to split.
 
 + How to generate the ground truth.
 
-\subsection{Basic search for candidate generation}
-In this part, for each synthetic or real query, we design a basic search algorithm to retrieve  candidate joinable/unionable tables from the data lake.
 
+\subsection{Basic search for candidate generation}
+In this part, for each synthetic or real query, we design a basic search algorithm to retrieve  candidate joinable/unionable tables from the data lake. 
 
 + How to guarantee high recall
 
@@ -29,3 +41,23 @@ In this part, we ask the human experts to label the candidates for each query.
 
 
 + Labeling statistics.
+\begin{table}[t]
+	\centering
+	\caption{Statistics of Human Labeling.}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\centering
+		Data Lake  & \#-Query Tables & $\#$-People & Time.   \\
+		\hline  
+		OpenData Small& 914  & 10 & 10h   \\
+		\hline
+		OpenData Large&   & 10  &  17.5h   \\
+		\hline
+		WebTable Small& 1,745   & 10 &  20h  \\
+		\hline
+		WebTable Large&   & 10 &  30h  \\
+		\hline
+	\end{tabular}
+	\label{Table:humanLabeling}
+	
+\end{table}

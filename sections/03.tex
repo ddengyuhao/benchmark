@@ -142,7 +142,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
             \hline
             \lsh~\cite{LshEn} & J & LSH & \XSolidBrush& O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$  \\
             \hline
-            \pex~\cite{Pexeso} & J &  Inv. index& \Checkmark  & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\querycellvalue + \log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$     \\
+            \pex~\cite{Pexeso} & J &  Inv. index& \Checkmark  & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$     \\
             \hline
             \deepjoin~\cite{DeepJoin} & J & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$  \\
             \hline
@@ -167,25 +167,25 @@ Given the data lakes, queries and ground truth, we next compare the performance 
         
     \end{table*}
 
-\begin{table*}[!ht]
+\begin{table}[!ht]
 	\centering
 	\caption{The Meaning of Different Symbols.}
 	\begin{tabular}{cc}
 		\hline
 		Symbol & Meaning \\ \hline
-		$\mathcal{B}$ & Number of columns in the query table $\qtable$  \\
-		$\mathcal{N}$ &The total number of columns in all tables in the data lake $\lake$ \\
-		$\mathcal{K}$ & The number of non-distinct cell values in all tables in the data lake $\lake$   \\
-		$\mathcal{R}$ &The number of distinct cell values in all tables in the data lake $\lake$ \\
-		$\mid \mathcal{T} \mid$ & Number of tables in the data lake $\lake$  \\
-		$\mathcal{X}$ &The total number of tuples in all tables in the data lake $\lake$ \\
-		$\mathcal{A}$ & The number of non-distinct cell values in query table $\qtable$  \\
+		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\
+		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\
+		$\mathcal{K}$ & \#-Non-distinct cell values in all tables in $\lake$   \\
+		$\mathcal{R}$ &\#-Distinct cell values in all tables in $\lake$ \\
+		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\
+		$\mathcal{X}$ &\#-Tuples in all tables in $\lake$ \\
+		$\mathcal{A}$ & \#-Non-distinct cell values in query table $\qtable$  \\
 		
 		$\mathcal{L}$ & The length of positing list in \josie  \\
 		$\mathcal{H}$ & The dimension of minhash vector \\
-		$\mathcal{P}$ & The number of partition in \lsh\\
-		$\mathcal{D}$ & The number of neighbors in \dlll\\
-		$\mathcal{I}$ & The number of neighbors in \infogather\\
+		$\mathcal{P}$ & \#-Partition in \lsh\\
+		$\mathcal{D}$ & \#-Neighbors in \dlll\\
+		$\mathcal{I}$ & \#-Neighbors in \infogather\\
 		$\overline{\mathcal{O}}$ & The average number of tuples in target column\\
 		%
 
@@ -201,7 +201,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 	
 	\end{tabular}
 	\label{symbol_table}
-\end{table*}
+\end{table}
 
 
 

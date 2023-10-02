@@ -34,7 +34,7 @@ To retrieve the unionable tables from the data lake, it not only requires consid
 \noindent \underline{\textit{Join Case.}}  
 In the case of joining tables, several considerations are essential:$(\romannumeral1).$ the semantics of corresponding columns in both tables. $(\romannumeral2).$ analyzing the relationship between the two tables, $(\romannumeral3).$ ensuring there is an overlap in cell values between the corresponding columns. Consequently, We used method that considers both $\romannumeral1$ and $\romannumeral2$, namely \deepjoin, and method that considers $\romannumeral3$, namely \josie, to obtain candidate tables respectively.
 
-\noindent The number of candidate tables we obtained was determined by experts. We first set an accuracy threshold (i.e. 70\%), and then manually judged that when the number of candidate tables reached a certain number, their corresponding accuracy was lower than the threshold we set. At this point, the number of selected tables is the final number of our candidate tables.
+\noindent  \underline{\textit{Number of Candidate Tables.}}  The number of candidate tables we obtained was determined by experts. We first set an accuracy threshold (i.e. 70\%), and then manually judged that when the number of candidate tables reached a certain number, their corresponding accuracy was lower than the threshold we set. At this point, the number of selected tables is the final number of our candidate tables.
 %+ How to guarantee high recall
 
 %+ Details
@@ -42,8 +42,8 @@ In the case of joining tables, several considerations are essential:$(\romannume
 \subsection{Human labeling}
 In this part, we ask the human experts to label the candidates for each query. In order to improve the efficiency of experts data labeling, we built a webpage for labeling the ground truth of both join and union case.
 
-
 \noindent \underline{\textit{Union Case.}}  
+
 
 \noindent \underline{\textit{Join Case.}}  
 
@@ -51,9 +51,16 @@ In this part, we ask the human experts to label the candidates for each query. I
 + Example shown to the experts.
 
 \noindent \textbf{Labeling Interface.} 
+The labeling interface we built is shown in the Figure ~\ref{fig:interface},  the interface is mainly divided into three parts in a vertical direction. The left part is the query tables to be labeled, and selecting the corresponding query table can display its corresponding information. The upper half in the middle part is the candidate tables corresponding to the query table, and the lower half displays the main information of the query table, including the meta information of the query table (such as all column names, cell values of corresponding column, etc.) and the query table itself, The upper part on the right of the interface is our labeling area, which is used to label whether two tables can be joined/unioned or not. The lower part is the main information of the candidate table, which also includes the meta information of the candidate table and the candidate table itself.
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{fig/interface.png}
+	\caption{Labeling Interface of Webpage.}
+	\label{fig:interface}
+\end{figure*}
 
 \noindent \textbf{Labeling Statistics.} 
-
+We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}.
 
 \begin{table}[t]
 	\centering

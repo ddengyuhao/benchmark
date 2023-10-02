@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  30 SEP 2023 23:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  1 OCT 2023 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1785,18 +1785,30 @@ Underfull \vbox (badness 1728) has occurred while \output is active []
  [5.5]
 Underfull \vbox (badness 2080) has occurred while \output is active []
 
-)
-(./sections/06.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<fig/interface.png, id=273, 2547.5175pt x 1318.9275pt>
+File: fig/interface.png Graphic file (type png)
+<use fig/interface.png>
+Package pdftex.def Info: fig/interface.png  used on input line 57.
+(pdftex.def)             Requested size: 506.295pt x 262.11043pt.
 
- [6.6]
+
+Class acmart Warning: A possible image without description on input line 60.
+
+[6.6]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/06.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
-Underfull \vbox (badness 3219) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7])
 (./sections/07.tex) (./sections/08.tex) (./sections/09.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package natbib Warning: Citation `arxiv' on page 8 undefined on input line 18.
 
@@ -1804,7 +1816,11 @@ Package natbib Warning: Citation `arxiv' on page 8 undefined on input line 18.
 Package natbib Warning: Citation `arxiv' on page 8 undefined on input line 21.
 
 
-LaTeX Warning: Reference `DBLP:journals/pvldb/ChaiLTLL22' on page 8 undefined o
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8.8 <./fig/interface.png>]
+
+LaTeX Warning: Reference `DBLP:journals/pvldb/ChaiLTLL22' on page 9 undefined o
 n input line 37.
 
 ) (./main.bbl
@@ -1812,13 +1828,12 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 LaTeX Info: Redefining \tempurl on input line 162.
 LaTeX Info: Redefining \tempurl on input line 178.
-LaTeX Info: Redefining \tempurl on input line 193.
-LaTeX Info: Redefining \tempurl on input line 207.
-LaTeX Info: Redefining \tempurl on input line 223.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8.8]
+LaTeX Info: Redefining \tempurl on input line 193.
+LaTeX Info: Redefining \tempurl on input line 207.
+LaTeX Info: Redefining \tempurl on input line 223.
 LaTeX Info: Redefining \tempurl on input line 284.
 )
 
@@ -1839,6 +1854,10 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
 [9.9] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1851,16 +1870,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 182674072298765DED14EA1C2658F2F0;2867.
+(rerunfilecheck)             Checksum: 16C01C054477ECABBCA3C5567ADBA859;2867.
  ) 
 Here is how much of TeX's memory you used:
- 39209 strings out of 478268
- 722900 string characters out of 5846347
- 1128133 words of memory out of 5000000
- 55768 multiletter control sequences out of 15000+600000
- 681926 words of font info for 485 fonts, out of 8000000 for 9000
+ 39222 strings out of 478268
+ 723160 string characters out of 5846347
+ 1134169 words of memory out of 5000000
+ 55775 multiletter control sequences out of 15000+600000
+ 682191 words of font info for 487 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 89i,13n,131p,3241b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,131p,3241b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
 usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/u
@@ -1888,10 +1907,10 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/public/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
 ublic/newtx/txsys.pfb>
-Output written on main.pdf (9 pages, 847067 bytes).
+Output written on main.pdf (9 pages, 1042849 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 103612 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 103617 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -51,7 +51,21 @@ In this part, we ask the human experts to label the candidates for each query. I
 + Example shown to the experts.
 
 \noindent \textbf{Labeling Interface.} 
-The labeling interface we built is shown in the Figure ~\ref{fig:interface},  the interface is mainly divided into three parts in a vertical direction. The left part is the query tables to be labeled, and selecting the corresponding query table can display its corresponding information. The upper half in the middle part is the candidate tables corresponding to the query table, and the lower half displays the main information of the query table, including the meta information of the query table (such as all column names, cell values of corresponding column, etc.) and the query table itself, The upper part on the right of the interface is our labeling area, which is used to label whether two tables can be joined/unioned or not. The lower part is the main information of the candidate table, which also includes the meta information of the candidate table and the candidate table itself.
+The labeling interface we built is shown in the Figure ~\ref{fig:interface}, the interface is mainly divided into three parts in a vertical direction. We will further explain how each part works.
+\noindent \underline{\textit{Query Table Specification.}}  
+As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays a list of query tables to be labeled. The user can select a specific query table, which is to be dispalyed in see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}.
+
+\noindent \underline{\textit{Metadata of Query Table.}}  When selecting the corresponding query table,  its corresponding information is to be visualized.(see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}})
+
+\noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}})
+
+\noindent \underline{\textit{Metadata of Candidate Table.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}})
+
+\noindent \underline{\textit{Labeling Area.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{5}}})
+
+%\noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}})
+
+ The upper half in the middle part is the candidate tables corresponding to the query table, and the lower half displays the main information of the query table, including the meta information of the query table (such as all column names, cell values of corresponding column, etc.) and the query table itself, The upper part on the right of the interface is our labeling area, which is used to label whether two tables can be joined/unioned or not. The lower part is the main information of the candidate table, which also includes the meta information of the candidate table and the candidate table itself.
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=1.0\linewidth]{fig/interface.png}

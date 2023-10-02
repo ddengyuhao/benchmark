@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{20}
+\begin{thebibliography}{19}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -176,21 +176,6 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/2882903.2882952}
-\showDOI{\tempurl}
-
-
-\bibitem[Lee et~al\mbox{.}(2007)]%
-        {DBLP:journals/vldb/LeeSDR07}
-\bibfield{author}{\bibinfo{person}{Yoonkyong Lee}, \bibinfo{person}{Mayssam
-  Sayyadian}, \bibinfo{person}{AnHai Doan}, {and} \bibinfo{person}{Arnon
-  Rosenthal}.} \bibinfo{year}{2007}\natexlab{}.
-\newblock \showarticletitle{eTuner: tuning schema matching software using
-  synthetic scenarios}.
-\newblock \bibinfo{journal}{\emph{{VLDB} J.}} \bibinfo{volume}{16},
-  \bibinfo{number}{1} (\bibinfo{year}{2007}), \bibinfo{pages}{97--122}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1007/s00778-006-0024-z}
 \showDOI{\tempurl}
 
 

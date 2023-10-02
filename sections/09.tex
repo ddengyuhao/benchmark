@@ -11,9 +11,9 @@ Santos~\cite{Santos} improves the table union search strategy by considering the
 %
 Josie~\cite{Josie} includes a join search benchmark that uses two data lakes. One is the same with TUS, and the other is sampled from the Web Table, with 1,000 query columns respectively. However, it only considers the table join search and just evaluates the efficiency, because Josie  considers the exact overlap as the join condition without taking any semantics into account. 
 %
-Comparing with the above works, \sys is a benchmark that supports both join and union search with large scale data lake, various queries and sufficient analysis in term of the efficacy.
+Valentine~\cite{valentine} focuses on evaluating  schema matching techniques to solve table discovery tasks. The evaluation is to match pairs of tables within  existing datasets. \cc{The size?}  Valentine also creates synthetic queries to conduct the evaluation, which only includes the schema matching approaches.
 %
-Valentine~\cite{valentine} focuses on evaluating multiple schema matching techniques to solve table discovery tasks. The evaluation is to match pairs of tables within  existing datasets. Comparing to us, \cc{Valentine}   
+Comparing with the above works, \sys is a benchmark that supports both join and union search with large scale data lake, various real queries and sufficient analysis in term of the efficacy.  
 %
 A recent Arxiv work~\cite{arxiv} focuses on evaluating table pretraining methods for table
  discovery tasks, with the specific goal of improving downstream machine learning tasks. 

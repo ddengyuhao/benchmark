@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2022)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -16,7 +16,7 @@ Warning--no key, author in WebTable
 Warning--no author, editor, organization, or key in WebTable
 Warning--to sort, need author or key in WebTable
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--no key, author in OpenData
 Warning--no key, author in OpenData
@@ -41,45 +41,45 @@ Warning--empty address in Frt12
 Warning--empty address in InfoGather
 Warning--empty address in DBLP:conf/icml/YoonAP20
 Warning--empty address in Josie
-You've used 20 entries,
+You've used 19 entries,
             5981 wiz_defined-function locations,
-            1771 strings with 25071 characters,
-and the built_in function-call counts, 25273 in all, are:
-= -- 3152
-> -- 897
+            1762 strings with 24796 characters,
+and the built_in function-call counts, 24018 in all, are:
+= -- 2950
+> -- 858
 < -- 0
-+ -- 305
-- -- 285
-* -- 1924
-:= -- 2384
-add.period$ -- 98
-call.type$ -- 20
-change.case$ -- 170
-chr.to.int$ -- 20
-cite$ -- 56
-duplicate$ -- 2202
-empty$ -- 1547
-format.name$ -- 357
-if$ -- 6209
++ -- 292
+- -- 273
+* -- 1832
+:= -- 2272
+add.period$ -- 93
+call.type$ -- 19
+change.case$ -- 162
+chr.to.int$ -- 19
+cite$ -- 55
+duplicate$ -- 2104
+empty$ -- 1477
+format.name$ -- 341
+if$ -- 5879
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 82
-newline$ -- 212
-num.names$ -- 132
-pop$ -- 937
+missing$ -- 78
+newline$ -- 201
+num.names$ -- 125
+pop$ -- 904
 preamble$ -- 1
-purify$ -- 320
+purify$ -- 304
 quote$ -- 0
-skip$ -- 790
+skip$ -- 758
 stack$ -- 0
-substring$ -- 1870
-swap$ -- 238
+substring$ -- 1772
+swap$ -- 228
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 488
+type$ -- 472
 warning$ -- 28
-while$ -- 105
+while$ -- 99
 width$ -- 0
-write$ -- 441
+write$ -- 419
 (There were 30 warnings)

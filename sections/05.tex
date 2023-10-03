@@ -42,20 +42,14 @@ In the case of joining tables, several considerations are essential:$(\romannume
 \subsection{Human labeling}
 In this part, we ask the human experts to label the candidates for each query. In order to improve the efficiency of experts data labeling, we built a webpage for labeling the ground truth of both join and union case.
 
-\noindent \underline{\textit{Union Case.}}  
-
-
-\noindent \underline{\textit{Join Case.}}  
-
-
 + Example shown to the experts.
 
 \noindent \textbf{Labeling Interface.} 
 The labeling interface we built is shown in the Figure ~\ref{fig:interface}, the interface is mainly divided into three parts in a vertical direction. We will further explain how each part works.
 \noindent \underline{\textit{Query Table Specification.}}  
-As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays a list of query tables to be labeled. The user can select a specific query table, which is to be dispalyed in see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}.
+As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays a list of query tables to be labeled.  In this The user can select a specific query table, whose information will be dispalyed in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}.
 
-\noindent \underline{\textit{Metadata of Query Table.}}  When selecting the corresponding query table,  its corresponding information is to be visualized.(see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}})
+\noindent \underline{\textit{Metadata of Query Table.}}  When selecting the corresponding query table,  its corresponding information is to be visualized.(see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}). For example, after the user chooses the first query table, its main information,including the metadata and the table itself  will be shown. We can see that for the query table \cc{XX}, its column names varying from \cc{XX} to \cc{XX}. Furthermore, for column \cc{XX}, it mainly consists of two cell values, namely \cc{XX} and \cc{XX}.These meta information are displayed above the query table as auxiliary information to help users better determine whether two tables can be joined or unioned.
 
 \noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}})
 
@@ -65,7 +59,7 @@ As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.
 
 %\noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}})
 
- The upper half in the middle part is the candidate tables corresponding to the query table, and the lower half displays the main information of the query table, including the meta information of the query table (such as all column names, cell values of corresponding column, etc.) and the query table itself, The upper part on the right of the interface is our labeling area, which is used to label whether two tables can be joined/unioned or not. The lower part is the main information of the candidate table, which also includes the meta information of the candidate table and the candidate table itself.
+ The upper part on the right of the interface is our labeling area, which is used to label whether two tables can be joined/unioned or not. 
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=1.0\linewidth]{fig/interface.png}
@@ -74,7 +68,7 @@ As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.
 \end{figure*}
 
 \noindent \textbf{Labeling Statistics.} 
-We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}.
+We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}. For OpenData Small
 
 \begin{table}[t]
 	\centering

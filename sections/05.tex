@@ -42,20 +42,21 @@ In the case of joining tables, several considerations are essential:$(\romannume
 \subsection{Human labeling}
 In this part, we ask the human experts to label the candidates for each query. In order to improve the efficiency of experts data labeling, we built a webpage for labeling the ground truth of both join and union case.
 
-+ Example shown to the experts.
+%+ Example shown to the experts.
 
 \noindent \textbf{Labeling Interface.} 
 The labeling interface we built is shown in the Figure ~\ref{fig:interface}, the interface is mainly divided into three parts in a vertical direction. We will further explain how each part works.
 \noindent \underline{\textit{Query Table Specification.}}  
-As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays a list of query tables to be labeled.  In this The user can select a specific query table, whose information will be dispalyed in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}.
+As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays a list of query tables to be labeled.  The figure shows a list of ten query tables and the user can select a specific query table, whose information will be dispalyed in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}.
 
-\noindent \underline{\textit{Metadata of Query Table.}}  When selecting the corresponding query table,  its corresponding information is to be visualized.(see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}). For example, after the user chooses the first query table, its main information,including the metadata and the table itself  will be shown. We can see that for the query table \cc{XX}, its column names varying from \cc{XX} to \cc{XX}. Furthermore, for column \cc{XX}, it mainly consists of two cell values, namely \cc{XX} and \cc{XX}.These meta information are displayed above the query table as auxiliary information to help users better determine whether two tables can be joined or unioned.
+\noindent \underline{\textit{Metadata of Query Table.}}  When selecting the corresponding query table,  its corresponding information is to be visualized.(see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}). For example, after the user chooses the first query table, its main information, including the metadata and the table itself  will be shown. We can see that for the query table \cc{XX}, its column names varying from \cc{XX} to \cc{XX}. Furthermore, for column \cc{XX}, it mainly consists of two distinct cell values, namely \cc{XX} and \cc{XX}. These meta information are displayed above the query table as auxiliary information to help users better determine whether two tables can be joined or unioned.
 
-\noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}})
+\noindent \underline{\textit{Candidate Table Specification.}} The functions of this part are similar to that of Query Table Specification (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}). In this part, users can select a candidate table and get some relevant visualizations they want. For example, when choosing candidate table \cc{XX}, the interface will show its column name and the corresponding range of cell values for each column.
 
-\noindent \underline{\textit{Metadata of Candidate Table.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}})
+\noindent \underline{\textit{Metadata of Candidate Table.}}  Similarly, this part provides the explanations in plain text for the metadata of a specific candidate table, which will help the users to better understand the meaning of the entire table.  The users can click the “more” button for more visualization details (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}}).
 
 \noindent \underline{\textit{Labeling Area.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{5}}})
+
 
 %\noindent \underline{\textit{Candidate Table Specification.}}  (see Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}})
 
@@ -68,7 +69,7 @@ As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.
 \end{figure*}
 
 \noindent \textbf{Labeling Statistics.} 
-We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}. For OpenData Small
+We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}. For OpenData Small, we will 
 
 \begin{table}[t]
 	\centering

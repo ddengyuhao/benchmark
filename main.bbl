@@ -1,0 +1,301 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{19}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Ope({[n.\,d.]})]%
+        {OpenData}
+ \bibinfo{year}{[n.\,d.]}\natexlab{}.
+\newblock \bibinfo{title}{{O}penData}.
+\newblock \bibinfo{howpublished}{\url{https://open.canada.ca/}}.
+\newblock
+
+
+\bibitem[Web({[n.\,d.]})]%
+        {WebTable}
+ \bibinfo{year}{[n.\,d.]}\natexlab{}.
+\newblock \bibinfo{title}{{W}ebTable}.
+\newblock \bibinfo{howpublished}{\url{https://webdatacommons.org/webtables/}}.
+\newblock
+
+
+\bibitem[Bogatu et~al\mbox{.}(2020)]%
+        {D3L}
+\bibfield{author}{\bibinfo{person}{Alex Bogatu}, \bibinfo{person}{Alvaro A.~A.
+  Fernandes}, \bibinfo{person}{Norman~W. Paton}, {and}
+  \bibinfo{person}{Nikolaos Konstantinou}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Dataset Discovery in Data Lakes}. In
+  \bibinfo{booktitle}{\emph{36th {IEEE} International Conference on Data
+  Engineering, {ICDE} 2020, Dallas, TX, USA, April 20-24, 2020}}.
+  \bibinfo{publisher}{{IEEE}}, \bibinfo{pages}{709--720}.
+\newblock
+
+
+\bibitem[Chepurko et~al\mbox{.}(2020)]%
+        {DBLP:journals/pvldb/ChepurkoMZFKK20}
+\bibfield{author}{\bibinfo{person}{Nadiia Chepurko}, \bibinfo{person}{Ryan
+  Marcus}, \bibinfo{person}{Emanuel Zgraggen}, \bibinfo{person}{Raul~Castro
+  Fernandez}, \bibinfo{person}{Tim Kraska}, {and} \bibinfo{person}{David~R.
+  Karger}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{{ARDA:} Automatic Relational Data Augmentation for
+  Machine Learning}.
+\newblock \bibinfo{journal}{\emph{Proc. {VLDB} Endow.}} \bibinfo{volume}{13},
+  \bibinfo{number}{9} (\bibinfo{year}{2020}), \bibinfo{pages}{1373--1387}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3397230.3397235}
+\showDOI{\tempurl}
+
+
+\bibitem[Dong et~al\mbox{.}(2021)]%
+        {Pexeso}
+\bibfield{author}{\bibinfo{person}{Yuyang Dong}, \bibinfo{person}{Kunihiro
+  Takeoka}, \bibinfo{person}{Chuan Xiao}, {and} \bibinfo{person}{Masafumi
+  Oyamada}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Efficient Joinable Table Discovery in Data Lakes:
+  {A} High-Dimensional Similarity-Based Approach}. In
+  \bibinfo{booktitle}{\emph{37th {IEEE} International Conference on Data
+  Engineering, {ICDE} 2021, Chania, Greece, April 19-22, 2021}}.
+  \bibinfo{publisher}{{IEEE}}, \bibinfo{pages}{456--467}.
+\newblock
+
+
+\bibitem[Dong et~al\mbox{.}(2022)]%
+        {DeepJoin}
+\bibfield{author}{\bibinfo{person}{Yuyang Dong}, \bibinfo{person}{Chuan Xiao},
+  \bibinfo{person}{Takuma Nozawa}, \bibinfo{person}{Masafumi Enomoto}, {and}
+  \bibinfo{person}{Masafumi Oyamada}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{DeepJoin: Joinable Table Discovery with Pre-trained
+  Language Models}.
+\newblock \bibinfo{journal}{\emph{CoRR}}  \bibinfo{volume}{abs/2212.07588}
+  (\bibinfo{year}{2022}).
+\newblock
+
+
+\bibitem[Fan et~al\mbox{.}(2023)]%
+        {Starmie}
+\bibfield{author}{\bibinfo{person}{Grace Fan}, \bibinfo{person}{Jin Wang},
+  \bibinfo{person}{Yuliang Li}, \bibinfo{person}{Dan Zhang}, {and}
+  \bibinfo{person}{Ren{\'{e}}e~J. Miller}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Semantics-aware Dataset Discovery from Data Lakes
+  with Contextualized Column-based Representation Learning}.
+\newblock \bibinfo{journal}{\emph{Proc. {VLDB} Endow.}} \bibinfo{volume}{16},
+  \bibinfo{number}{7} (\bibinfo{year}{2023}), \bibinfo{pages}{1726--1739}.
+\newblock
+
+
+\bibitem[Fernandez et~al\mbox{.}(2018)]%
+        {Aurum}
+\bibfield{author}{\bibinfo{person}{Raul~Castro Fernandez},
+  \bibinfo{person}{Ziawasch Abedjan}, \bibinfo{person}{Famien Koko},
+  \bibinfo{person}{Gina Yuan}, \bibinfo{person}{Samuel Madden}, {and}
+  \bibinfo{person}{Michael Stonebraker}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Aurum: {A} Data Discovery System}. In
+  \bibinfo{booktitle}{\emph{34th {IEEE} International Conference on Data
+  Engineering, {ICDE} 2018, Paris, France, April 16-19, 2018}}.
+  \bibinfo{publisher}{{IEEE} Computer Society}, \bibinfo{pages}{1001--1012}.
+\newblock
+
+
+\bibitem[Khatiwada et~al\mbox{.}(2022)]%
+        {Santos}
+\bibfield{author}{\bibinfo{person}{Aamod Khatiwada}, \bibinfo{person}{Grace
+  Fan}, \bibinfo{person}{Roee Shraga}, \bibinfo{person}{Zixuan Chen},
+  \bibinfo{person}{Wolfgang Gatterbauer}, \bibinfo{person}{Ren{\'{e}}e~J.
+  Miller}, {and} \bibinfo{person}{Mirek Riedewald}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{SANTOS:} Relationship-based Semantic Table Union
+  Search}.
+\newblock \bibinfo{journal}{\emph{CoRR}}  \bibinfo{volume}{abs/2209.13589}
+  (\bibinfo{year}{2022}).
+\newblock
+
+
+\bibitem[Koutras et~al\mbox{.}(2021)]%
+        {valentine}
+\bibfield{author}{\bibinfo{person}{Christos Koutras}, \bibinfo{person}{George
+  Siachamis}, \bibinfo{person}{Andra Ionescu}, \bibinfo{person}{Kyriakos
+  Psarakis}, \bibinfo{person}{Jerry Brons}, \bibinfo{person}{Marios
+  Fragkoulis}, \bibinfo{person}{Christoph Lofi}, \bibinfo{person}{Angela
+  Bonifati}, {and} \bibinfo{person}{Asterios Katsifodimos}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Valentine: Evaluating Matching Techniques for
+  Dataset Discovery}. In \bibinfo{booktitle}{\emph{37th {IEEE} International
+  Conference on Data Engineering, {ICDE} 2021, Chania, Greece, April 19-22,
+  2021}}. \bibinfo{publisher}{{IEEE}}, \bibinfo{pages}{468--479}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE51399.2021.00047}
+\showDOI{\tempurl}
+
+
+\bibitem[Kumar et~al\mbox{.}(2016)]%
+        {DBLP:conf/sigmod/KumarNPZ16}
+\bibfield{author}{\bibinfo{person}{Arun Kumar}, \bibinfo{person}{Jeffrey~F.
+  Naughton}, \bibinfo{person}{Jignesh~M. Patel}, {and} \bibinfo{person}{Xiaojin
+  Zhu}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{To Join or Not to Join?: Thinking Twice about Joins
+  before Feature Selection}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  2016 International Conference on Management of Data, {SIGMOD} Conference
+  2016, San Francisco, CA, USA, June 26 - July 01, 2016}}.
+  \bibinfo{publisher}{{ACM}}, \bibinfo{pages}{19--34}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2882903.2882952}
+\showDOI{\tempurl}
+
+
+\bibitem[Li et~al\mbox{.}(2021)]%
+        {DBLP:journals/pvldb/LiYK21}
+\bibfield{author}{\bibinfo{person}{Yifan Li}, \bibinfo{person}{Xiaohui Yu},
+  {and} \bibinfo{person}{Nick Koudas}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Data Acquisition for Improving Machine Learning
+  Models}.
+\newblock \bibinfo{journal}{\emph{Proc. {VLDB} Endow.}} \bibinfo{volume}{14},
+  \bibinfo{number}{10} (\bibinfo{year}{2021}), \bibinfo{pages}{1832--1844}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3467861.3467872}
+\showDOI{\tempurl}
+
+
+\bibitem[Liu et~al\mbox{.}(2022)]%
+        {DBLP:conf/icde/LiuCLLFT22}
+\bibfield{author}{\bibinfo{person}{Jiabin Liu}, \bibinfo{person}{Chengliang
+  Chai}, \bibinfo{person}{Yuyu Luo}, \bibinfo{person}{Yin Lou},
+  \bibinfo{person}{Jianhua Feng}, {and} \bibinfo{person}{Nan Tang}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Feature Augmentation with Reinforcement Learning}.
+  In \bibinfo{booktitle}{\emph{38th {IEEE} International Conference on Data
+  Engineering, {ICDE} 2022, Kuala Lumpur, Malaysia, May 9-12, 2022}}.
+  \bibinfo{publisher}{{IEEE}}, \bibinfo{pages}{3360--3372}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE53745.2022.00317}
+\showDOI{\tempurl}
+
+
+\bibitem[Nargesian et~al\mbox{.}(2018)]%
+        {TUS}
+\bibfield{author}{\bibinfo{person}{Fatemeh Nargesian}, \bibinfo{person}{Erkang
+  Zhu}, \bibinfo{person}{Ken~Q. Pu}, {and} \bibinfo{person}{Ren{\'{e}}e~J.
+  Miller}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Table Union Search on Open Data}.
+\newblock \bibinfo{journal}{\emph{Proc. {VLDB} Endow.}} \bibinfo{volume}{11},
+  \bibinfo{number}{7} (\bibinfo{year}{2018}), \bibinfo{pages}{813--825}.
+\newblock
+
+
+\bibitem[Sarma et~al\mbox{.}(2012)]%
+        {Frt12}
+\bibfield{author}{\bibinfo{person}{Anish~Das Sarma}, \bibinfo{person}{Lujun
+  Fang}, \bibinfo{person}{Nitin Gupta}, \bibinfo{person}{Alon~Y. Halevy},
+  \bibinfo{person}{Hongrae Lee}, \bibinfo{person}{Fei Wu},
+  \bibinfo{person}{Reynold Xin}, {and} \bibinfo{person}{Cong Yu}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Finding related tables}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the {ACM} {SIGMOD} International
+  Conference on Management of Data, {SIGMOD} 2012, Scottsdale, AZ, USA, May
+  20-24, 2012}}, \bibfield{editor}{\bibinfo{person}{K.~Sel{\c{c}}uk Candan},
+  \bibinfo{person}{Yi~Chen}, \bibinfo{person}{Richard~T. Snodgrass},
+  \bibinfo{person}{Luis Gravano}, {and} \bibinfo{person}{Ariel Fuxman}} (Eds.).
+  \bibinfo{publisher}{{ACM}}, \bibinfo{pages}{817--828}.
+\newblock
+
+
+\bibitem[Yakout et~al\mbox{.}(2012)]%
+        {InfoGather}
+\bibfield{author}{\bibinfo{person}{Mohamed Yakout}, \bibinfo{person}{Kris
+  Ganjam}, \bibinfo{person}{Kaushik Chakrabarti}, {and}
+  \bibinfo{person}{Surajit Chaudhuri}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{InfoGather: entity augmentation and attribute
+  discovery by holistic matching with web tables}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the {ACM} {SIGMOD} International
+  Conference on Management of Data, {SIGMOD} 2012, Scottsdale, AZ, USA, May
+  20-24, 2012}}, \bibfield{editor}{\bibinfo{person}{K.~Sel{\c{c}}uk Candan},
+  \bibinfo{person}{Yi~Chen}, \bibinfo{person}{Richard~T. Snodgrass},
+  \bibinfo{person}{Luis Gravano}, {and} \bibinfo{person}{Ariel Fuxman}} (Eds.).
+  \bibinfo{publisher}{{ACM}}, \bibinfo{pages}{97--108}.
+\newblock
+
+
+\bibitem[Yoon et~al\mbox{.}(2020)]%
+        {DBLP:conf/icml/YoonAP20}
+\bibfield{author}{\bibinfo{person}{Jinsung Yoon},
+  \bibinfo{person}{Sercan~{\"{O}}mer Arik}, {and} \bibinfo{person}{Tomas
+  Pfister}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Data Valuation using Reinforcement Learning}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 37th International Conference on
+  Machine Learning, {ICML} 2020, 13-18 July 2020, Virtual Event}}
+  \emph{(\bibinfo{series}{Proceedings of Machine Learning Research},
+  Vol.~\bibinfo{volume}{119})}. \bibinfo{publisher}{{PMLR}},
+  \bibinfo{pages}{10842--10851}.
+\newblock
+\urldef\tempurl%
+\url{http://proceedings.mlr.press/v119/yoon20a.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Zhu et~al\mbox{.}(2019)]%
+        {Josie}
+\bibfield{author}{\bibinfo{person}{Erkang Zhu}, \bibinfo{person}{Dong Deng},
+  \bibinfo{person}{Fatemeh Nargesian}, {and} \bibinfo{person}{Ren{\'{e}}e~J.
+  Miller}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{JOSIE:} Overlap Set Similarity Search for Finding
+  Joinable Tables in Data Lakes}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the 2019 International Conference on Management of Data, {SIGMOD} Conference
+  2019, Amsterdam, The Netherlands, June 30 - July 5, 2019}},
+  \bibfield{editor}{\bibinfo{person}{Peter~A. Boncz}, \bibinfo{person}{Stefan
+  Manegold}, \bibinfo{person}{Anastasia Ailamaki}, \bibinfo{person}{Amol
+  Deshpande}, {and} \bibinfo{person}{Tim Kraska}} (Eds.).
+  \bibinfo{publisher}{{ACM}}, \bibinfo{pages}{847--864}.
+\newblock
+
+
+\bibitem[Zhu et~al\mbox{.}(2016)]%
+        {LshEn}
+\bibfield{author}{\bibinfo{person}{Erkang Zhu}, \bibinfo{person}{Fatemeh
+  Nargesian}, \bibinfo{person}{Ken~Q. Pu}, {and}
+  \bibinfo{person}{Ren{\'{e}}e~J. Miller}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{LSH} Ensemble: Internet-Scale Domain Search}.
+\newblock \bibinfo{journal}{\emph{Proc. {VLDB} Endow.}} \bibinfo{volume}{9},
+  \bibinfo{number}{12} (\bibinfo{year}{2016}), \bibinfo{pages}{1185--1196}.
+\newblock
+
+
+\end{thebibliography}

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  4 OCT 2023 16:41
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  4 OCT 2023 14:51
->>>>>>> 52e73d9fe08650404602bf59418e24ca42ec4461
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  4 OCT 2023 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1874,27 +1870,33 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 8.0pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 6.2pt on input line 29.
- (./sections/01.tex
-LaTeX Font Info:    Try loading font information for U+ding on input line 20.
+ (./sections/01.tex <fig/example.pdf, id=84, 1267.73625pt x 602.25pt>
+File: fig/example.pdf Graphic file (type pdf)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/bbding/Uding.fd
-File: Uding.fd 1996/02/01 v1.0 BBding font definitions
-)
+<use fig/example.pdf>
+Package pdftex.def Info: fig/example.pdf used on input line 10.
+(pdftex.def)             Requested size: 405.03754pt x 192.41148pt.
+
+
+Class acmart Warning: A possible image without description on input line 13.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 59.
+(Font)              scaled to size 9.0pt on input line 27.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 9.0pt on input line 60.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 60.
-
+(Font)              scaled to size 9.0pt on input line 28.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 28.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
 )
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 60.
+(Font)              using `T1/zi4/m/n' instead on input line 28.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 60.
+(Font)              scaled to size 9.0pt on input line 28.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1906,69 +1908,80 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 9.0pt on input line 64.
+(Font)              scaled to size 9.0pt on input line 32.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `T1/zi4/m/it/9'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/it/9'.
 (microtype)             Ignoring protrusion settings for this character.
-<fig/example.pdf, id=91, 1265.72874pt x 620.3175pt>
-File: fig/example.pdf Graphic file (type pdf)
- <use fig/example.pdf>
-Package pdftex.def Info: fig/example.pdf used on input line 80.
-(pdftex.def)             Requested size: 405.03754pt x 198.49619pt.
-
-
-Class acmart Warning: A possible image without description on input line 83.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 89.
+(Font)              scaled to size 7.3pt on input line 69.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 89.
+(Font)              scaled to size 7.3pt on input line 69.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 89.
+(Font)              scaled to size 9.0pt on input line 69.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 89.
+(Font)              scaled to size 9.0pt on input line 69.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 89.
+(Font)              scaled to size 8.0pt on input line 69.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/it' in size <8> not ava
+ilable
+(Font)              Font shape `T1/LinuxBiolinumT-TLF/b/sl' tried instead on in
+put line 85.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/sl' will be
+(Font)              scaled to size 8.0pt on input line 85.
 [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `XXX' on page 2 undefined on input line 145.
+LaTeX Warning: Reference `XXX' on page 2 undefined on input line 111.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<fig/api.png, id=120, 1675.25874pt x 849.1725pt>
+File: fig/api.png Graphic file (type png)
+ <use fig/api.png>
+Package pdftex.def Info: fig/api.png used on input line 117.
+(pdftex.def)             Requested size: 241.14749pt x 122.22632pt.
+
+
+Class acmart Warning: A possible image without description on input line 120.
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 148.
- [2.2 <./fig/example.pdf>]
-Underfull \hbox (badness 3536) in paragraph at lines 157--158
+(Font)              scaled to size 7.0pt on input line 130.
+[2.2 <./fig/example.pdf> <./fig/api.png>]
+Underfull \hbox (badness 3536) in paragraph at lines 130--131
 \T1/LinuxLibertineT-TLF/m/n/9 (+20) (4) We eval-u-ate and an-a-lyze mul-ti-ple 
 state-of-the-art join-
  []
 
-) (./sections/02.tex [3.3]
-<fig/framework.pdf, id=167, 613.29124pt x 710.655pt>
+LaTeX Font Info:    Try loading font information for U+ding on input line 144.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/bbding/Uding.fd
+File: Uding.fd 1996/02/01 v1.0 BBding font definitions
+))
+(./sections/02.tex <fig/framework.pdf, id=159, 613.29124pt x 710.655pt>
 File: fig/framework.pdf Graphic file (type pdf)
- <use fig/framework.pdf>
+
+<use fig/framework.pdf>
 Package pdftex.def Info: fig/framework.pdf used on input line 68.
 (pdftex.def)             Requested size: 229.08937pt x 265.45396pt.
 
 
 Class acmart Warning: A possible image without description on input line 71.
 
-) (./sections/03.tex <fig/benchmark.pdf, id=168, 952.55875pt x 442.65375pt>
-File: fig/benchmark.pdf Graphic file (type pdf)
 
-<use fig/benchmark.pdf>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/03.tex
+Underfull \vbox (badness 1019) has occurred while \output is active []
+
+ [3.3]
+<fig/benchmark.pdf, id=172, 952.55875pt x 442.65375pt>
+File: fig/benchmark.pdf Graphic file (type pdf)
+ <use fig/benchmark.pdf>
 Package pdftex.def Info: fig/benchmark.pdf used on input line 28.
 (pdftex.def)             Requested size: 241.14749pt x 112.06131pt.
 LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <9> not available
@@ -1992,6 +2005,9 @@ build 4 data lakes from Open-Data [[]] and
  []
 
 [4.4 <./fig/framework.pdf> <./fig/benchmark.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 []\T1/LinuxLibertineT-TLF/m/n/9 (+20) + Query Cat-e-gory: Real/Synthetic (Spars
 e/Dense),
@@ -2014,10 +2030,7 @@ Overfull \hbox (2.26913pt too wide) in paragraph at lines 138--138
  []
 
 ) (./sections/04.tex) (./sections/05.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [5.5]
 LaTeX Font Info:    Try loading font information for OMS+LinuxLibertineT-TLF on
@@ -2032,7 +2045,7 @@ LaTeX Font Warning: Font shape `OMS/LinuxLibertineT-TLF/m/n' undefined
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6]
-<fig/interface.png, id=297, 2547.5175pt x 1318.9275pt>
+<fig/interface.png, id=302, 2547.5175pt x 1318.9275pt>
 File: fig/interface.png Graphic file (type png)
  <use fig/interface.png>
 Package pdftex.def Info: fig/interface.png used on input line 64.
@@ -2048,19 +2061,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 16.
 
-Underfull \vbox (badness 1325) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./sections/07.tex) (./sections/08.tex) (./sections/09.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(./sections/07.tex) (./sections/08.tex
+Underfull \vbox (badness 1668) has occurred while \output is active []
 
- [8.8 <./fig/interface.png>]
+ [8.8 <./fig/interface.png>]) (./sections/09.tex
 
 Package natbib Warning: Citation `arxiv' on page 9 undefined on input line 18.
 
@@ -2071,11 +2081,7 @@ Package natbib Warning: Citation `arxiv' on page 9 undefined on input line 21.
 LaTeX Warning: Reference `DBLP:journals/pvldb/ChaiLTLL22' on page 9 undefined o
 n input line 37.
 
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./main.bbl
+) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 63.
 LaTeX Info: Redefining \tempurl on input line 162.
@@ -2096,14 +2102,7 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
-
-Overfull \vbox (13.5pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (13.58049pt too high) has occurred while \output is active []
-
 Package atenddvi Info: Last page = 10.
-
 [10.10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
@@ -2111,7 +2110,7 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 16C01C054477ECABBCA3C5567ADBA859;2867.
+(rerunfilecheck)             Checksum: 717866DC23B3FD62DA67CA25ED061AEF;2867.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2125,19 +2124,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43357 strings out of 492995
- 790982 string characters out of 6132704
- 959618 words of memory out of 5000000
- 45400 multiletter control sequences out of 15000+600000
- 209725 words of font info for 411 fonts, out of 8000000 for 9000
+ 43367 strings out of 492995
+ 791151 string characters out of 6132704
+ 959662 words of memory out of 5000000
+ 45408 multiletter control sequences out of 15000+600000
+ 214771 words of font info for 411 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
-<<<<<<< HEAD
- 60i,13n,94p,10381b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,94p,10381b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
-usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc} </Use
-rs/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bbding10.
-540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f
+}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc} <
+/Users/apple/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbding/bbdin
+g10.540pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertineal
+t.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f
 .enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.
 enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local
 /texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/
@@ -2148,57 +2146,26 @@ xlive/2017/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></usr
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinu
 mT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiol
 inumTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/Lin
-BiolinumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine
-/LinLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/liber
-tine/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-libertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/new
-tx/fxlri-5letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ne
-wtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/n
-ewtx/ntxsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfon
-ts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtx
-r.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (10 pages, 1127178 bytes).
-=======
- 89i,13n,131p,3241b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/
-usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/u
-sr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/us
-r/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr
-/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/
-local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
-a-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Liberti
-neMathMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Liber
-tineMathMI5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/Li
-bertineMathMI7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/liber
-tine/LinBiolinumT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/li
-bertine/LinBiolinumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
-c/libertine/LinBiolinumTI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
-ublic/libertine/LinLibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
-e1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-dist
-/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/niceframe-type1/bbding10.pfb></usr/local/texlive/2022/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/newtx/txsys.pfb>
-Output written on main.pdf (10 pages, 1053961 bytes).
->>>>>>> 52e73d9fe08650404602bf59418e24ca42ec4461
+BiolinumTBO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertin
+e/LinBiolinumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libe
+rtine/LinLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+libertine/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/libertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/newtx/fxlri-5letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/newtx/fxlri-7letters.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
+lic/newtx/ntxsyralt.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+txfonts/rtxmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfont
+s/rtxr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
+Output written on main.pdf (10 pages, 1436712 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 500000)
- 58053 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 468 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 58570 words of extra memory for PDF output out of 61914 (max. 10000000)
 

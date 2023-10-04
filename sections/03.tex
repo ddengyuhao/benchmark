@@ -128,8 +128,6 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 \fi
 
 
-\noindent\textbf{API Design.}
-
     \begin{table*}[t]
         \centering
         \caption{Table Discovery Methods.}
@@ -162,6 +160,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
             \hline
             Pretrain-based~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
             \hline
+            
         \end{tabular}
         \label{table:methods}
         
@@ -169,24 +168,25 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 
 \begin{table}[!ht]
 	\centering
-	\caption{The Meaning of Different Symbols.}
-	\begin{tabular}{cc}
+	\caption{ Notations of Table~\ref{table:methods}.}
+	\begin{tabular}{|c|c|}
 		\hline
 		Symbol & Meaning \\ \hline
-		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\
-		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\
-		$\mathcal{K}$ & \#-Non-distinct cell values in all tables in $\lake$   \\
-		$\mathcal{R}$ &\#-Distinct cell values in all tables in $\lake$ \\
-		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\
-		$\mathcal{X}$ &\#-Tuples in all tables in $\lake$ \\
-		$\mathcal{A}$ & \#-Non-distinct cell values in query table $\qtable$  \\
+		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\\hline
+		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\\hline
+		$\mathcal{K}$ & \#-Non-distinct cell values in all tables in $\lake$   \\\hline
+		$\mathcal{R}$ &\#-Distinct cell values in all tables in $\lake$ \\\hline
+		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\\hline
+		$\mathcal{X}$ &\#-Tuples in all tables in $\lake$ \\\hline
+		$\mathcal{A}$ & \#-non-distinct cell values in query table $\qtable$  \\\hline
 		
-		$\mathcal{L}$ & The length of positing list in \josie  \\
-		$\mathcal{H}$ & The dimension of minhash vector \\
-		$\mathcal{P}$ & \#-Partitions in \lsh\\
-		$\mathcal{D}$ & \#-Neighbors in \dlll\\
-		$\mathcal{I}$ & \#-Neighbors in \infogather\\
-		$\overline{\mathcal{O}}$ & The average number of cloumns in candidate tables\\
+		$\mathcal{L}$ & Length of positing list in \josie  \\\hline
+		$\mathcal{H}$ & Dimension of minhash vector \\\hline
+		$\mathcal{P}$ & \#-Partitions in \lsh\\\hline
+		$\mathcal{D}$ & \#-Neighbors in \dlll\\\hline
+		$\mathcal{I}$ & \#-Neighbors in \infogather\\\hline
+		$\overline{\mathcal{O}}$ & Average  \#-cloumns in candidate tables
+		\\ \hline
 		%
 
 

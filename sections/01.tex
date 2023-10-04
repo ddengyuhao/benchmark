@@ -106,9 +106,8 @@ To better improve the labeling accuracy and human efforts, we design a candidate
 
 Third, we evaluate various approaches~\cc{\cite{}}, including techniques like schema matching, local sensitive hash,  pre-trained language models etc. for joinable/unionable table search on our benchmark datasets, so as to provide meaningful insights for scalability and accuracy of different approaches on different datasets.
 
-Fourth, we implement an easy-to-use API, based on which a user can conveniently (1) profile the benchmark datasets from different perspectives;
-(2) issue join/union table search through few lines of python code;
-(3) compare with multiple state-of-the-art discovery algorithms in one line. \cc{Figure~\ref{XXX} shows the functionality of our API.} 
+Fourth, we implement an easy-to-use API, based on which a user can conveniently 
+ issue join/union table, or compare with multiple state-of-the-art discovery algorithms  search through few lines of python code. Figure~\ref{fig:api} shows the example.
 
 Overall, Table~\ref{Table:benchmarks} shows the comparison of \sys over existing benchmarks. Based on OpenData~\cite{} and  WebTable~\cite{}, we build 4 data lakes (corresponding to the gray rows), over which  both join and union search are performed. We can observe that \sys achieves a more comprehensive benchmark due to the much larger number of queries with various characteristics and  much larger data lake size such that both the effectiveness and efficiency of different table discovery algorithms are sufficiently evaluated. 
 

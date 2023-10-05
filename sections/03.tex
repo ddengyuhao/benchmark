@@ -150,7 +150,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
             \hline
             \starmie~\cite{Starmie} & U & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
             \hline
-            \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum {\averagetargetcolumnnum}^2)$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
+            \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum )$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
             \hline
             \frt~\cite{Frt12} & J \& U & N/A & \XSolidBrush &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
             \hline
@@ -180,12 +180,13 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 		$\mathcal{X}$ &\#-Tuples in all tables in $\lake$ \\\hline
 		$\mathcal{A}$ & \#-non-distinct cell values in query table $\qtable$  \\\hline
 		
-		$\mathcal{L}$ & Length of positing list in \josie  \\\hline
+		$\mathcal{L}$ & Length of posting list in \josie  \\\hline
 		$\mathcal{H}$ & Dimension of minhash vector \\\hline
 		$\mathcal{P}$ & \#-Partitions in \lsh\\\hline
 		$\mathcal{D}$ & \#-Neighbors in \dlll\\\hline
 		$\mathcal{I}$ & \#-Neighbors in \infogather\\\hline
-		$\overline{\mathcal{O}}$ & Average  \#-cloumns in candidate tables
+		$\mathcal{S}$ & \#-Neighbors in \santos\\\hline
+		$\overline{\mathcal{O}}$ & Average  \#-columns in candidate tables
 		\\ \hline
 		%
 

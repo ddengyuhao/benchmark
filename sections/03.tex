@@ -156,7 +156,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
             \hline
             \infogather~\cite{InfoGather} & J \& U & Inv. index & \XSolidBrush & O$(\columnnum^2)$   & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum )$   \\
             \hline
-            \aurum~\cite{Aurum} & J \& U & LSH & \Checkmark  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
+           \cc{\aurum~\cite{Aurum}} & J \& U & LSH & \Checkmark  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
             \hline
             Pretrain-based~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
             \hline
@@ -174,18 +174,18 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 		Symbol & Meaning \\ \hline
 		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\\hline
 		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\\hline
-		$\mathcal{K}$ & \#-Non-distinct cell values in all tables in $\lake$   \\\hline
-		$\mathcal{R}$ &\#-Distinct cell values in all tables in $\lake$ \\\hline
+		$\mathcal{K}$ & \#-Non-distinct cell values of all tables in $\lake$   \\\hline
+		$\mathcal{R}$ &\#-Distinct cell values of all tables in $\lake$ \\\hline
 		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\\hline
-		$\mathcal{X}$ &\#-Tuples in all tables in $\lake$ \\\hline
+		$\mathcal{X}$ &\#-Tuples of all tables in $\lake$ \\\hline
 		$\mathcal{A}$ & \#-non-distinct cell values in query table $\qtable$  \\\hline
 		
-		$\mathcal{L}$ & Length of positing list in \josie  \\\hline
-		$\mathcal{H}$ & Dimension of minhash vector \\\hline
+		$\mathcal{L}$ & Length of posting list in \josie  \\\hline
+		$\mathcal{H}$ & Dimension of minhash vectors \\\hline
 		$\mathcal{P}$ & \#-Partitions in \lsh\\\hline
 		$\mathcal{D}$ & \#-Neighbors in \dlll\\\hline
 		$\mathcal{I}$ & \#-Neighbors in \infogather\\\hline
-		$\overline{\mathcal{O}}$ & Average  \#-cloumns in candidate tables
+		$\overline{\mathcal{O}}$ & Avg.  \#-columns of candidate tables in \frt
 		\\ \hline
 		%
 

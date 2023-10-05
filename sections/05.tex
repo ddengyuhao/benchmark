@@ -12,7 +12,7 @@ To generate syhthetic queries that are relatively realistic, including randomnes
 
 \noindent \underline{\textit{Union Case.}}  To generate synthetic queries for the unionable case, it is essential for two small tables to share identical columns. Consequently, we generate unionable scenarios by partitioning the original base table both horizontally and vertically, ensuring there is no overlap in rows and varying the extent of column overlap. First, we horizontally split the table into several parts, then randomly select several columns from each part as column overlap. After that, we select the remaining columns that are not duplicate as supplementary columns for each small table, and thus forming the synthetic queries for the union case.
 
-\noindent \underline{\textit{Join Case.}}  Joinable tables must share at least one common joining column, and unlike unionable tables, they should exhibit a substantial row overlap. To construct this case, similar to the method used in the union case we first vertically split the base table into several tables while retaining varying proportions of overlapping columns (e.g., 1 column, 30\% of columns, 50\%, etc.). Furthermore, we horizontally divide the split tables with varyingt row overlap percentages (in our case,20\%, 35\%, 50\%, etc.). 
+\noindent \underline{\textit{Join Case.}}  Joinable tables must share at least one common joining column, and unlike unionable tables, they should exhibit a substantial row overlap. To construct this case, similar to the method used in the union case we first vertically split the base table into several tables while retaining varying proportions of overlapping columns (e.g., 1 column, 30\% of columns, 50\%, etc.). Furthermore, we horizontally divide the split tables with varying row overlap percentages (in our case,20\%, 35\%, 50\%, etc.). 
 
 \noindent \textbf{Ground Truth Generation.} 
 During the process of constructing synthetic queries, ground truth are also generated accordingly.
@@ -61,7 +61,7 @@ As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.
 
 \begin{figure*}[h]
 	\centering
-	\includegraphics[width=1.0\linewidth]{fig/interface.jpg}
+	\includegraphics[width=1.0\linewidth]{fig/interface.png}
 	\caption{Labeling Interface of Webpage.}
 	\label{fig:interface}
 \end{figure*}

@@ -65,12 +65,21 @@ If $r_{11}, r_{13}$ ($r_{26}, r_{27}$) are selected from $T_1$ ($T_2$), we creat
 \cc{add some difficulties.}
 
 \noindent \textbf{Ground Truth Generation.} 
-During the process of constructing synthetic queries, ground truth are also generated accordingly.
+The generation of ground truth is mainly divided into three categories from a high level perspective.
+
+
+%During the process of constructing synthetic queries, ground truth are also generated accordingly.
 \noindent \underline{\textit{Union Ground Truth Generation.}}  
-As mentioned above, we first divide the base table horizontally into different parts, and then select some small tables with common columns in each part. As a consequence, these small tables are unionable in pairs, so we mark them as ground truth.
+In the first category, as previously mentioned, we randomly partitioned the large table into several smaller tables, all sharing the same columns. Consequently, these tables are pair-wise unionable, forming the basis for our ground truth. For the second category, since we might randomly identify columns multiple times within each large table, if there is a duplicate between the first and second set of selected identical columns, the resulting small tables from the second split and the ones from the first split can also be unioned. Consequently, additional corresponding ground truth can be generated.
+To illustrate, consider Figure~\ref{fig:query_construction}(a). In the first round, we selecte columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} as the column overlap, and columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} in the second round. Consequently, columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}} and \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} can be unioned between the small tables split in the second round and those split in the first round. Therefore, we can label them as ground truth.
 
 \noindent \underline{\textit{Join Ground Truth Generation.}} 
-Similarly, when constructing the synthetic quries for join case, we initially vertically partition the base table into multiple tables, preserving different percentages of overlapping columns (varying from 1 column to 50\% of columns). These overlapping columns and partition tables correspond to the query table and ground truth of the join case respectively.
+Similarly, when constructing the synthetic quries for join case, we initially select a column as the joinable column, the choosen column and partition tables correspond to the query table and ground truth of the join case respectively. Also, we also will 
+
+
+% For the second category, since we might randomly identify columns multiple times within each large table, if there is a duplicate between the first and second set of selected identical columns, the resulting small tables from the second split and the ones from the first split can also be unioned. Consequently, additional corresponding ground truth can be generated.
+ 
+
 %+ How to choose large tables.
 
 %+ How to split.

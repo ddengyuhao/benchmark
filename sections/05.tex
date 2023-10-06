@@ -70,7 +70,7 @@ During the process of constructing synthetic queries, ground truth are also gene
 As mentioned above, we first divide the base table horizontally into different parts, and then select some small tables with common columns in each part. As a consequence, these small tables are unionable in pairs, so we mark them as ground truth.
 
 \noindent \underline{\textit{Join Ground Truth Generation.}} 
-Similarly, when constructing the syhthetic quries for join case, we initially vertically partition the base table into multiple tables, preserving different percentages of overlapping columns (varying from 1 column to 50\% of columns). These overlapping columns and partition tables correspond to the query table and ground truth of the join case respectively.
+Similarly, when constructing the synthetic quries for join case, we initially vertically partition the base table into multiple tables, preserving different percentages of overlapping columns (varying from 1 column to 50\% of columns). These overlapping columns and partition tables correspond to the query table and ground truth of the join case respectively.
 %+ How to choose large tables.
 
 %+ How to split.

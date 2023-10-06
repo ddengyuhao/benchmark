@@ -5,7 +5,7 @@
 In this part, we will discuss how to construct synthetic queries by splitting large tables and generating the corresponding ground truth.
 
 \noindent \textbf{Choosing Large Tables.} 
-To create synthetic queries, we should always choose to use a large base table with more rows and columns. To achieve this, we first pick all the tables with both number of rows and columns larger than a threshold (\ie for Opendata, we set it as 50, we set it as 20; for Webtable, we set it as 20) to ensure that they can be well splitted. Then, We sort these tables based on the number of their cell values and select top-20\%
+To create synthetic queries, we should always choose to use a large base table with more rows and columns. To achieve this, we first pick all the tables with both number of rows and columns larger than a threshold (\ie for Opendata, we set it as 50; for Webtable, we set it as 20) to ensure that they can be well splitted. Then, We sort these tables based on the number of their cell values and select top-20\%
 as large table to be splitted.
 
   %In order to ensure the diversity of synthetic queries, we manually selected tables with different semantics as the base tables. \cc{Not clear}
@@ -51,7 +51,18 @@ At a high level, we synthesize queries for union and join by  horizontally and v
  %
  % In the example of the figure, we divide the large table into three parts, for the first part, we choose column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}} and column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}},  add to those overlap columns. In the same way, for the second part, we select column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}} and column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{5}}}, for the last part, we select column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{5}}} and column \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{7}}}. The tables formed by each part can be unioned with each other.
 
-\noindent \underline{\textit{Join Query Construction.}}  Joinable tables must share one common joinable column, and unlike unionable tables, they should exhibit a substantial row overlap. To construct this case, we first choose a specific column (highlighted in red) as the joinable column (refer to Figure ~\ref{fig:query_construction} - (b)). Subsequently, a random selection of columns (highlighted in yellow) is made to form Table $T_1$, and another set of columns (highlighted in blue) is randomly chosen to create Table $T_2$. The combination of these two tables results in the formation of Table $T$.  For $T_1$ and $T_2$, we represent their rows as $r_{1x}$ and $r_{2x}$ respectively, where $x$ represents the row number. Additionally, we randomly select several columns from  $T$ to create row overlap. Next, we choose a set of rows randomly from both  $T_1$ and  $T_2$, and append them to the overlapping rows. For example, selecting $r_{11}$ from $T_1$ and choose $r_{26}$ as well as $r_{27}$ from $T_2$, allows these two tables to be joined.
+\noindent \underline{\textit{Join Query Construction.}}  For a pair of joinable tables, they should respectively have one column to be joined and basically, the two columns should  exhibit a substantial \cc{row} overlap. To achieve this, as shown in Figure~\ref{fig:query_construction}(b), we first randomly select a  column (highlighted as red) as the joinable column. 
+%%
+Subsequently, we randomly select of yellow columns to form table $T_1$, and another set of blue columns  is randomly chosen to form  $T_2$. At a high level, the pair of joinable tables are respectively sampled from $T_1$ and $T_2$ 
+(we use $T$ to denote the combination table of $T_1$ and $T_2$, and $r_{1i}$ denotes the $i$-th row in $T_1$ ).
+%
+To create the overlaps, we randomly select some row from  $T$ as overlapping rows, marked as green. Next, we  randomly choose a set of rows  from   $T_1$ and  $T_2$, and append them to the overlapping rows.
+If $r_{11}, r_{13}$ ($r_{26}, r_{27}$) are selected from $T_1$ ($T_2$), we create two queries [$r_{11}, r_{12}, r_{13}, r_{14}, r_{15}$] and  [$r_{22}, r_{24}, r_{25}, r_{26}, r_{27}$] that can be joined with each other.
+
+ % For $T_1$ and $T_2$, we represent their rows as $r_{1x}$ and $r_{2x}$ respectively, where $x$ represents the row number. Additionally, we randomly select several columns from  $T$ to create row overlap. Next, we choose a set of rows randomly from both  $T_1$ and  $T_2$, and append them to the overlapping rows. For example, selecting $r_{11}$ from $T_1$ and choose $r_{26}$ as well as $r_{27}$ from $T_2$, allows these two tables to be joined.
+  
+  
+\cc{add some difficulties.}
 
 \noindent \textbf{Ground Truth Generation.} 
 During the process of constructing synthetic queries, ground truth are also generated accordingly.

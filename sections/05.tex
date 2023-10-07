@@ -65,7 +65,7 @@ If $r_{11}, r_{13}$ ($r_{26}, r_{27}$) are selected from $T_1$ ($T_2$), we creat
 \cc{add some difficulties.}
 
 \noindent \textbf{Ground Truth Generation.} 
-The  ground truth of synthesized queries can be derived from  three perspectives.
+The  ground truth of synthesized queries can be derived from  the following perspectives.
 
 %During the process of constructing synthetic queries, ground truth are also generated accordingly.
 
@@ -79,16 +79,28 @@ Second, since we can randomly identify red columns multiple times within each la
 %Second, since we might randomly identify columns multiple times within each large table, if there is a duplicate between the first and second set of selected identical columns, the resulting small tables from the second split and the ones from the first split can also be unioned. Consequently, additional corresponding ground truth can be generated.
 %To illustrate, consider Figure~\ref{fig:query_construction}(a). In the first round, we selecte columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} as the column overlap, and columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} in the second round. Consequently, columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}} and \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} can be unioned between the small tables split in the second round and those split in the first round. Therefore, we can label them as ground truth.
 %
-
+ Third, some of these large tables might also be unioned, so the splitted small tables from them might also be unionable. Similarly, the data lake might also exist tables that can be unioned with each synthetic queries, as discussed in Section~\ref{subsec:overview}.
+ For this perspective, we will retrieve a set of candidate tables from the data lake and ask the human experts to check, which will be introduced in the next two subsections.
+ 
+ %category follows a process similar to generating ground truth for real queries. In the synthetic queries we construct, there might be several tables in the data lake that can be unioned with them. In this category, we are also required to retrieve a selection of candidate tables that show a relatively high relevance to the query table. Subsequently, human experts manually inspect these candidates to check their relevance.
 
 
 % In the first category, as previously mentioned, we randomly partitioned the large table into several smaller tables, all sharing the same columns. Consequently, these tables are pair-wise unionable, forming the basis for our ground truth. For the second category, since we might randomly identify columns multiple times within each large table, if there is a duplicate between the first and second set of selected identical columns, the resulting small tables from the second split and the ones from the first split can also be unioned. Consequently, additional corresponding ground truth can be generated.
 % To illustrate, consider Figure~\ref{fig:query_construction}(a). In the first round, we selecte columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} as the column overlap, and columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{4}}}, \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} in the second round. Consequently, columns \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}} and \raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{6}}} can be unioned between the small tables split in the second round and those split in the first round. Therefore, we can label them as ground truth. 
 
-The third category follows a process similar to generating ground truth for real queries. In the synthetic queries we construct, there might be several tables in the data lake that can be unioned with them. In this category, we are also required to retrieve a selection of candidate tables that show a relatively high relevance to the query table. Subsequently, human experts manually inspect these candidates to check their relevance.
+
+
+
 
 \noindent \underline{\textit{Join Ground Truth Generation.}} 
-Similarly, when constructing the synthetic quries for join case, we initially select a column as the joinable column, the choosen column and partition tables correspond to the query table and ground truth of the join case respectively. Also, when selecting the same join column, we might also choose different rows as overlap from table $T$ multiple times. If there are duplicates between the first and second set of selected rows, the initially split small table and the subsequently split small table can also be joined and marked as ground truth. Similiarly, for the synthetic query tables for join case, we continue the process by searching for tables within the data lake that exhibit high similarity. Subsequently, we manually evaluate whether these tables can be joined with the constructed query table. If they are joinable, they are also incorporated into the ground truth.
+As discussed in Figure~\ref{fig:query_construction}, a pair of tables (\eg $T_1, T_2$) sampled from a large table based on the red column are joinable. Similar to the second part of the above union case,  given the same red column, we can  choose  overlapping rows for multiple times over a large table. If  these overlapping rows of multiple times share many duplicates, the synthesized small tables of these multiple times are also joinable.
+Similar to the third part of the  union case, the data lake might also exist joinable tables, and we rely on human experts to label the ground truth.
+
+%Similarly, when constructing the synthetic quries for join case,  we initially select a column as the joinable column. The column and partition tables correspond to the query table and ground truth of the join case respectively.
+%
+ %Also, when selecting the same join column, we might also choose different rows as overlap from table $T$ multiple times. If there are duplicates between the first and second set of selected rows, the initially split small table and the subsequently split small table can also be joined and marked as ground truth.   
+ %
+ %Similiarly, for the synthetic query tables for join case, we continue the process by searching for tables within the data lake that exhibit high similarity. Subsequently, we manually evaluate whether these tables can be joined with the constructed query table. If they are joinable, they are also incorporated into the ground truth.
 
 
 % For the second category, since we might randomly identify columns multiple times within each large table, if there is a duplicate between the first and second set of selected identical columns, the resulting small tables from the second split and the ones from the first split can also be unioned. Consequently, additional corresponding ground truth can be generated. 

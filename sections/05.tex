@@ -112,13 +112,24 @@ Similar to the third part of the  union case, the data lake might also exist joi
 
 %+ How to generate the ground truth.
 \subsection{Basic Search for Candidate Generation}
-In this part, for each synthetic or real query, we design a basic search algorithm to retrieve  candidate joinable/unionable tables from the data lake. 
+In this part, for each synthetic or real query, we design a basic search strategy to retrieve a set of  candidate joinable/unionable tables from the data lake for human experts to label. The goals are two-fold. One is to achieve a high recall, \ie given a query, almost all joinable/unionble tables appear in these candidates. The other is to reduce the human efforts as much as possible.
 
-\noindent \underline{\textit{Union Candidate Generation.}}  
-To retrieve the unionable tables from the data lake, it not only requires considering $(\romannumeral1 ).$  the semantics of the corresponding columns in two tables (i.e. only considering the semantics between individual column pairs), but also $(\romannumeral2 ).$ the semantics between two tables (i.e. the relationships and semantics between different columns in the same table),  Therefore, we used multiple methods that consider these two semantics separately to obtain results on the query table. Specifically, we use \starmie,\santos and SATO. After that, we take the union of these results as the candidate tables and label them by experts.
+\noindent \underline{\textit{Ensemble Retrieval.}}
+At a high level, to achieve a high recall, we propose to leverage multiple typical table search methods to respectively retrieve a number of candidates and compute the ensemble as the final candidate set.  
+%
+To be specific, for union search, we leverage the algorithm $\mathcal{A}_1=$ \starmie and $\mathcal{A}_2=$ \dlll (they respectively use HNSW and LSH index) to retrieve candidates.
+ To ensure a high recall, we set a relatively large $K (K=100)$ for the two algorithms and retrieve two sorted lists with the size $K$.
+ The two lists will be displayed to the experts for labeling. 
+ \cc{But for ease of labeling, we merge the two lists one by one, and then display the new list to the labeling platform shown as below.}
+%
+For join search, we leverage \josie, \deepjoin and \starmie (they respectively use ) to retrieve candidates. 
 
-\noindent \underline{\textit{Join Candidate Generation.}}  
-In the case of joining tables, several considerations are essential:$(\romannumeral1).$ the semantics of corresponding columns in both tables. $(\romannumeral2).$ analyzing the relationship between the two tables, $(\romannumeral3).$ ensuring there is an overlap in cell values between the corresponding columns. Consequently, We used method that considers both $\romannumeral1$ and $\romannumeral2$, namely \deepjoin, and method that considers $\romannumeral3$, namely \josie, to obtain candidate tables respectively.
+
+%\noindent \underline{\textit{Union Candidate Generation.}}  
+%To retrieve the unionable tables from the data lake, it not only requires considering $(\romannumeral1 ).$  the semantics of the corresponding columns in two tables (i.e. only considering the semantics between individual column pairs), but also $(\romannumeral2 ).$ the semantics between two tables (i.e. the relationships and semantics between different columns in the same table),  Therefore, we used multiple methods that consider these two semantics separately to obtain results on the query table. Specifically, we use \starmie,\santos and SATO. After that, we take the union of these results as the candidate tables and label them by experts.
+
+%\noindent \underline{\textit{Join Candidate Generation.}}  
+%In the case of joining tables, several considerations are essential:$(\romannumeral1).$ the semantics of corresponding columns in both tables. $(\romannumeral2).$ analyzing the relationship between the two tables, $(\romannumeral3).$ ensuring there is an overlap in cell values between the corresponding columns. Consequently, We used method that considers both $\romannumeral1$ and $\romannumeral2$, namely \deepjoin, and method that considers $\romannumeral3$, namely \josie, to obtain candidate tables respectively.
 
 \noindent  \underline{\textit{Number of Candidate Tables.}}  The number of candidate tables we obtained was determined by experts. We first set an accuracy threshold (i.e. 70\%), and then manually judged that when the number of candidate tables reached a certain number, their corresponding accuracy was lower than the threshold we set. At this point, the number of selected tables is the final number of our candidate tables.
 %+ How to guarantee high recall

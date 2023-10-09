@@ -65,6 +65,75 @@ column encoders in an unsupervised way, which captures rich information of conte
 
 \noindent\underline{Efficiency}
 
+\begin{table*}[t]
+	\centering
+	\caption{Efficiency of Join Search.}
+	\resizebox{1.0\textwidth}{!}{
+		\begin{tabular}{|c|cccc|cccc|cccc|cccc|}
+			\hline
+			\multirow{3}{1cm}{\textbf{Methods}} & \multicolumn{4}{c|}{\textbf{WebTable Small}} & \multicolumn{4}{c|}{\textbf{WebTable Large}} & \multicolumn{4}{c|}{\textbf{OpenData Small}} & \multicolumn{4}{c|}{\textbf{OpenData Large}}  \\
+			& \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}}& \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}} & \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}} & \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}}  \\
+			
+			&Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem  \\ 
+			\hline
+			\josie &         &                    &        &   &         &                    &        & &         &                    &        & &     &    &               &   \\
+			\hline
+			\lsh &        &                   &               &  &         &                    &        & &         &                    &        & &     &    &               &   \\
+			\hline
+			\pex&        &                  &           &   &         &                    &        & &         &                    &        & &     &    &               &    \\
+			\hline
+			\deepjoin &         &                  &             &&         &                    &        & &         &                    &        & &     &    &               &    \\
+			\hline
+			\starmie  &     &                   &                &   &         &                    &        & &         &                    &        & &     &    &               &   \\
+			\hline
+			\frt &          &     &               &  &         &                    &        & &         &                    &        &   &     &    &               &   \\
+			\hline
+			\infogather &   &   &           &   &         &                    &        & &         &                    &        & &     &    &               &  \\
+			\hline
+			\aurum   &          &                 &              &  &         &                    &        & &         &                    &        &  &     &    &               &   \\
+			\hline
+			
+		\end{tabular}
+	}
+	\label{eva:join_efficiency}
+	
+\end{table*}
+
+\begin{table*}[t]
+	\centering
+	\caption{Efficiency of Union Search.}
+	\resizebox{1.0\textwidth}{!}{
+		\begin{tabular}{|c|cccc|cccc|cccc|cccc|}
+			\hline
+			\multirow{3}{1cm}{\textbf{Methods}} & \multicolumn{4}{c|}{\textbf{WebTable Small}} & \multicolumn{4}{c|}{\textbf{WebTable Large}} & \multicolumn{4}{c|}{\textbf{OpenData Small}} & \multicolumn{4}{c|}{\textbf{OpenData Large}}  \\
+			& \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}}& \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}} & \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}} & \multicolumn{2}{c}{\textbf{Offline}} & \multicolumn{2}{c|}{\textbf{Online}}  \\
+			&Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem  \\ 
+			\hline
+			\tus &     &    &               &  &     &    &               &  &     &    &               &  &     &    &               &     \\
+			\hline
+			\dlll&          &                 &               &  &     &    &               &  &     &    &               &  &     &    &               &     \\
+			\hline
+			\starmie  &         &               &               & &     &    &               &  &     &    &               &  &     &    &               &    \\
+			\hline
+			\santos &        &    &               & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			\frt &       &   &                &  &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			\infogather &   &    &              & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			\aurum   &      &            &             &  &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			SATO &      &                &             & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			TABBIE &      &                &             & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\hline
+			
+		\end{tabular}
+	}
+	\label{eva:union_efficiency}
+	
+\end{table*}
+
 \noindent\underline{Threshold}
 
 \noindent\underline{Buckets!!!}

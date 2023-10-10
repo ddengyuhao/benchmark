@@ -153,18 +153,32 @@ In this part, we introduce the labeling  platform for table search to improve th
 %+ Example shown to the experts.
 
 \noindent \textbf{Labeling Interface.} 
-Figure~\ref{fig:interface} shows the interface for the join search, which mainly consists of three parts. The interface  of the union search follows a similar structure.
+Figure~\ref{fig:interface} shows the interface for the union search, which mainly consists of three parts. 
 
+%The interface  of the join search follows a similar structure.
 
 %The labeling interface we built is shown in the Figure ~\ref{fig:interface}, We demonstrate the interface designed for the join case and the interface for the union case follows a similar structure. The interface is primarily divided into three sections , each serving distinct functions. Next, we will elaborate on the functionality of each section.
 
-\noindent \underline{\textit{Query Table Information.}}  
-As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section 
-displays the main information of a specific query table, including the metadata associated with it and the progress of the labeling process. The table information  includes its corresponding metadata and the table itself. We can see that for the query table $BuildInfo.csv$, its column names varying from $CSDUID$ to $OriginalValue$. Furthermore, the column $Building Type$ predominantly contains four distinct cell values, such as $Commercial$ and $Industrial$. These meta information are displayed above the query table, serving as supplementary information to assist users in  evaluating whether two tables can be successfully joined or unioned. Beneath the query table, there is a progress bar featuring a green line indicating that 30\% of the query tables have been labeled, and the blue line indicating that 30\% of the query tables are currently undergoing the labeling process.
+\noindent \underline{\textit{Query Table.}}  
+% 
+Figure~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}
+displays the query table as well as the metadata. 
+Above the table, we show the \cc{domain} of each attribute to assist experts to determine whether two tables are joinable/unionable. The expert can jump to the next query by clicking the button below the table.
+\cc{The table can also be expanded to show more tuples.}
+%As shown in Figure~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{1}}}, this section displays the main information of a specific query table, including the metadata associated with it and the progress of the labeling process. 
+%   
+%The table information  includes its corresponding metadata and the table itself. We can see that for the query table \texttt{BuildInfo.csv}, its column names varying from \texttt{CSDUID} to \texttt{OriginalValue}. Furthermore, the column \texttt{Building Type} predominantly contains four distinct cell values, such as \texttt{Commercial} and \texttt{Industrial}. 
+%
+%These meta information are displayed above the query table, serving as supplementary information to assist users in  evaluating whether two tables can be successfully joined or unioned.
+%Beneath the query table, there is a progress bar featuring a green line indicating that 30\% of the query tables have been labeled, and the blue line indicating that 30\% of the query tables are currently undergoing the labeling process.
 
-\noindent \underline{\textit{Set of Candidate Tables.}} This section presents comprehensive details of all candidate tables corresponding to the query table. As shown in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}}, there are three candidate tables, denoted as $Build.csv$, $BuildIntro.csv$ and $SchoolBuild.csv$. Each candidate table is accompanied by a labeling area where users can select two columns from both the query and candidate tables that can be joined, such as $BuildInfo.CSD$ and $Build.CSD$. Given the semantic similarity and overlap between these two columns, they are categorized as joinable types. Upon clicking the "add" button, the interface records and stores this labeled data in the backend database.
+\noindent \underline{\textit{Candidate Tables.}} %This section presents comprehensive details of all candidate tables corresponding to the query table. As shown in 
+Figure~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{2}}} shows the information of candidate tables. The expert can click the  upper right button to browse and label more candidates. \cc{The labeling ares is under each candidate table, where the expert can determine whether the table can be unioned with the query. Besides, we also ask the experts to explain why the two tables can be unioned by identifying unionable column pairs in the labeling area.}
 
-\noindent \underline{\textit{Set of Result.}} In this section of the interface, all the annotated data corresponding to the candidate tables is displayed, as illustrated in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}. For instance, in the case of query table $BuildInfo.csv$ and candidate table $Build.csv$, it is evident that the $Period$ column in the query table only contains year information, whereas the  $Period$ column in the candidate table includes both year and month details, resulting in a lack of overlap between these two columns. Therefore, the labeled information indicates that these two columns cannot be joined (where "no" indicates they cannot be joined, and "yes" indicates they can be joined).
+
+% there are three candidate tables, denoted as \texttt{Build.csv}, \texttt{BuildIntro.csv} and \texttt{SchoolBuild.csv}. Each candidate table is accompanied by a labeling area where users can select two columns from both the query and candidate tables that can be joined, such as \texttt{BuildInfo.CSD} and \texttt{Build.CSD}. Given the semantic similarity and overlap between these two columns, they are categorized as joinable types. Upon clicking the "add" button, the interface records and stores this labeled data in the backend database.
+
+\noindent \underline{\textit{Results.}} In this section of the interface, all the annotated data corresponding to the candidate tables is displayed, as illustrated in Figure ~\ref{fig:interface}-\raisebox{.3pt}{\textcircled{\hspace{-0.08cm} \raisebox{-.5pt}{3}}}. For instance, in the case of query table \texttt{BuildInfo.csv} and candidate table \texttt{Build.csv}, it is evident that the \texttt{Period} column in the query table only contains year information, whereas the \texttt{Period} column in the candidate table includes both year and month details, resulting in a lack of overlap between these two columns. Therefore, the labeled information indicates that these two columns cannot be joined (where "no" indicates they cannot be joined, and "yes" indicates they can be joined).
 Furthermore, the interface provides a "delete" button to rectify any incorrectly labeled data. Additionally, users can review incomplete data through the page flipping function located below the candidate table, ensuring a thorough evaluation process.
 
 
@@ -178,6 +192,9 @@ Furthermore, the interface provides a "delete" button to rectify any incorrectly
 \end{figure*}
 
 \noindent \textbf{Labeling Statistics.} 
+
+\cc{how to teach experts?}
+
 We have count some statistical information during manual labeling, as show in Table ~\ref{Table:humanLabeling}. For OpenData Large, this dataset has a total of  \cc{XX} query tables to be labeled, with an average of 20 candidate tables matching each query table. Therefore, we have 10 experts and spent a total of approximately \cc{XX} hours completing the labeling work. Similarly, for WebTable Large, we also have 10 experts and spent a total of approximately \cc{XX} hours for labeling. This is because this dataset has \cc{XX} query tables in all that need to be labeled, and each table has an average of 20 corresponding candidate tables.
 
 \begin{table}[t]

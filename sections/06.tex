@@ -120,7 +120,8 @@ We naturally categorize existing approaches to be evaluated into \cc{three categ
  
   \noindent  (2) \aurum can also be utilized to solve  both the table join/union search problems. First, the schema of each column is encoded using word embeddings. Then, all columns are organized as a graph that each node corresponds to a column and each edge connects two nodes with similar embeddings. When a query table comes, all columns in the table will also be encoded and hashed to find similar columns in the data lake, and  the nearby tables are also retrieved based on the graph. Finally, the join/union scores are computed based on those candidate tables.  \cc{Summarize complexity.} 
   
- \noindent  (3) \frt introduces a framework that captures different relatedness of tables, which are then utilized for union or join. For union,  \frt considers entity consistency, entity expansion and schema consistency to align two tables. For join, \frt considers the coverage of entity sets of two columns. \cc{Summarize complexity.}
+ \noindent  (3) \cc{\frt} introduces a framework that captures different relatedness of tables, which are then utilized for union or join.
+  For union,  \frt considers entity consistency, entity expansion and schema consistency to align two tables. For join, \frt considers the coverage of entity sets of two columns. \cc{Summarize complexity.}
 
 \subsection{Evaluation}
 

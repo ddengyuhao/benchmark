@@ -128,68 +128,7 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 \fi
 
 
-    \begin{table*}[t]
-        \centering
-        \caption{Table Discovery Methods.}
-        \begin{tabular}{|c|c|c|c|cccc|}
-            \hline
-            \multirow{2}{1cm}{\textbf{Methods}} & \multirow{2}{0.6cm}{\textbf{Task}} & \multirow{2}{0.8cm}{\textbf{Index}} & \multirow{2}{1.6cm}{\textbf{Embedding}} & \multicolumn{2}{c}{\textbf{Offline Process}} & \multicolumn{2}{c|}{\textbf{Online Process}} \\
-            &&&&Time Comp.    & Space Comp. & Time Comp. & Space Comp. \\ 
-            \hline
-            \josie~\cite{Josie} & J & Inv. index & \XSolidBrush  & O$(\cellvaluenum + \rawtokennum \log \rawtokennum)$         & O$(\rawtokennum)$                   & O$(\positinglistlen log \positinglistlen)$         & O$(\positinglistlen)$    \\
-            \hline
-            \lsh~\cite{LshEn} & J & LSH & \XSolidBrush& O$(\columnnum)$        & O$(\columnnum \times \minhashlen)$                   & O$(\querycolumnnum)$                & O$(\querycolumnnum \times \minhashlen)$  \\
-            \hline
-            \pex~\cite{Pexeso} & J &  Inv. index& \Checkmark  & O$(\rawtokennum)$        & O$(\rawtokennum)$                   & O$(\log \querycellvalue \times \log \rawtokennum)$                & O$(\querycellvalue)$     \\
-            \hline
-            \deepjoin~\cite{DeepJoin} & J & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$  \\
-            \hline
-             \tus~\cite{TUS} & U & LSH & \Checkmark  & O$(\cellvaluenum + \columnnum)$         & O$(\columnnum \times \minhashlen)$    & O$(\querycolumnnum)$               &  O$(\querycolumnnum \times \minhashlen)$     \\
-            \hline
-            \dlll~\cite{D3L} & U & LSH & \Checkmark& O$(\cellvaluenum + \columnnum)$          & O$(\columnnum)$                   & O$(\querycolumnnum \times \dlllneighbornnum)$                & O($\querycolumnnum$)      \\
-            \hline
-            \starmie~\cite{Starmie} & U & HNSW & \Checkmark & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
-            \hline
-            \santos~\cite{Santos} & U & Inv. index & \XSolidBrush & O$(\rawtokennum)$         & O$(\rawtokennum \times \columnnum )$    & O$(\querycellvalue + \santosneighbornnum)$               & O$(\querycellvalue)$  \\
-            \hline
-            \frt~\cite{Frt12} & J \& U & N/A & \XSolidBrush &  O$(\columnnum)$        & O$(\columnnum)$    & O$( \tablenum \times {(\querycolumnnum + \averagetargettuplenum)}^3)$               & O$({\averagetargettuplenum}^2)$    \\
-            \hline
-            \infogather~\cite{InfoGather} & J \& U & Inv. index & \XSolidBrush & O$(\columnnum^2)$   & O$(\columnnum^2)$    & O$(\querycolumnnum \times \inforneighbornnum \log \inforneighbornnum)$              & O$(\inforneighbornnum )$   \\
-            \hline
-           \cc{\aurum~\cite{Aurum}} & J \& U & LSH & \Checkmark  & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$   \\
-            \hline
-            Pretrain-based~\cite{} & U & HNSW & \Checkmark   & O$(\columnnum)$         & O$(\columnnum)$                   & O$(\log \columnnum)$                & O$(\columnnum)$ \\
-            \hline
-            
-        \end{tabular}
-        \label{table:methods}
-        
-    \end{table*}
 
-\begin{table}[!ht]
-	\centering
-	\caption{ Notations of Table~\ref{table:methods}.}
-	\begin{tabular}{|c|c|}
-		\hline
-		Notation & Explanation \\ \hline
-		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\\hline
-		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\\hline
-		$\mathcal{K}$ & \#-Non-distinct cell values of all tables in $\lake$   \\\hline
-		$\mathcal{R}$ &\#-Distinct cell values of all tables in $\lake$ \\\hline
-		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\\hline
-		$\mathcal{X}$ &\#-Tuples of all tables in $\lake$ \\\hline
-		$\mathcal{A}$ & \#-non-distinct cell values in query table $\qtable$  \\\hline
-		
-		$\mathcal{L}$ & Length of posting list in \josie  \\\hline
-
-		$\mathcal{H}$ & Dimension of minhash vector \\\hline
-		$\mathcal{P}$ & \#-Partitions in \lsh\\\hline
-		$\mathcal{D}$ & \#-Neighbors in \dlll\\\hline
-		$\mathcal{I}$ & \#-Neighbors in \infogather\\\hline
-		$\mathcal{S}$ & \#-Neighbors in \santos\\\hline
-		$\overline{\mathcal{O}}$ & Average  \#-columns in candidate tables
-		\\ \hline
-		%
 
 
 %fake方法造query：就是先选一个行和列都比较多的大表，然后随机选择num列（num为随机数），并且打乱这些列的顺序，再添加了一列随机数；竖着切成几个小表之后，再随机选择num行（num为随机数），并且打乱这些行的顺序，同时，选择横着切表之前的1/4行作为切完之后各个小表之间的overlap。
@@ -199,11 +138,5 @@ Given the data lakes, queries and ground truth, we next compare the performance 
 %fake方法定ground truth: 首先，竖着切之后，判断各个小表有没有属性重复，有的话，两个表之间视为可以join。除此之外，横着切生成的不同小表，由于它们之间一定会有overlap和属性重复，所以两两之间视为可union
 
 %不fake方法定ground truth：根据不fake的方法造出来的query，利用一些简单的相似性判断捞出一些候选表，再进行人工标注
-
-	
-	\end{tabular}
-	\label{symbol_table}
-\end{table}
-
 
 

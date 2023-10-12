@@ -2,6 +2,10 @@
 
 \input{sections/commands}
 
+
+
+%\usepackage[normalem]{ulem} %to strike the words
+
 %\settopmatter{printacmref = false}
 
 \renewcommand\footnotetextcopyrightpermission[1]{}
@@ -16,17 +20,21 @@
 	conference title from your rights confirmation emai}{June 11--16,
 	2024}{Santiago, Chile}
 
+\hypersetup{draft} 
+
 \begin{document}
 \title{Table Discovery Benchmark}
 
 
-\renewcommand{\shortauthors}{Trovato et al.}
+%\renewcommand{\shortauthors}{Trovato et al.}
 
 \begin{abstract}
 Recently, table discovery has attracted much attention because 
 \end{abstract}
 
 \maketitle
+
+
 
 \input{sections/01}
 \input{sections/02}
@@ -38,11 +46,10 @@ Recently, table discovery has attracted much attention because
 \input{sections/08}
 \input{sections/09}
 
-
 %\normalem
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{ref}
-
+%\normalem
 \end{document}
 
 \endinput

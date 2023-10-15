@@ -44,7 +44,7 @@
 		\hline
 		Notation & Explanation \\ \hline
 		$\mathcal{B}$ & \#-Columns in the query table $\qtable$  \\\hline
-		$\mathcal{N}$ &\#-Columns in all tables $\lake$ \\\hline
+		$\mathcal{N}$ &\#-Columns of all tables in $\lake$ \\\hline
 		$\mathcal{K}$ & \#-Non-distinct cell values of all tables in $\lake$   \\\hline
 		$\mathcal{R}$ &\#-Distinct cell values of all tables in $\lake$ \\\hline
 		$\mid \mathcal{T} \mid$ & \#-Tables in $\lake$  \\\hline
@@ -79,49 +79,48 @@ We naturally categorize existing approaches to be evaluated into \cc{three categ
 
 
 \noindent\textbf{Table Join Search.} (1) \josie aims to find joinable tables in data lake via set similarity search. Based on the intuition that two joinable columns have many overlap values, given the query table $\qtable$ and query column $\qcolumn$,  \josie considers $\qcolumn$ as a set, and finds the  exact top-$k$ columns  that have high overlap set similarities with $\qcolumn$. %To be specific, overlap set similarity refers to the intersection value between two columns.
- To achieve this efficiently, \josie builds the inverted index that maps distinct cell values and sets (columns) that contain each corresponding value. Then given a query column, the inverted index can help to identify candidate columns with overlap values in the data lake, a cost model is introduced to quickly eliminate unqualified candidates.  \cc{Summarize complexity.}
+ To achieve this efficiently, \josie builds the inverted index that maps distinct cell values and sets (columns) that contain each corresponding value. Then given a query column, the inverted index can help to identify candidate columns with overlap values in the data lake, a cost model is introduced to quickly eliminate unqualified candidates.  \cc{Summarize complexity.(The offline part's time complexity depends on distinct cell values in the data lake $\lake$, while the online part's complexity is influenced by the posting list's length, which is determined by the characteristics of $\lake$.)}.
+ 	
  
- \noindent  (2) Similar to \josie, \lsh also considers the set overlap between columns to determine whether two tables can be joined.  Different from \josie that computes the exact top-$k$ columns, it estimates the set containment score using an index structure based on MinHash LSH and return the columns with the scores larger than a threshold, which is  built by two stages. First, all columns are partitioned disjointly based on their cardinalities. Second, a MinHash LSH index for each partition is constructed and dynamically tuned considering its customized  similarity threshold. The key contribution is a cost model to conduct an optimal data partitioning for the LSH index, such that the false positive rate could be minimized if an ideal  similarity filter is used in each partition. \cc{Summarize complexity.}
+ \noindent  (2) Similar to \josie, \lsh also considers the set overlap between columns to determine whether two tables can be joined.  Different from \josie that computes the exact top-$k$ columns, it estimates the set containment score using an index structure based on MinHash LSH and return the columns with the scores larger than a threshold, which is  built by two stages. First, all columns are partitioned disjointly based on their cardinalities. Second, several MinHash LSH indexs for each partition is constructed and dynamically tuned considering its customized  similarity threshold. The key contribution is a cost model to conduct an optimal data partitioning for the LSH index, such that the false positive rate could be minimized if an ideal  similarity filter is used in each partition. \cc{Summarize complexity(The offline(online) part's time complexity is highly correlated with the number of columns of all tables in $\lake$(query table $\qtable$). To convert \lsh into the Top-$K$ method, we further consider the overlap between columns to get the final result.) }
+ 
  
  %is enable to obtain high accuracy over a large and skewed domain distributions. 
 
- 
 
- \noindent  (3) Unlike the above two methods, \pex considers the semantics of textual columns to capture the column similarity. To be specific, it first encodes column values in the data lake into high-dimensional vectors using fastText~\cite{}, which are then indexed by an inverted index and a hierarchical grid. When a query $\qcolumn$ comes, a block-and-verify strategy is applied to efficiently compute the cosine similarity between vectors. \cc{Summarize complexity.}
+ \noindent  (3) Unlike the above two methods, \pex considers the semantics of textual columns to capture the column similarity. To be specific, it first encodes column values in the data lake into high-dimensional vectors using fastText~\cite{}, which are then indexed by an inverted index and a hierarchical grid. When a query $\qcolumn$ comes, a block-and-verify strategy is applied to efficiently compute the cosine similarity between vectors. \cc{Summarize complexity (Note that the results for \pex are impractical for our large datasets due to its high time complexity in online queries, which is closely tied to the number of distinct cell values in the $\lake$.).}
  
  
+ \noindent  (4) \deepjoin also considers the column semantics represented by vectors. Different from \pex that directly encodes columns into vectors,  \deepjoin involves a training process fine-tuning based on DistilBERT~\cite{} and MPNet~\cite{}. This process feeds a pair of columns into the pre-trained language model,  outputs two vectors and computes their cosine similarity, which is used to compute the loss by comparing with the similarity between this pair of columns. Afterwards,  columns in the data lake are transformed into vectors that are indexed using HNSW~\cite{}. When a query $\qcolumn$ comes, it is also transformed into a vector and similar columns that are likely to be joined with it are retrieved though the HNSW index. \cc{Summarize complexity (This method's complexity is directly tied to the HNSW index, which depends solely on the total number of columns in all data lake tables.).}
  
- \noindent  (4) \deepjoin also considers the column semantics represented by vectors. Different from \pex that directly encodes columns into vectors,  \deepjoin involves a training process fine-tuning based on DistilBERT~\cite{} and MPNet~\cite{}. This process feeds a pair of columns into the pre-trained language model,  outputs two vectors and computes their cosine similarity, which is used to compute the loss by comparing with the similarity between this pair of columns. Afterwards,  columns in the data lake are transformed into vectors that are indexed using HNSW~\cite{}. When a query $\qcolumn$ comes, it is also transformed into a vector and similar columns that are likely to be joined with it are retrieved though the HNSW index. \cc{Summarize complexity.}
- 
-
- 
-
 
  %deepjoin sufficienctly discuss the above methods.
 
 \noindent\textbf{Table Union Search.}
  (1) \tus first defines the table union search problem that  if two tables have multiple columns (\ie attributes) with similar domains, they are likely to be unioned. To determine the unionable attributes, three statistical models that respectively consider value overlap , ontology similarity and natural language similarity are incorporated. Then, given any pair of columns,  \tus leverages a data-driven  method to judiciously choose the best model to describe their unionbility. %Also, a TUS benchmark is proposed to validate the algorithm.  
- \cc{Summarize complexity.}
+ \cc{Summarize complexity.()}
 
- \noindent  (2) \dlll also considers the similarity between columns from 5 aspects, namely attribute name, attribute extent, word-embedding of attributes, format representation and domain distribution. Then \dlll leverages a weighting strategy that computes a more accurate similarity for columns.  \cc{Summarize complexity.}
+ \noindent  (2) \dlll also considers the similarity between columns from 5 aspects, namely attribute name, attribute extent, word-embedding of attributes, format representation and domain distribution. Then \dlll leverages a weighting strategy that computes a more accurate similarity for columns.  \cc{Summarize complexity (\dlll online' time complexity is linked to query column neighbors and the query time correlates closely with dataset characteristics.).}
   
   \noindent  (3) \santos. The above methods mainly consider  the semantic similarity of  schemes and cell values of columns to determine whether two tables can be joined.
-   \santos further improves the accuracy by incorporating the semantic relationships between pairs of columns. To be specific,  it can leverage a KB to annotate a semantic graph for columns within a table. When a query table comes, the graph will be compared with graphs in the data lake such that the column semantics can be well considered. In most scenarios, it is hard for a KB to well cover the values in a real data lake, so \santos proposes a synthesized KB to annotate the column relationships using the knowledge in the data lake. \cc{Summarize complexity.}
+   \santos further improves the accuracy by incorporating the semantic relationships between pairs of columns. To be specific,  it can leverage a KB to annotate a semantic graph for columns within a table. When a query table comes, the graph will be compared with graphs in the data lake such that the column semantics can be well considered. In most scenarios, it is hard for a KB to well cover the values in a real data lake, so \santos proposes a synthesized KB to annotate the column relationships using the knowledge in the data lake. \cc{Summarize complexity (Due to \santos' offline phase being space-intensive (involving distinct cell values and total columns), we don't report results on our large datasets.).}
  
 
 
  \noindent (4) \starmie focuses on union tables based on large  pre-trained language models. To be specific, a lightweight contrastive learning method is applied to train column encoders in an unsupervised way. Particularly, the encoding of each column also considers other columns within each table, which captures rich information of contextual semantics.
-  Then, columns in data lake are represented as vectors and the HNSW index is applied to accelerate the query efficiency. \cc{Summarize complexity.}
+  Then, columns in data lake are represented as vectors and the HNSW index is applied to accelerate the query efficiency. \cc{Summarize complexity (\starmie's complexity depends on HNSW index, which is related to total columns in $\lake$).}
 
 
 \noindent\textbf{Methods can be used for Join \& Union.}
-  (1) \infogather aims at augmenting entities or attributes from a large corpus of HTML tables for a given table, which can be regarded as table union or join search. The basic idea is to first achieve a holistic matching across all tables, and then  given a query table,  \infogather finds tables that can be unioned or joined using direct or indirect matching among tables in the data lake. \cc{Summarize complexity.}
+  (1) \infogather aims at augmenting entities or attributes from a large corpus of HTML tables for a given table, which can be regarded as table union or join search. The basic idea is to first achieve a holistic matching across all tables, and then  given a query table,  \infogather finds tables that can be unioned or joined using direct or indirect matching among tables in the data lake. \cc{Summarize complexity (Due to \infogather' offline phase being space and time-consuming (correlating with the square of total columns), we don't report results on the large datasets.).}
 
  
-  \noindent  (2) \aurum can also be utilized to solve  both the table join/union search problems. First, the schema of each column is encoded using word embeddings. Then, all columns are organized as a graph that each node corresponds to a column and each edge connects two nodes with similar embeddings. When a query table comes, all columns in the table will also be encoded and hashed to find similar columns in the data lake, and  the nearby tables are also retrieved based on the graph. Finally, the join/union scores are computed based on those candidate tables.  \cc{Summarize complexity.} 
+  \noindent  (2) \aurum can also be utilized to solve  both the table join/union search problems. First, the schema of each column is encoded using word embeddings. Then, all columns are organized as a graph that each node corresponds to a column and each edge connects two nodes with similar embeddings. When a query table comes, all columns in the table will also be encoded and hashed to find similar columns in the data lake, and  the nearby tables are also retrieved based on the graph. Finally, the join/union scores are computed based on those candidate tables.  \cc{Summarize complexity (Also, \aurum's complexity is related to HNSW index, which, in turn, is associated with the total number of columns in $\lake$.)} 
   
- \noindent  (3) \cc{\frt} introduces a framework that captures different relatedness of tables, which are then utilized for union or join.
-  For union,  \frt considers entity consistency, entity expansion and schema consistency to align two tables. For join, \frt considers the coverage of entity sets of two columns. \cc{Summarize complexity.}
+   \noindent  (3) \cc{\frt} introduces a framework that captures different relatedness of tables, which are then utilized for union or join. For union, \frt uses semantic information to identify shared entities and attributes between the tables and computes a similarity score based on the overlap of these elements.
+    For join, \frt determines whether two tables have complementary schemas, meaning that they have attributes that can be combined through a join operation. \cc{Summarize complexity (Due to \frt' online phase's high time complexity, which scales with the total number of tables in $\lake$, we excluded \frt' results from our report on the large datasets.).}
+  
+% \noindent  (3) \cc{\frt} introduces a framework that captures different relatedness of tables, which are then utilized for union or join. For union,  \frt considers entity consistency, entity expansion and schema consistency to align two tables. For join, \frt considers the coverage of entity sets of two columns. \cc{Summarize complexity.}
 
 \subsection{Evaluation}
 
@@ -142,21 +141,21 @@ We naturally categorize existing approaches to be evaluated into \cc{three categ
 			
 			&Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem &Time    & Mem  & Time  & Mem  \\ 
 			\hline
-			\josie &         &                    &        &   &         &                    &        & &         &                    &        & &     &    &               &   \\
+			\josie &  & 45G& 2s & 45G  &         &                    &        & &         &  11.6G& 0.06s & 11.6G&     &    &               &   \\
 			\hline
 			\lsh &        &                   &               &  &         &                    &        & &         &                    &        & &     &    &               &   \\
 			\hline
-			\pex&        &                  &           &   &         &                    &        & &         &                    &        & &     &    &               &    \\
+			\pex&        &          &           &   &  --       &    --    &   --     & --&         &          &        & &  --   &   -- &     --    &  --  \\
 			\hline
 			\deepjoin &         &                  &             &&         &                    &        & &         &                    &        & &     &    &               &    \\
 			\hline
-			\starmie  &     &                   &                &   &         &                    &        & &         &                    &        & &     &    &               &   \\
+			\starmie &  12.5m &  141G &0.3s &98G &     &    &               &  & 7s    & 2.2G   &3.9s &1.8G  & 1.1m & 13.2G & 6s& 9.6G   \\
 			\hline
-			\frt &          &     &               &  &         &                    &        & &         &                    &        &   &     &    &               &   \\
+			\frt &          &     &  4.5s&  & --    &  -- & -- &-- &         &                    &12.1s &   & --    &--    & --& --  \\
 			\hline
-			\infogather &   &   &           &   &         &                    &        & &         &                    &        & &     &    &               &  \\
+			\infogather &   &   &           &   &  --&-- &-- &-- &         &                    &        & &-- &  --  &  --& -- \\
 			\hline
-			\aurum   &          &                 &              &  &         &                    &        & &         &                    &        &  &     &    &               &   \\
+			\aurum     &  12.5m & 40G & 0.6s& 32.4G &     &    &               &  &  9s& 0.6G  &   4.3s& 0.6G & 1.3m  & 3.9G   & 7.2s   & 3.5G  \\
 			\hline
 			
 		\end{tabular}
@@ -164,8 +163,6 @@ We naturally categorize existing approaches to be evaluated into \cc{three categ
 	\label{eva:join_efficiency}
 	
 \end{table*}
-
-
 
 \begin{table*}[t]
 	\centering
@@ -179,23 +176,24 @@ We naturally categorize existing approaches to be evaluated into \cc{three categ
 			\hline
 			\tus &     &    &               &  &     &    &               &  &     &    &               &  &     &    &               &     \\
 			\hline
-			\dlll&          &                 &               &  &     &    &               &  &     &    &               &  &     &    &               &     \\
+			\dlll&          &                 &               &  &     &    &               &      &  150h  &  15G  & 3.4s  & 15G    &    &     &          &     \\
 			\hline
-			\starmie  &         &               &               & &     &    &               &  &     &    &               &  &     &    &               &    \\
+			\starmie  &  12.5m &  141G &0.3s &98G &     &    &               &  & 7s    & 2.2G   &3.9s &1.8G  & 1.1m & 13.2G & 6s& 9.6G   \\
 			\hline
-			\santos &        &    &               & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\santos &        &    &               & & --    & --   &  --&  --&     &    &               &  & --    & --   &  -- & --  \\
 			\hline
-			\frt &       &   &                &  &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\frt &  &   & 4.5s &  & --    & --   & --& -- &     &    &   12.1s &  &--& -- & --& --  \\
 			\hline
-			\infogather &   &    &              & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\infogather &   &    &              & &  --   & --   &   -- &--  &     &    &               &  &--     &--    &  --  & --  \\
 			\hline
-			\aurum   &      &            &             &  &     &    &               &  &     &    &               &  &     &    &               &   \\
+			\aurum   &  12.5m & 40G & 0.6s& 32.4G &     &    &               &  &  9s& 0.6G  &   4.3s& 0.6G & 1.3m  & 3.9G   & 7.2s   & 3.5G  \\
 			\hline
-			SATO &      &                &             & &     &    &               &  &     &    &               &  &     &    &               &   \\
+			SATO & 15.5m  &  109G & 0.6s  & 79.7G&     &    &               &  &     &    &               &  &     &    &               &   \\
 			\hline
 			TABBIE &      &                &             & &     &    &               &  &     &    &               &  &     &    &               &   \\
 			\hline
-			
+			TABERT & 13.5m &137G &  0.83s &96G &     &    &               &  &6s&  1.9G  & 5.2s  & 1.6G &  48s   &  12.1G  & 11.6s &  8.9G \\
+			\hline
 		\end{tabular}
 	}
 	\label{eva:union_efficiency}
